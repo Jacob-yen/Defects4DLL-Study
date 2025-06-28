@@ -1,0 +1,38 @@
+constraints:
+  learning_rate:
+    dtype:
+    - float
+    structure: 0
+    default: '0.001'
+    tensor_t:
+    - tf.Tensor
+    ndim: 'any'
+  beta_1:
+    dtype:
+    - float
+    default: '0.9'
+    ndim: 0
+    range:
+    - '[0, 1]'
+  beta_2:
+    dtype:
+    - float
+    default: '0.999'
+    ndim: 0
+    range:
+    - '[0, 1]'
+  epsilon:
+    dtype:
+    - float
+    default: '1e-07'
+    ndim: 0
+    range:
+    - '(0,inf)'
+  name:
+    dtype:
+    - string
+    default: 'Adamax'
+    ndim: 0
+  '**kwargs':
+    dtype:
+    - string

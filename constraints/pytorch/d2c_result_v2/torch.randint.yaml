@@ -1,0 +1,79 @@
+check_nan: true
+constraints:
+  low:
+    dtype:
+      - int
+    default: 0
+    ndim: 0
+    range:
+      - '[0, inf)'
+  high:
+    dtype:
+      - int
+    ndim: 0
+    range:
+      - '[0, inf)'
+  size:
+    dtype:
+      - int
+    structure: tuple
+    ndim: any
+  generator:
+    dtype:
+      - torch.Generator
+    default: None
+    ndim: 0
+  out:
+    dtype:
+      - torch.tensor
+    default: None
+    tensor_t: torch.tensor
+    ndim: any
+  dtype:
+    dtype:
+    - torch.dtype
+    default: None
+    ndim: 0
+    enum:
+    - torch.float64
+    - torch.float32
+    - torch.float16
+    - torch.int64
+    - torch.int32
+    - torch.int16
+  layout:
+    dtype:
+    - torch.layout
+    default: torch.strided
+    ndim: 0
+    enum:
+    - torch.strided
+    - torch.sparse_coo
+  device:
+    dtype:
+    - torch.device
+    default: None
+    ndim: 0
+  requires_grad:
+    dtype:
+    - bool
+    default: False
+    ndim: 0
+inputs:
+  optional:
+    - low
+    - generator
+    - out
+    - dtype
+    - layout
+    - device
+    - requires_grad
+  required:
+    - high
+    - size
+layer_constructor: true
+link: https://pytorch.org/docs/1.11/generated/torch.randint.html?highlight=torch%20randint#torch.randint
+package: torch
+target: randint
+title: torch.randint
+version: 1.11.0

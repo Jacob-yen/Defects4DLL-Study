@@ -1,0 +1,37 @@
+check_nan: true
+constraints:
+  module:
+    dtype:
+      - nn.Module
+    ndim: 0
+  device_ids:
+    dtype:
+      - int
+      - torch.device
+    structure: list
+    default: None
+    ndim: 0
+  output_device:
+    dtype:
+      - int
+      - torch.device
+    default: None
+    ndim: 0
+  dim:
+    dtype:
+      - int
+    default: 0
+    ndim: 0
+inputs:
+  optional:
+    - device_ids
+    - output_device
+    - dim
+  required:
+    - module
+layer_constructor: true
+link: https://pytorch.org/docs/1.11/generated/torch.nn.parallel.DistributedDataParallel.html?highlight=torch%20nn%20parallel%20distributeddataparallel#torch.nn.parallel.DistributedDataParallel
+package: torch
+target: DistributedDataParallel
+title: torch.nn.parallel.distributeddataparallel.yaml
+version: 1.11.0

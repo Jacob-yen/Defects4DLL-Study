@@ -1,0 +1,8 @@
+input_params:
+- name: use_scale
+  require: false
+  style: keyword
+- name: '**kwargs'
+  require: false
+  style: keyword
+return: None

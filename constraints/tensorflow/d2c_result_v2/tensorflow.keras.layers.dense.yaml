@@ -1,0 +1,83 @@
+constraints:
+  units:
+    dtype:
+    - int
+    range:
+    - (1, inf)
+  activation:
+    dtype:
+    - enum
+    default: None
+    enum:
+    - linear
+    - relu
+    - sigmoid
+    - softmax
+    - etc.
+  use_bias:
+    dtype:
+    - bool
+    default: 'True'
+  kernel_initializer:
+    dtype:
+    - enum
+    default: 'glorot_uniform'
+    enum:
+    - glorot_uniform
+    - he_uniform
+    - zeros
+    - etc.
+  bias_initializer:
+    dtype:
+    - enum
+    default: 'zeros'
+    enum:
+    - zeros
+    - ones
+    - constant
+    - etc.
+  kernel_regularizer:
+    dtype:
+    - enum
+    default: None
+    enum:
+    - l1
+    - l2
+    - l1_l2
+  bias_regularizer:
+    dtype:
+    - enum
+    default: None
+    enum:
+    - l1
+    - l2
+    - l1_l2
+  activity_regularizer:
+    dtype:
+    - enum
+    default: None
+    enum:
+    - l1
+    - l2
+    - l1_l2
+  kernel_constraint:
+    dtype:
+    - enum
+    default: None
+    enum:
+    - max_norm
+    - non_neg
+    - unit_norm
+    - etc.
+  bias_constraint:
+    dtype:
+    - enum
+    default: None
+    enum:
+    - max_norm
+    - non_neg
+    - unit_norm
+    - etc.
+  '**kwargs':
+    dtype:
+      - string

@@ -1,0 +1,20 @@
+constraints:
+  data_source:
+    dtype:
+    - Dataset
+    ndim: 0
+    tensor_t: []
+  replacement:
+    dtype:
+    - bool
+    default: False
+  num_samples:
+    dtype:
+    - int
+    range:
+    - '[1, inf)'
+  generator:
+    dtype:
+    - Generator
+    default: None
+    ndim: 0

@@ -1,0 +1,13 @@
+input_params:
+- name: values
+  require: true
+  style: positional
+- name: row_splits
+  require: true
+  style: positional
+- name: name
+  require: false
+  style: keyword
+- name: validate
+  require: false
+  style: keyword

@@ -1,0 +1,16 @@
+constraints:
+  device:
+    default: "cpu"
+    descp: "the desired device for the generator."
+    dtype:
+    - torch.device
+inputs:
+  optional:
+    - device
+  required: []
+layer_constructor: true
+link: https://pytorch.org/docs/1.11/generated/torch.Generator.html?highlight=torch%20generator#torch.Generator
+package: torch
+target: Generator
+title: torch.Generator
+version: 1.11.0

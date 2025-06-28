@@ -1,0 +1,18 @@
+constraints:
+  dtype:
+    dtype:
+    - tf.dtype
+  shape:
+    dtype:
+    - tuple
+    structure:
+    - list
+    default:
+    - None
+    ndim:
+    - any
+  name:
+    dtype:
+    - string
+    default:
+    - None

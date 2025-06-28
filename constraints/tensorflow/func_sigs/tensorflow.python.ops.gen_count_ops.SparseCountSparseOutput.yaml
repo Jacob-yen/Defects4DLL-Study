@@ -1,0 +1,26 @@
+input_params:
+- name: indices
+  require: true
+  style: positional
+- name: values
+  require: true
+  style: positional
+- name: dense_shape
+  require: true
+  style: positional
+- name: weights
+  require: true
+  style: positional
+- name: binary_output
+  require: true
+  style: positional
+- name: minlength
+  require: false
+  style: keyword
+- name: maxlength
+  require: false
+  style: keyword
+- name: name
+  require: false
+  style: keyword
+return: None

@@ -1,0 +1,55 @@
+constraints:
+  dtype:
+    default: None
+    descp: Placeholder type.
+    dtype:
+      - tf.dtype
+  name:
+    default: None
+    descp: Optional name string for the placeholder.
+    dtype:
+    - string
+    ndim:
+    - '0'
+  ndim:
+    default: None
+    descp: Number of axes of the tensor. At least one of {`shape`, `ndim`} must be
+      specified. If both are specified, `shape` is used.
+    dtype:
+    - int
+    ndim:
+    - '0'
+    range:
+    - '[0,inf)'
+  ragged:
+    default: 'False'
+    descp: Boolean, whether the placeholder should have a ragged type. In this case,
+      values of 'None' in the 'shape' argument represent ragged dimensions. For more
+      information about RaggedTensors, see thisguide.
+    dtype:
+    - bool
+    ndim:
+    - '0'
+  shape:
+    default: None
+    descp: Shape of the placeholder (integer tuple, may include `None` entries).
+    dtype:
+    - int
+    structure:
+    - tuple
+  sparse:
+    default: 'False'
+    descp: Boolean, whether the placeholder should have a sparse type.
+    dtype:
+    - bool
+    ndim:
+    - '0'
+inputs:
+  optional:
+  - shape
+  - ndim
+  - dtype
+  - sparse
+  - name
+  - ragged
+  required: []

@@ -1,0 +1,49 @@
+constraints:
+  obj:
+    descp: 'The nn.Module, function, class type, dictionary, or list to compile.'
+    dtype:
+    - callable
+    - class
+    - nn.Module
+    ndim: 0
+  optimize:
+    dtype:
+    - bool
+    default: None
+    ndim: 0
+  _frames_up:
+    dtype:
+    - int
+    default: 0
+    ndim: 0
+    range:
+    - "(-inf,inf)"
+  _rcb:
+    dtype:
+    - string
+    default: None
+    ndim: 0
+  example_inputs:
+    descp: 'Provide example inputs to annotate the arguments for a function or nn.Module.'
+    dtype:
+      - int
+    structure:
+    - tuple
+    - Dict
+    - List
+    default: None
+    ndim: any
+inputs:
+  optional:
+  - optimize
+  - _frames_up
+  - _rcb
+  - example_inputs
+  required:
+  - obj
+layer_constructor: true
+link: https://pytorch.org/docs/1.11/generated/torch.jit.script.html?highlight=torch%20jit%20script#torch.jit.script
+package: torch
+target: script
+title: torch.jit.script
+version: 1.11.0

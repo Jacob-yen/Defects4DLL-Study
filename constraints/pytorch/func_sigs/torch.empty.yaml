@@ -1,0 +1,26 @@
+input_params:
+- name: '*size'
+  require: true
+  style: positional
+- name: out
+  require: false
+  style: keyword
+- name: dtype
+  require: false
+  style: keyword
+- name: layout
+  require: false
+  style: keyword
+- name: device
+  require: false
+  style: keyword
+- name: requires_grad
+  require: false
+  style: keyword
+- name: pin_memory
+  require: false
+  style: keyword
+- name: memory_format
+  require: false
+  style: keyword
+return: Tensor

@@ -1,0 +1,19 @@
+constraints:
+  saved_model_dir:
+    dtype:
+    - string
+  signature_keys:
+    dtype:
+    - string
+    default:
+    - None
+    structure:
+    - list
+  tags:
+    dtype:
+    - enum
+    enum:
+    - '{tf.saved_model.SERVING}'
+    - "{'serve'}"
+    default:
+    - None

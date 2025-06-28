@@ -1,0 +1,9 @@
+constraints:
+  arg0:
+    dtype:
+    - string
+link:
+package: torch
+target: parse_ir
+title: torch._C.parse_ir
+version: 1.11.0

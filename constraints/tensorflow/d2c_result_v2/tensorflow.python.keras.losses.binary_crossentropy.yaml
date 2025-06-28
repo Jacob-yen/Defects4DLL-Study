@@ -1,0 +1,22 @@
+constraints:
+  y_true:
+    dtype:
+    - list
+  y_pred:
+    dtype:
+    - list
+  from_logits:
+    default: False
+    dtype:
+      - bool
+  label_smoothing:
+    default: 0
+    dtype:
+      - float
+inputs:
+  optional:
+  - from_logits
+  - label_smoothing
+  required:
+  - y_true
+  - y_pred

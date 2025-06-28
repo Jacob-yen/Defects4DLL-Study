@@ -1,0 +1,20 @@
+input_params:
+- name: images
+  require: true
+  style: positional
+- name: size
+  require: true
+  style: positional
+- name: method
+  require: false
+  style: keyword
+- name: preserve_aspect_ratio
+  require: false
+  style: keyword
+- name: antialias
+  require: false
+  style: keyword
+- name: name
+  require: false
+  style: keyword
+return: Tensor

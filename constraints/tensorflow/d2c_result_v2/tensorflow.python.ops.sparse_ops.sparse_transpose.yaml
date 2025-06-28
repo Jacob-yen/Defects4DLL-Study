@@ -1,0 +1,17 @@
+constraints:
+  sp_input:
+    dtype:
+    - tf.tensor
+    ndim: any
+    tensor_t:
+    - tf.tensor
+  perm:
+    dtype:
+    - list
+    structure: list
+    default: None
+    ndim: 1
+  name:
+    dtype:
+    - string
+    default: None

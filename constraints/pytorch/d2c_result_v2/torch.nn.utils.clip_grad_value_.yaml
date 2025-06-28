@@ -1,0 +1,29 @@
+constraints:
+  parameters:
+    descp: an iterable of Tensors or a single Tensor that will have gradients normalized
+    doc_dtype: Iterable[Tensor] or Tensor
+    dtype:
+      - torch.tensor
+    structure:
+      - list
+    tensor_t:
+      - torch.tensor
+  clip_value:
+    doc_dtype: float
+    dtype:
+    - torch.float32
+  foreach:
+    default: None
+    dtype:
+      - bool
+inputs:
+  optional:
+  - norm_type
+  required:
+  - parameters
+  - max_norm
+link: https://pytorch.org/docs/1.5.0/nn.html#torch.nn.utils.clip_grad_norm_
+package: torch
+target: clip_grad_norm_
+title: torch.nn.utils.clip_grad_norm_
+version: 1.5.0

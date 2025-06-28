@@ -1,0 +1,98 @@
+constraints:
+  initial_value:
+    dtype:
+      - tf.tensor
+    default: None
+    tensor_t:
+      - tf.tensor
+    ndim: 'any'
+  trainable:
+    dtype:
+      - bool
+    default: 'True'
+    ndim: 0
+  collections:
+    dtype: 0
+    structure:
+      - list
+    default: None
+    ndim: 0
+  validate_shape:
+    dtype:
+      - bool
+    default: 'True'
+    ndim: 0
+  caching_device:
+    dtype:
+      - string
+    default: None
+    ndim: 0
+  name:
+    dtype:
+      - string
+    default: None
+    ndim: 0
+  dtype:
+    dtype:
+      - tf.dtype
+    default: None
+    ndim: 0
+  variable_def:
+    dtype:
+      - string
+    default: None
+    ndim: 0
+  import_scope:
+    dtype:
+      - string
+    default: None
+    ndim: 0
+  constraint:
+    dtype:
+      - string
+    structure:
+      - callable
+    default: None
+    ndim: 0
+  distribute_strategy:
+    dtype:
+      - string
+    structure: 0
+    default: None
+    ndim: 0
+  synchronization:
+    dtype:
+      - enum
+    default: 'tf.VariableSynchronization.AUTO'
+    ndim: 0
+    enum:
+      - tf.VariableSynchronization.AUTO
+      - tf.VariableSynchronization.ON_READ
+      - tf.VariableSynchronization.ON_WRITE
+      - tf.VariableSynchronization.NONE
+  aggregation:
+    dtype:
+      - enum
+    default: None
+    ndim: 0
+    enum:
+      - tf.VariableAggregation.NONE
+      - tf.VariableAggregation.SUM
+      - tf.VariableAggregation.MEAN
+      - tf.VariableAggregation.MAX
+      - tf.VariableAggregation.MIN
+  shape:
+    dtype:
+      - int
+    structure:
+      - tuple
+    default: None
+    ndim: 'any'
+  handle:
+    dtype:
+      - string
+  experimental_enable_variable_lifting:
+    dtype:
+      - bool
+    default: 'True'
+    ndim: 0

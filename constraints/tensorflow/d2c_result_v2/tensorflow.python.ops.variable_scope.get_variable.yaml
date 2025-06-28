@@ -1,0 +1,94 @@
+constraints:
+  name:
+    dtype:
+    - string
+  shape:
+    dtype:
+    - tuple
+    structure:
+    - list
+    default:
+    - None
+    ndim:
+    - any
+  dtype:
+    dtype:
+    - string
+    default:
+    - None
+  initializer:
+    dtype:
+    - tf.tensor
+    default:
+    - None
+    tensor_t:
+    - tf.tensor
+    ndim:
+    - any
+  regularizer:
+    dtype:
+    - tf.tensor
+    default:
+    - None
+  trainable:
+    dtype:
+    - bool
+    default:
+    - None
+  collections:
+    dtype:
+    - list
+    structure:
+    - list
+    default:
+    - None
+    range:
+    - '[1,inf)'
+  caching_device:
+    dtype:
+    - string
+    default:
+    - None
+  partitioner:
+    dtype:
+    - callable
+    default:
+    - None
+  validate_shape:
+    dtype:
+    - bool
+    default:
+    - True
+  use_resource:
+    dtype:
+    - bool
+    default:
+    - None
+  custom_getter:
+    dtype:
+    - callable
+    default:
+    - None
+  constraint:
+    dtype:
+    - callable
+    default:
+    - None
+  synchronization:
+    dtype:
+    - enum
+    default:
+    - tf.VariableSynchronization.AUTO
+    enum:
+    - tf.VariableSynchronization.AUTO
+    - tf.VariableSynchronization.ON_READ
+    - tf.VariableSynchronization.ON_WRITE
+  aggregation:
+    dtype:
+    - enum
+    default:
+    - tf.compat.v1.VariableAggregation.NONE
+    enum:
+    - tf.compat.v1.VariableAggregation.NONE
+    - tf.compat.v1.VariableAggregation.SUM
+    - tf.compat.v1.VariableAggregation.MEAN

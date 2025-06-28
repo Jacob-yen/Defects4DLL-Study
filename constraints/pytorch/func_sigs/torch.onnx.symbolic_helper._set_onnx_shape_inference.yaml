@@ -1,0 +1,4 @@
+input_params:
+- name: onnx_shape_inference
+  require: true
+  style: positional

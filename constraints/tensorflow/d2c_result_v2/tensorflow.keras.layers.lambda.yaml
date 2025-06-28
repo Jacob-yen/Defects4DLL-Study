@@ -1,0 +1,6 @@
+constraints:
+  function:
+    dtype:
+      - tf.function
+    default:
+      - lambda inputs: inputs[0]

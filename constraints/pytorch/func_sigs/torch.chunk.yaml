@@ -1,0 +1,11 @@
+input_params:
+- name: input
+  require: true
+  style: positional
+- name: chunks
+  require: true
+  style: positional
+- name: dim
+  require: false
+  style: keyword
+return: Tensor

@@ -1,0 +1,16 @@
+constraints:
+  backend:
+    dtype:
+    - string
+    ndim: 0
+    default: 'x86'
+    enum:
+    - x86
+    - fbgemm
+    - qnnpack
+    - onednn
+  version:
+    dtype:
+    - int
+    ndim: 0
+    default: 1

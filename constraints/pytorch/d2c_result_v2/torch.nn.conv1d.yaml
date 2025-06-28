@@ -1,0 +1,61 @@
+constraints:
+  in_channels:
+    dtype:
+    - int
+    range:
+    - '[1, inf)'
+  out_channels:
+    dtype:
+    - int
+    range:
+    - '[1, inf)'
+  kernel_size:
+    dtype:
+    - int
+    - tuple
+  stride:
+    dtype:
+    - int
+    - tuple
+    default:
+    - 1
+  padding:
+    dtype:
+    - int
+    - tuple
+    - string
+    default:
+    - 0
+    enum:
+    - zeros
+    - reflect
+    - replicate
+    - circular
+  padding_mode:
+    dtype:
+    - enum
+    default:
+    - zeros
+    enum:
+    - zeros
+    - reflect
+    - replicate
+    - circular
+  dilation:
+    dtype:
+    - int
+    - tuple
+    default:
+    - 1
+  groups:
+    dtype:
+    - int
+    default:
+    - 1
+    range:
+    - '[1, inf)'
+  bias:
+    dtype:
+    - bool
+    default:
+    - true

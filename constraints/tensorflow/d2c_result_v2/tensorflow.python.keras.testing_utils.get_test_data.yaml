@@ -1,0 +1,26 @@
+constraints:
+  train_samples:
+    dtype:
+    - int
+    range:
+    - '(0,inf)'
+  test_samples:
+    dtype:
+    - int
+    range:
+    - '(0,inf)'
+  input_shape:
+    dtype:
+    - int
+    structure:
+    - tuple
+  num_classes:
+    dtype:
+    - int
+    range:
+    - '(0,inf)'
+  random_seed:
+    dtype:
+    - int
+    range:
+    - '(0,inf)'

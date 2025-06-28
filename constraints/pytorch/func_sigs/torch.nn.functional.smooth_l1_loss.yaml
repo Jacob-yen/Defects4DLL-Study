@@ -1,0 +1,32 @@
+input_params:
+- name: input
+  require: true
+  style: positional
+  type:
+  - torch.Tensor
+- name: target
+  require: true
+  style: positional
+  type:
+  - torch.Tensor
+- name: size_average
+  require: false
+  style: positional
+  type:
+  - Union[bool, NoneType]
+- name: reduce
+  require: false
+  style: positional
+  type:
+  - Union[bool, NoneType]
+- name: reduction
+  require: false
+  style: positional
+  type:
+  - str
+- name: beta
+  require: false
+  style: positional
+  type:
+  - float
+return: torch.Tensor

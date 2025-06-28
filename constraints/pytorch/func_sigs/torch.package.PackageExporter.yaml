@@ -1,0 +1,16 @@
+input_params:
+- name: f
+  require: true
+  style: positional
+  type:
+  - Union[str, pathlib.Path, BinaryIO]
+- name: importer
+  require: false
+  style: positional
+  type:
+  - Union[torch.package.importer.Importer, Sequence[torch.package.importer.Importer]]
+- name: verbose
+  require: false
+  style: positional
+  type:
+  - Union[torch.package.importer.Importer, Sequence[torch.package.importer.Importer]]

@@ -1,0 +1,35 @@
+input_params:
+  - name: model
+    require: true
+    style: positional
+  - name: args
+    require: true
+    style: positional
+  - name: verbose
+    require: false
+    style: keyword
+  - name: input_names
+    require: false
+    style: keyword
+  - name: output_names
+    require: false
+    style: keyword
+  - name: operator_export_type
+    require: false
+    style: keyword
+  - name: do_constant_folding
+    require: false
+    style: keyword
+  - name: _disable_torch_constant_prop
+    require: false
+    style: keyword
+  - name: fixed_batch_size
+    require: false
+    style: keyword
+  - name: training
+    require: false
+    style: keyword
+  - name: dynamic_axes
+    require: false
+    style: keyword
+return: None

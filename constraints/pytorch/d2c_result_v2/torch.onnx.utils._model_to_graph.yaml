@@ -1,0 +1,52 @@
+constraints:
+  model:
+    dtype:
+    - null
+  args:
+    dtype:
+    - tuple
+  verbose:
+    dtype:
+    - bool
+    default:
+    - false
+  input_names:
+    dtype:
+    - list
+    default:
+    - None
+  output_names:
+    dtype:
+    - list
+    default:
+    - None
+  operator_export_type:
+    dtype:
+    - object
+    default:
+    - _C_onnx.OperatorExportTypes.ONNX
+  do_constant_folding:
+    dtype:
+    - bool
+    default:
+    - true
+  _disable_torch_constant_prop:
+    dtype:
+    - bool
+    default:
+    - false
+  fixed_batch_size:
+    dtype:
+    - bool
+    default:
+    - false
+  training:
+    dtype:
+    - object
+    default:
+    - _C_onnx.TrainingMode.EVAL
+  dynamic_axes:
+    dtype:
+    - dict
+    default:
+    - None

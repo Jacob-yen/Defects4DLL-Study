@@ -1,0 +1,29 @@
+constraints:
+  input:
+    descp: A `Tensor`. A Tensor to broadcast.
+    dtype:
+      - tf.tensor
+    tensor_t:
+    - tf.tensor
+  name:
+    default: None
+    descp: A name for the operation (optional).
+    dtype:
+    - string
+    ndim:
+    - '0'
+  shape:
+    descp: 'A `Tensor`. Must be one of the following types: `int32`, `int64`. An 1-D
+      `int` Tensor. The shape of the desired output.'
+    dtype:
+    - int
+    ndim:
+    - '1'
+    tensor_t:
+    - tf.tensor
+inputs:
+  optional:
+  - name
+  required:
+  - input
+  - shape

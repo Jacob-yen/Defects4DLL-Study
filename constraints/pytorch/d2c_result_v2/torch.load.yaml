@@ -1,0 +1,35 @@
+constraints:
+  f:
+    descp: a file-like object (has to implement `read()`, :meth`readline`, :meth`tell`,
+      and :meth`seek`), or a string containing a file name
+    dtype:
+      - string
+  map_location:
+    default: None
+    descp: a function, `torch.device`, string or a dict specifying how to remap storage
+      locations
+    dtype:
+    - nn.Module
+    structure:
+    - dict
+  weights_only:
+    dtype:
+    - torch.weights_only
+  pickle_module:
+    default: pickle
+    descp: module used for unpickling metadata and objects (has to match the `pickle_module`
+      used to serialize file)
+    dtype:
+    - pickle
+inputs:
+  optional:
+  - map_location
+  - pickle_module
+  required:
+  - f
+  - '**pickle_load_args'
+link: https://pytorch.org/docs/1.5.0/torch.html#torch.load
+package: torch
+target: load
+title: torch.load
+version: 1.5.0

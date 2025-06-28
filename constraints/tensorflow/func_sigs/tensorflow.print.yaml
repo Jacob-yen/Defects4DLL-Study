@@ -1,0 +1,23 @@
+input_params:
+- name: '*inputs'
+  require: true
+  style: positional
+- name: output_stream
+  require: false
+  style: keyword
+- name: summarize
+  require: false
+  style: keyword
+- name: sep
+  require: false
+  style: keyword
+- name: end
+  require: false
+  style: keyword
+- name: name
+  require: false
+  style: keyword
+- name: '**kwargs'
+  require: false
+  style: keyword
+return: Tensor

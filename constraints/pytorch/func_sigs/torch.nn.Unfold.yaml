@@ -1,0 +1,14 @@
+input_params:
+- name: kernel_size
+  require: true
+  style: positional
+- name: dilation
+  require: false
+  style: keyword
+- name: padding
+  require: false
+  style: keyword
+- name: stride
+  require: false
+  style: keyword
+return: Tensor

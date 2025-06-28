@@ -1,0 +1,17 @@
+constraints:
+  bytes_or_text:
+    descp: A `bytes`, `str`, or `unicode` object.
+    dtype:
+    - string
+  encoding:
+    default: utf-8
+    descp: A string indicating the charset for decoding unicode.
+    dtype:
+    - string
+    ndim:
+    - '0'
+inputs:
+  optional:
+  - encoding
+  required:
+  - bytes_or_text

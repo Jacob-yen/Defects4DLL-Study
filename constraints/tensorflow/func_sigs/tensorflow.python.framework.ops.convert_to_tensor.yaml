@@ -1,0 +1,14 @@
+input_params:
+- name: value
+  require: true
+  style: positional
+- name: dtype
+  require: false
+  style: keyword
+- name: dtype_hint
+  require: false
+  style: keyword
+- name: name
+  require: false
+  style: keyword
+return: None

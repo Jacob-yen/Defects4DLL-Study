@@ -1,0 +1,13 @@
+constraints:
+  tensor:
+    dtype:
+      - tf.tensor
+  shape:
+    dtype:
+    - int
+    - list
+  name:
+    dtype:
+    - string
+    default:
+    - None

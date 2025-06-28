@@ -1,0 +1,11 @@
+input_params:
+- name: data
+  require: true
+  style: positional
+- name: dtype
+  require: false
+  style: positional
+- name: device
+  require: false
+  style: positional
+return: Tensor

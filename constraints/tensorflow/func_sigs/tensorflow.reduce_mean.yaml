@@ -1,0 +1,22 @@
+input_params:
+- name: input_tensor
+  require: true
+  style: positional
+  type:
+  - list
+- name: axis
+  require: false
+  style: keyword
+  type:
+  - int
+- name: keepdims
+  require: false
+  style: keyword
+  type:
+  - bool
+- name: name
+  require: false
+  style: keyword
+  type:
+  - string
+return: Tensor

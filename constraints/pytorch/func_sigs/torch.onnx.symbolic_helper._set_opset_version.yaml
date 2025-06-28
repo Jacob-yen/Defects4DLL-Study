@@ -1,0 +1,5 @@
+input_params:
+  - name: opset_version
+    require: true
+    style: keyword
+return: None

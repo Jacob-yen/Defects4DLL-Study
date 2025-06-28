@@ -1,0 +1,16 @@
+input_params:
+- name: callbacks
+  require: false
+  style: keyword
+- name: add_history
+  require: false
+  style: keyword
+- name: add_progbar
+  require: false
+  style: keyword
+- name: model
+  require: false
+  style: keyword
+- name: '**params'
+  require: false
+  style: keyword

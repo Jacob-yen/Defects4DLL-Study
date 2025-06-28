@@ -1,0 +1,4 @@
+constraints:
+  onnx_shape_inference:
+    dtype:
+    - bool

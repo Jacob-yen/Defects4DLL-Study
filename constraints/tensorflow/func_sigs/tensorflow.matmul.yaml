@@ -1,0 +1,29 @@
+input_params:
+- name: a
+  require: true
+  style: positional
+- name: b
+  require: true
+  style: positional
+- name: transpose_a
+  require: false
+  style: keyword
+- name: transpose_b
+  require: false
+  style: keyword
+- name: adjoint_a
+  require: false
+  style: keyword
+- name: adjoint_b
+  require: false
+  style: keyword
+- name: a_is_sparse
+  require: false
+  style: keyword
+- name: b_is_sparse
+  require: false
+  style: keyword
+- name: name
+  require: false
+  style: keyword
+return: Tensor

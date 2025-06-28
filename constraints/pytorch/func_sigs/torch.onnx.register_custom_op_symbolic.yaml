@@ -1,0 +1,10 @@
+input_params:
+- name: symbolic_name
+  require: true
+  style: positional
+- name: symbolic_fn
+  require: true
+  style: positional
+- name: opset_version
+  require: true
+  style: positional

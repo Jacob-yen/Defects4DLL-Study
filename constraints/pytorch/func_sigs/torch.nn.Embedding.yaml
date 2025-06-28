@@ -1,0 +1,48 @@
+input_params:
+- name: num_embeddings
+  require: true
+  style: positional
+  type:
+  - int
+- name: embedding_dim
+  require: true
+  style: positional
+  type:
+  - int
+- name: padding_idx
+  require: false
+  style: positional
+  type:
+  - Union[int, NoneType]
+- name: max_norm
+  require: false
+  style: positional
+  type:
+  - Union[float, NoneType]
+- name: norm_type
+  require: false
+  style: positional
+  type:
+  - float
+- name: scale_grad_by_freq
+  require: false
+  style: positional
+  type:
+  - bool
+- name: sparse
+  require: false
+  style: positional
+  type:
+  - bool
+- name: _weight
+  require: false
+  style: positional
+  type:
+  - Union[torch.Tensor, NoneType]
+- name: device
+  require: false
+  style: positional
+- name: dtype
+  require: false
+  style: positional
+return: None

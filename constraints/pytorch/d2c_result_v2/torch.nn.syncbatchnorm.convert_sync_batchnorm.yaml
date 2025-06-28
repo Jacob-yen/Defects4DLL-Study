@@ -1,0 +1,23 @@
+check_nan: true
+constraints:
+  module:
+    descp: module containing one or more BatchNorm*D layers
+    doc_dtype: Module
+    dtype:
+      - nn.Module
+  process_group:
+    descp: process group to scope synchronization, default is the whole world
+    doc_dtype: Module
+    dtype:
+      - nn.Module
+inputs:
+  optional:
+    - process_group
+  required:
+    - module
+layer_constructor: true
+link: https://pytorch.org/docs/1.11/generated/torch.nn.SyncBatchNorm.html?highlight=convert_sync_batchnorm#torch.nn.SyncBatchNorm.convert_sync_batchnorm
+package: torch
+target: convert_sync_batchnorm
+title: torch.nn.SyncBatchNorm.convert_sync_batchnorm
+version: 1.11.0

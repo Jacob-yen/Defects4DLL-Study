@@ -1,0 +1,14 @@
+input_params:
+- name: input
+  require: true
+  style: positional
+- name: spacing
+  require: false
+  style: keyword
+- name: dim
+  require: false
+  style: keyword
+- name: edge_order
+  require: false
+  style: keyword
+return: Tensor

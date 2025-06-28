@@ -1,0 +1,29 @@
+input_params:
+- name: image_size
+  require: true
+  style: positional
+- name: bounding_boxes
+  require: true
+  style: positional
+- name: seed
+  require: false
+  style: keyword
+- name: min_object_covered
+  require: false
+  style: keyword
+- name: aspect_ratio_range
+  require: false
+  style: keyword
+- name: area_range
+  require: false
+  style: keyword
+- name: max_attempts
+  require: false
+  style: keyword
+- name: use_image_if_no_bounding_boxes
+  require: false
+  style: keyword
+- name: name
+  require: false
+  style: keyword
+return: None

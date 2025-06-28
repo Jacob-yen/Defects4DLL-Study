@@ -1,0 +1,10 @@
+input_params:
+- name: sp_input
+  require: true
+  style: positional
+- name: default_value
+  require: true
+  style: positional
+- name: name
+  require: false
+  style: keyword

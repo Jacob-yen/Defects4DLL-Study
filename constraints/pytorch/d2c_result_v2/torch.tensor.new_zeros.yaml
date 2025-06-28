@@ -1,0 +1,16 @@
+constraints:
+  dtype:
+    dtype:
+      - torch.dtype
+  device:
+    dtype:
+      - torch.device
+  requires_grad:
+    dtype:
+      - bool
+  layout:
+    dtype:
+      - torch.layout
+  pin_memory:
+    dtype:
+      - bool

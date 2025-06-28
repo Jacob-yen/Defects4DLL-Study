@@ -1,0 +1,17 @@
+constraints:
+  layers:
+    dtype:
+    - object
+    default:
+    - None
+    ndim:
+    - any
+    structure:
+    - list
+  name:
+    dtype:
+    - string
+    default:
+    - None
+    ndim:
+    - 0

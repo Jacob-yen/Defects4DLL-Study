@@ -1,0 +1,81 @@
+constraints:
+  input:
+    dtype:
+      - torch.tensor
+    tensor_t:
+      - torch.tensor
+  weight:
+    dtype:
+      - torch.Tensor
+    tensor_t:
+      - torch.tensor
+    ndim:
+      - any
+  offsets:
+    dtype:
+      - torch.Tensor
+    default:
+      - None
+    tensor_t:
+      - torch.tensor
+    shape:
+      - any
+  max_norm:
+    dtype:
+      - float
+    default:
+      - None
+    ndim:
+      - 0
+    range:
+      - '[0, inf)'
+  norm_type:
+    dtype:
+      - float
+    default:
+      - 2
+    ndim:
+      - 0
+    range:
+      - '[1, inf)'
+  scale_grad_by_freq:
+    dtype:
+      - bool
+    default:
+      - False
+    ndim:
+      - 0
+  mode:
+    dtype:
+      - string
+    default:
+      - 'mean'
+    ndim:
+      - 0
+    enum:
+      - 'sum'
+      - 'mean'
+      - 'max'
+  sparse:
+    dtype:
+      - bool
+    default:
+      - False
+  per_sample_weights:
+    dtype:
+      - torch.Tensor
+    default:
+      - None
+    ndim:
+      - any
+  include_last_offset:
+    dtype:
+      - bool
+    default:
+      - False
+  padding_idx:
+    dtype:
+      - int
+    default:
+      - None
+

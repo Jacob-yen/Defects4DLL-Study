@@ -1,0 +1,13 @@
+input_params:
+- name: params
+  require: true
+  style: positional
+- name: ids
+  require: true
+  style: positional
+- name: max_norm
+  require: false
+  style: keyword
+- name: name
+  require: false
+  style: keyword

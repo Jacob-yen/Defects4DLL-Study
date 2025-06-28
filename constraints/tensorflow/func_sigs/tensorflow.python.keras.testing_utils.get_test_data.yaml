@@ -1,0 +1,16 @@
+input_params:
+- name: train_samples
+  require: true
+  style: positional
+- name: test_samples
+  require: true
+  style: positional
+- name: input_shape
+  require: true
+  style: positional
+- name: num_classes
+  require: true
+  style: positional
+- name: random_seed
+  require: false
+  style: keyword

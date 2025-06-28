@@ -1,0 +1,5 @@
+input_params:
+- name: device
+  require: true
+  style: positional
+return: Tensor

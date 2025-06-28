@@ -1,0 +1,28 @@
+constraints:
+  callbacks:
+    dtype:
+    - object
+    default:
+    - None
+    structure:
+    - list
+  add_history:
+    dtype:
+    - bool
+    default:
+    - False
+  add_progbar:
+    dtype:
+    - bool
+    default:
+    - False
+  model:
+    dtype:
+    - object
+    default:
+    - None
+  '**params':
+    dtype:
+    - string
+    default:
+    - None

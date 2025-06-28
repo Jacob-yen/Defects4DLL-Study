@@ -1,0 +1,145 @@
+constraints:
+  model:
+    dtype:
+    - torch.nn.Module
+    - torch.jit.ScriptModule
+    - torch.jit.ScriptFunction
+  args:
+    dtype:
+    - tuple
+    - torch.Tensor
+    tensor_t:
+    - torch.tensor
+    ndim:
+    - any
+  f:
+    dtype:
+    - string
+  export_params:
+    dtype:
+    - bool
+    default:
+    - True
+  verbose:
+    dtype:
+    - bool
+    default:
+    - False
+  _retain_param_name:
+    dtype:
+    - string
+  example_outputs:
+    dtype:
+    - string
+  strip_doc_string:
+    dtype:
+    - string
+  enable_onnx_checker:
+    dtype:
+    - string
+  use_external_data_format:
+    dtype:
+    - string
+  device:
+    dtype:
+    - torch.device
+  training:
+    dtype:
+    - string
+    enum:
+    - TrainingMode.EVAL
+    - TrainingMode.PRESERVE
+    - TrainingMode.TRAINING
+    default:
+    - TrainingMode.EVAL
+  input_names:
+    dtype:
+    - string
+    structure:
+    - list
+    default:
+    - empty list
+  output_names:
+    dtype:
+    - string
+    structure:
+    - list
+    default:
+    - empty list
+  operator_export_type:
+    dtype:
+    - string
+    enum:
+    - None
+    - OperatorExportTypes.ONNX
+    - OperatorExportTypes.ONNX_FALLTHROUGH
+    - OperatorExportTypes.ONNX_ATEN
+    default:
+    - None
+  opset_version:
+    dtype:
+    - int
+    range:
+    - '[7, 15]'
+    default:
+    - 9
+  do_constant_folding:
+    dtype:
+    - bool
+    default:
+    - True
+  dynamic_axes:
+    dtype:
+    - string
+    structure:
+    - list
+    - dict
+    default:
+    - empty dict
+  keep_initializers_as_inputs:
+    dtype:
+    - bool
+    default:
+    - None
+  custom_opsets:
+    dtype:
+    - string
+    - int
+    structure:
+    - dict
+    default:
+    - empty dict
+  export_modules_as_functions:
+    dtype:
+    - bool
+    default:
+    - False
+inputs:
+  optional:
+  - export_params
+  - verbose
+  - training
+  - input_names
+  - output_names
+  - aten
+  - export_raw_ir
+  - operator_export_type
+  - opset_version
+  - _retain_param_name
+  - do_constant_folding
+  - example_outputs
+  - strip_doc_string
+  - dynamic_axes
+  - keep_initializers_as_inputs
+  - custom_opsets
+  - enable_onnx_checker
+  - use_external_data_format
+  required:
+  - model
+  - args
+  - f
+link: https://pytorch.org/docs/1.5.0/onnx.html#torch.onnx.export
+package: torch
+target: export
+title: torch.onnx.export
+version: 1.5.0

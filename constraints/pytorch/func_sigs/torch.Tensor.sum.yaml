@@ -1,0 +1,11 @@
+input_params:
+- name: dim
+  require: false
+  style: keyword
+- name: keepdim
+  require: false
+  style: keyword
+- name: dtype
+  require: false
+  style: keyword
+return: Tensor

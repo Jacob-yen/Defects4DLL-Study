@@ -1,0 +1,5 @@
+input_params:
+- name: other
+  require: true
+  style: positional
+return: Tensor

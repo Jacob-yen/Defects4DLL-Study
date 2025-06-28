@@ -1,0 +1,8 @@
+input_params:
+- name: graph
+  require: false
+  style: keyword
+- name: profiler
+  require: false
+  style: keyword
+return: Tensor

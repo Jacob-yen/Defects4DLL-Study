@@ -1,0 +1,13 @@
+input_params:
+- name: module
+  require: true
+  style: positional
+- name: device_ids
+  require: false
+  style: positional
+- name: output_device
+  require: false
+  style: positional
+- name: dim
+  require: false
+  style: positional

@@ -1,0 +1,14 @@
+input_params:
+- name: max_value
+  require: false
+  style: keyword
+- name: negative_slope
+  require: false
+  style: keyword
+- name: threshold
+  require: false
+  style: keyword
+- name: dtype
+  require: false
+  style: keyword
+return: Tensor

@@ -1,0 +1,7 @@
+input_params:
+- name: cuda_only
+  require: false
+  style: keyword
+- name: min_cuda_compute_capability
+  require: false
+  style: keyword

@@ -1,0 +1,11 @@
+input_params:
+- name: input
+  require: true
+  style: positional
+- name: size
+  require: false
+  style: keyword
+- name: scale_factor
+  require: false
+  style: keyword
+return: Tensor

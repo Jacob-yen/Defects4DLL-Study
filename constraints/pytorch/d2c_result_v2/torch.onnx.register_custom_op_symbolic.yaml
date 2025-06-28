@@ -1,0 +1,31 @@
+check_nan: true
+constraints:
+  symbolic_name:
+    descp: 'The name of the custom operator in “<domain>::<op>” format.'
+    dtype:
+    - string
+    ndim: 0
+  symbolic_fn:
+    descp: 'A function that takes in the ONNX graph and the input arguments to the current operator, and returns new operator nodes to add to the graph.'
+    dtype:
+    - Callable
+    ndim: 0
+  opset_version:
+    descp: 'The ONNX opset version in which to register.'
+    dtype:
+    - int
+    ndim: 0
+    range:
+    - "(-inf,inf)"
+inputs:
+  optional: []
+  required:
+    - symbolic_name
+    - symbolic_fn
+    - opset_version
+layer_constructor: true
+link: https://pytorch.org/docs/1.11/onnx.html?highlight=register_custom_op_symbolic#torch.onnx.register_custom_op_symbolic
+package: torch
+target: register_custom_op_symbolic
+title: torch.onnx.register_custom_op_symbolic
+version: 1.11.0

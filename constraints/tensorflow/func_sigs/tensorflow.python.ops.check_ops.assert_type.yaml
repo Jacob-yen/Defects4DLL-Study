@@ -1,0 +1,14 @@
+input_params:
+- name: tensor
+  require: true
+  style: positional
+- name: tf_type
+  require: true
+  style: positional
+- name: message
+  require: false
+  style: keyword
+- name: name
+  require: false
+  style: keyword
+return: None

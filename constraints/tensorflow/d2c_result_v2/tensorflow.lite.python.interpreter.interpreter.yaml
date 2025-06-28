@@ -1,0 +1,36 @@
+constraints:
+  inputs:
+    model_path:
+      dtype:
+      - string
+      default: None
+      ndim: 0
+    model_content:
+      dtype: any
+      default: None
+      ndim: 0
+    experimental_delegates:
+      dtype:
+      - string
+      default: None
+      structure:
+      - list
+    num_threads:
+      dtype:
+      - int
+      default: None
+      range:
+      - '[-1, inf)'
+    experimental_op_resolver_type:
+      dtype:
+      - enum
+      default: tf.lite.experimental.OpResolverType.AUTO
+      enum:
+      - tf.lite.experimental.OpResolverType.AUTO
+      - tf.lite.experimental.OpResolverType.BUILTIN
+      - tf.lite.experimental.OpResolverType.BUILTIN_WITHOUT_DEFAULT_DELEGATES
+    experimental_preserve_all_tensors:
+      dtype:
+      - bool
+      default:
+      - 'False'

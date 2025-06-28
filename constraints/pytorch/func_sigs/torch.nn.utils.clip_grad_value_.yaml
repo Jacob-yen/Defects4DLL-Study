@@ -1,0 +1,11 @@
+input_params:
+- name: parameters
+  require: true
+  style: positional
+- name: clip_value
+  require: true
+  style: positional
+- name: foreach
+  require: false
+  style: positional
+return: torch.Tensor

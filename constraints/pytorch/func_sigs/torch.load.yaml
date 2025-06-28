@@ -1,0 +1,10 @@
+input_params:
+- name: f
+  require: true
+  style: positional
+- name: map_location
+  require: false
+  style: positional
+- name: pickle_module
+  require: false
+  style: positional

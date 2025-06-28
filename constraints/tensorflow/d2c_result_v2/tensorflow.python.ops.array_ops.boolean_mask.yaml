@@ -1,0 +1,32 @@
+constraints:
+  data:
+    descp: A potentially ragged tensor.
+    dtype:
+      - tf.tensor
+      - list
+    tensor_t:
+    - tf.tensor
+  mask:
+    descp: A potentially ragged boolean tensor.  `mask`'s shape must be a prefix of
+      `data`'s shape.  `rank(mask)` must be known statically.
+    dtype:
+    - list
+    tensor_t:
+    - tf.tensor
+  axis:
+    default: None
+    dtype:
+      - int
+  name:
+    default: None
+    descp: A name prefix for the returned tensor (optional).
+    dtype:
+    - string
+    ndim:
+    - '0'
+inputs:
+  optional:
+  - name
+  required:
+  - data
+  - mask

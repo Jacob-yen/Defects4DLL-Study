@@ -1,0 +1,32 @@
+input_params:
+- name: input
+  require: true
+  style: positional
+  type:
+  - torch.Tensor
+- name: size
+  require: false
+  style: positional
+  type:
+  - Union[int, NoneType]
+- name: scale_factor
+  require: false
+  style: positional
+  type:
+  - Union[List[float], NoneType]
+- name: mode
+  require: false
+  style: positional
+  type:
+  - str
+- name: align_corners
+  require: false
+  style: positional
+  type:
+  - Union[bool, NoneType]
+- name: recompute_scale_factor
+  require: false
+  style: positional
+  type:
+  - Union[bool, NoneType]
+return: torch.Tensor

@@ -1,0 +1,28 @@
+check_nan: true
+constraints:
+  f:
+    dtype:
+      - string
+    ndim: 0
+  importer:
+    dtype:
+      - Importer
+    structure:
+      - single_importer
+      - sequence_of_importers
+    default: torch.package.importer._SysImporter
+    ndim: 0
+  verbose:
+    dtype:
+      - bool
+inputs:
+  optional:
+    - importer
+  required:
+    - f
+layer_constructor: true
+link: https://pytorch.org/docs/1.11/package.html?highlight=torch%20package%20packageexporter#torch.package.PackageExporter
+package: torch
+target: PackageExporter
+title: torch.package.PackageExporter
+version: 1.11.0

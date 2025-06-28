@@ -1,0 +1,5 @@
+input_params:
+- name: variable
+  require: true
+  style: positional
+return: float

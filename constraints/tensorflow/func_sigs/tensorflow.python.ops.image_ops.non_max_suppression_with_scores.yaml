@@ -1,0 +1,23 @@
+input_params:
+- name: boxes
+  require: true
+  style: positional
+- name: scores
+  require: true
+  style: positional
+- name: max_output_size
+  require: true
+  style: positional
+- name: score_threshold
+  require: false
+  style: keyword
+- name: soft_nms_sigma
+  require: false
+  style: keyword
+- name: iou_threshold
+  require: false
+  style: keyword
+- name: name
+  require: false
+  style: keyword
+return: None

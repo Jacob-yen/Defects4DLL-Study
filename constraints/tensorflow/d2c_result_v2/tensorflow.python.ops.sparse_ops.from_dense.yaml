@@ -1,0 +1,21 @@
+constraints:
+  name:
+    default: None
+    descp: Optional name for the op.
+    dtype:
+    - string
+    ndim:
+    - '0'
+  tensor:
+    descp: A dense `Tensor` to be converted to a `SparseTensor`.
+    dtype:
+    - SparseTensor
+    - tf.tensor
+    tensor_t:
+    - SparseTensor
+    - tf.tensor
+inputs:
+  optional:
+  - name
+  required:
+  - tensor

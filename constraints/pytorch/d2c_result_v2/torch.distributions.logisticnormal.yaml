@@ -1,0 +1,34 @@
+constraints:
+  loc:
+    dtype:
+    - float
+    - torch.tensor
+    tensor_t: torch.tensor
+    ndim: any
+    range:
+      - '[-inf, inf]'
+  scale:
+    dtype:
+    - float
+    - torch.tensor
+    tensor_t: torch.tensor
+    ndim: any
+    range:
+      - '[-inf, inf]'
+  validate_args:
+    dtype:
+    - bool
+    default: None
+    ndim: 0
+inputs:
+  optional:
+    - validate_args
+  required:
+    - scale
+    - loc
+layer_constructor: true
+link:
+package: torch
+target: LogisticNormal
+title: torch.distributions.LogisticNormal
+version: 1.11.0

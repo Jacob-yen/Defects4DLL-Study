@@ -1,0 +1,25 @@
+constraints:
+  name:
+    descp: A name for the summary to be written.
+    dtype:
+    - string
+    ndim:
+    - '0'
+  profiler_outdir:
+    default: None
+    dtype:
+      - dict
+    descp: Output directory for profiler. It is required when profiler is enabled
+      when trace was started. Otherwise, it is ignored.
+  step:
+    default: None
+    dtype:
+      - int
+    descp: Explicit `int64`-castable monotonic step value for this summary. If omitted,
+      this defaults to `tf.summary.experimental.get_step()`, which must not be None.
+inputs:
+  optional:
+  - step
+  - profiler_outdir
+  required:
+  - name

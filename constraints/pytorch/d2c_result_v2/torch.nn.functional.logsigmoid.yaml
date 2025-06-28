@@ -1,0 +1,19 @@
+check_nan: true
+constraints:
+  input:
+    ndim:
+    - 'any'
+    dtype:
+    - torch.tensor
+    tensor_t:
+    - torch.tensor
+inputs:
+  optional:
+  required:
+  - input
+layer_constructor: true
+link: https://pytorch.org/docs/1.11/generated/torch.nn.functional.softplus.html?highlight=softplus#torch.nn.functional.softplus
+package: torch
+target: softplus
+title: torch.nn.functional.softplus
+version: 1.11.0

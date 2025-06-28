@@ -1,0 +1,9 @@
+constraints:
+  split_size:
+    dtype:
+      - int
+      - list
+  dim:
+    default: 0
+    dtype:
+      - int

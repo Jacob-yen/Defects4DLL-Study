@@ -1,0 +1,35 @@
+constraints:
+  model_layers:
+    dtype:
+    - list
+    default: None
+  input_shape:
+    dtype:
+    - tuple
+    default: None
+    ndim: any
+  input_dtype:
+    dtype:
+    - tf.dtype
+    default: None
+  name:
+    dtype:
+    - string
+    default: None
+  input_ragged:
+    dtype:
+    - bool
+    default: None
+  input_sparse:
+    dtype:
+    - bool
+    default: None
+  model_type:
+    dtype:
+    - enum
+    default: None
+    enum:
+    - subclass
+    - subclass_custom_build
+    - sequential
+    - functional

@@ -1,0 +1,33 @@
+constraints:
+  input:
+    descp: the input tensor.
+    doc_dtype: Tensor
+    dtype:
+      - torch.tensor
+  spacing:
+    default: 1
+    dtype:
+      - int
+      - tuple
+      - list
+  dim:
+    default: None
+    dtype:
+      - int
+      - float
+  edge_order:
+    default: 1
+    dtype:
+      - int
+      - float
+inputs:
+  optional:
+  - out
+  required:
+  - input
+link: https://pytorch.org/docs/1.5.0/torch.html#torch.pow
+package: torch
+ret_type: Tensor
+target: pow
+title: torch.pow
+version: 1.5.0

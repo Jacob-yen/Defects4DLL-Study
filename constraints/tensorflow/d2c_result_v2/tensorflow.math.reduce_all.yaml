@@ -1,0 +1,20 @@
+constraints:
+  input_tensor:
+    dtype:
+      - list
+      - tf.tensor
+  axis:
+    dtype:
+    - int
+    default:
+    - None
+  keepdims:
+    dtype:
+      - bool
+    default:
+      - False
+  name:
+    dtype:
+      - string
+    default:
+      - None

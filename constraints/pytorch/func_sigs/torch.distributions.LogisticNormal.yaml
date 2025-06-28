@@ -1,0 +1,10 @@
+input_params:
+- name: loc
+  require: true
+  style: positional
+- name: scale
+  require: true
+  style: positional
+- name: validate_args
+  require: false
+  style: positional

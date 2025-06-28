@@ -1,0 +1,29 @@
+constraints:
+  out_type:
+    dtype:
+      - tf.dtype
+    enum:
+      - half
+      - float
+      - double
+      - int32
+      - uint16
+      - uint8
+      - int16
+      - int8
+      - int64
+  little_endian:
+    dtype:
+      - bool
+    default:
+      - True
+  fixed_length:
+    dtype:
+      - int
+    default:
+      - None
+  name:
+    dtype:
+      - string
+    default:
+      - None

@@ -1,0 +1,8 @@
+input_params:
+- name: axis
+  require: true
+  style: positional
+- name: kwargs
+  require: false
+  style: keyword
+return: Tensor

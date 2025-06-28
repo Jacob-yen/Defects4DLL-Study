@@ -1,0 +1,20 @@
+constraints:
+  sp_input:
+    dtype:
+    - tf.tensor
+    ndim:
+    - 2
+    shape:
+    - '[N, M]'
+    tensor_t:
+    - tf.tensor
+  default_value:
+    dtype:
+    - int
+    ndim:
+    - 0
+  name:
+    default:
+    - None
+    dtype:
+    - string

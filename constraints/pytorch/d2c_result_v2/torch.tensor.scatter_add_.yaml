@@ -1,0 +1,10 @@
+constraints:
+  dim:
+    dtype:
+      - int
+  index:
+    dtype:
+      - torch.tensor
+  src:
+    dtype:
+      - torch.tensor

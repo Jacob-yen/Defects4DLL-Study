@@ -1,0 +1,36 @@
+constraints:
+  message:
+    default: None
+    descp: A string to prefix to the default message.
+    dtype:
+    - string
+    ndim:
+    - '0'
+  name:
+    default: None
+    descp: A name for this operation. Defaults to "assert_type"
+    dtype:
+    - string
+    ndim:
+    - '0'
+  tensor:
+    descp: A `Tensor`.
+    dtype:
+      - tf.tensor
+    tensor_t:
+    - tf.tensor
+  tf_type:
+    descp: A tensorflow type (`dtypes.float32`, `tf.int64`, `dtypes.bool`, etc).
+    dtype:
+      - enum
+    enum:
+      - tf.bool
+      - tf.float32
+      - tf.int64
+inputs:
+  optional:
+  - message
+  - name
+  required:
+  - tensor
+  - tf_type

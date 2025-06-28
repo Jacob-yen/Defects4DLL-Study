@@ -1,0 +1,43 @@
+constraints:
+  dtype:
+    default: tf.dtypes.int32
+    descp: dtype for returned histogram.
+    dtype:
+    - tf.dtype
+  name:
+    default: None
+    descp: A name for this operation (defaults to 'histogram_fixed_width').
+    dtype:
+    - string
+    ndim:
+    - '0'
+  nbins:
+    default: '100'
+    descp: Scalar `int32 Tensor`.  Number of histogram bins.
+    dtype:
+    - int
+    ndim:
+    - '0'
+    range:
+    - '[0,inf)'
+  value_range:
+    descp: Shape [2] `Tensor` of same `dtype` as `values`. values <= value_range[0]
+      will be mapped to hist[0], values >= value_range[1] will be mapped to hist[-1].
+    dtype:
+      - float
+    tensor_t:
+    - tf.tensor
+  values:
+    descp: Numeric `Tensor`.
+    dtype:
+    - float
+    tensor_t:
+    - tf.tensor
+inputs:
+  optional:
+  - nbins
+  - dtype
+  - name
+  required:
+  - values
+  - value_range

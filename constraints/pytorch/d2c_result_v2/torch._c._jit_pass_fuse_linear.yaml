@@ -1,0 +1,9 @@
+constraints:
+  arg0:
+    dtype:
+      - Graph
+link:
+package: torch
+target: _jit_pass_fuse_linear
+title: torch._C._jit_pass_fuse_linear
+version: 1.11.0

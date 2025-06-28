@@ -1,0 +1,28 @@
+constraints:
+  inputs:
+    dtype:
+    - tf.tensor
+    structure:
+    - list
+    tensor_t:
+    - tf.tensor
+    ndim: 'any'
+  outputs:
+    dtype:
+    - tf.tensor
+    structure:
+    - list
+    tensor_t:
+    - tf.tensor
+    ndim: 'any'
+  name:
+    dtype:
+    - string
+    default:
+    - None
+  trainable:
+    dtype:
+    - bool
+    default:
+    - 'True'
+    ndim: 0

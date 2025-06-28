@@ -1,0 +1,5 @@
+constraints:
+  other:
+    default: None
+    dtype:
+      - torch.tensor

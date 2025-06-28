@@ -1,0 +1,10 @@
+input_params:
+- name: saved_model_dir
+  require: true
+  style: positional
+- name: signature_keys
+  require: false
+  style: keyword
+- name: tags
+  require: false
+  style: keyword

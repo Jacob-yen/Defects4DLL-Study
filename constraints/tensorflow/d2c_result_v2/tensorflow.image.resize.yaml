@@ -1,0 +1,34 @@
+constraints:
+  images:
+    dtype:
+      - tf.tensor
+    tensor_t:
+      - tf.tensor
+    shape:
+    - '(-1, height, width, channels)'
+  size:
+    dtype:
+    - int
+    - tuple
+    structure: tuple
+    default: None
+    ndim: 1
+    shape:
+    - '(height, width)'
+  method:
+    dtype:
+    - image.ResizeMethod
+    default: ResizeMethod.BILINEAR
+  preserve_aspect_ratio:
+    dtype:
+      - boolean
+    default: False
+  antialias:
+    dtype:
+      - boolean
+    default: False
+  name:
+    dtype:
+      - string
+    default: None
+

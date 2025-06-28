@@ -1,0 +1,21 @@
+input_params:
+- name: module
+  require: true
+  style: positional
+- name: name
+  require: false
+  style: keyword
+  default: 'weight'
+- name: n_power_iterations
+  require: false
+  style: keyword
+  default: 1
+- name: eps
+  require: false
+  style: keyword
+  default: 1e-12
+- name: dim
+  require: false
+  style: keyword
+  default: None
+return: Module

@@ -1,0 +1,16 @@
+constraints:
+  x:
+    dtype:
+    - tf.tensor
+    ndim:
+    - any
+  axes:
+    dtype:
+    - int
+    default:
+    - None
+  name:
+    dtype:
+    - string
+    default:
+    - None

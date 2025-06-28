@@ -1,0 +1,26 @@
+input_params:
+- name: shape
+  require: false
+  style: keyword
+- name: batch_size
+  require: false
+  style: keyword
+- name: name
+  require: false
+  style: keyword
+- name: dtype
+  require: false
+  style: keyword
+- name: sparse
+  require: false
+  style: keyword
+- name: tensor
+  require: false
+  style: keyword
+- name: ragged
+  require: false
+  style: keyword
+- name: '**kwargs'
+  require: false
+  style: keyword
+return: None

@@ -1,0 +1,15 @@
+input_params:
+- name: dims
+  require: true
+  style: positional
+- name: value
+  require: true
+  style: positional
+- name: name
+  require: false
+  style: keyword
+- name: layout
+  require: false
+  style: keyword
+return: Tensor
+

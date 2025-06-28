@@ -1,0 +1,23 @@
+constraints:
+  x:
+    descp: A potentially ragged tensor.
+    dtype:
+      - tf.tensor
+      - list
+    tensor_t:
+    - tf.tensor
+  out_idx:
+    dtype:
+    - int
+    default:
+    - tf.dtypes.int32
+  name:
+    default: None
+    dtype:
+    - string
+inputs:
+  optional:
+  - out_idx
+  - name
+  required:
+  - x

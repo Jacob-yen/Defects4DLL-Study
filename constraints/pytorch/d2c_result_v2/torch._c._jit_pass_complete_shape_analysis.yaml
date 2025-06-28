@@ -1,0 +1,15 @@
+constraints:
+  arg0:
+    dtype:
+      - Graph
+  arg1:
+    dtype:
+      - tuple
+  arg2:
+    dtype:
+      - bool
+link:
+package: torch
+target: _jit_pass_complete_shape_analysis
+title: torch._C._jit_pass_complete_shape_analysis
+version: 1.11.0

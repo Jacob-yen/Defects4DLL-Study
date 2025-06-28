@@ -1,0 +1,14 @@
+input_params:
+- name: data_source
+  require: true
+  style: positional
+- name: replacement
+  require: false
+  style: keyword
+- name: num_samples
+  require: false
+  style: keyword
+- name: generator
+  require: false
+  style: keyword
+return: RandomSampler

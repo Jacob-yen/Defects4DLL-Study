@@ -1,0 +1,14 @@
+input_params:
+- name: start
+  require: true
+  style: positional
+- name: inp
+  require: true
+  style: positional
+- name: Tout
+  require: true
+  style: positional
+- name: name
+  require: false
+  style: keyword
+return: Tensor

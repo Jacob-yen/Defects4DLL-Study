@@ -1,0 +1,13 @@
+constraints:
+  cuda_only:
+    default:
+    - false
+    dtype:
+    - bool
+  min_cuda_compute_capability:
+    default:
+    - None
+    dtype:
+    - float
+    structure:
+    - tuple

@@ -1,0 +1,8 @@
+input_params:
+- name: reduction
+  require: false
+  style: keyword
+- name: name
+  require: false
+  style: keyword
+return: Tensor

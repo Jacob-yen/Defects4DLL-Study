@@ -1,0 +1,25 @@
+### System Prompt
+You are a deep learning programmer with expertise in <LIBRARY> and the capability to write deep learning programs.
+You are a deep learning programmer with expertise in writing <LIBRARY> programs in Python.
+
+
+
+### User Message
+Now, I will provide you with a program that triggers a bug in <LIBRARY>. You are required to modify the program to make it run successfully.
+
+Hint: You should understand the code and the stacktrace step by step and can change the code by the following ways:
+- change the variable usage.
+- change the API parameters.
+- change replace the API invocation triggering the bug with another API.
+- change the computing graph.
+
+Program: 
+<CODE>
+
+Exception Stack Trace: 
+<STACK_TRACE>
+
+### Assistant Response
+```python 
+<Changed Program>
+```

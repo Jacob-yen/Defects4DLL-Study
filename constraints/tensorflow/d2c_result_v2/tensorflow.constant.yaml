@@ -1,0 +1,33 @@
+constraints:
+  dtype:
+    default: None
+    descp: The type of the elements of the resulting tensor.
+    dtype:
+    - tf.dtype
+  name:
+    default: Const
+    descp: Optional name for the tensor.
+    dtype:
+    - string
+    ndim:
+    - '0'
+  shape:
+    default: None
+    dtype:
+      - int
+    structure:
+      - tuple
+    descp: Optional dimensions of resulting tensor.
+  value:
+    dtype:
+      - int
+    structure:
+      - list
+    descp: A constant value (or list) of output type `dtype`.
+inputs:
+  optional:
+  - dtype
+  - shape
+  - name
+  required:
+  - value

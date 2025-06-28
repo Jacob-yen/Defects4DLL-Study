@@ -1,0 +1,26 @@
+input_params:
+- name: n
+  require: true
+  style: positional
+- name: generator
+  require: false
+  style: keyword
+- name: out
+  require: false
+  style: keyword
+- name: dtype
+  require: false
+  style: keyword
+- name: layout
+  require: false
+  style: keyword
+- name: device
+  require: false
+  style: keyword
+- name: requires_grad
+  require: false
+  style: keyword
+- name: pin_memory
+  require: false
+  style: keyword
+return: Tensor

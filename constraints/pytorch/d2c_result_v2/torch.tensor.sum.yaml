@@ -1,0 +1,13 @@
+constraints:
+  dim:
+    default: None
+    dtype:
+      - int
+  keepdim:
+    default: False
+    dtype:
+      - bool
+  dtype:
+    default: None
+    dtype:
+      - torch.dtype

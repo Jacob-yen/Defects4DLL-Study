@@ -1,0 +1,16 @@
+constraints:
+  func:
+    dtype:
+      - tf.func
+  inp:
+    dtype:
+      - list
+  Tout:
+    dtype:
+      - tf.dtype
+      - list
+  name:
+    dtype:
+      - string
+    default:
+      - None

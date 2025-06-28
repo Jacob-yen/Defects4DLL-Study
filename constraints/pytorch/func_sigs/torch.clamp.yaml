@@ -1,0 +1,14 @@
+input_params:
+- name: input
+  require: true
+  style: positional
+- name: min
+  require: false
+  style: keyword
+- name: max
+  require: false
+  style: keyword
+- name: out
+  require: false
+  style: keyword
+return: Tensor

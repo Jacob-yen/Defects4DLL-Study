@@ -1,0 +1,28 @@
+constraints:
+  indices:
+    dtype:
+    - tf.Tensor
+    ndim:
+    - 2
+    shape:
+    - '[N, ndims]'
+    tensor_t:
+    - tf.Tensor
+  values:
+    dtype:
+    - tf.Tensor
+    ndim:
+    - 1
+    shape:
+    - '[N]'
+    tensor_t:
+    - tf.Tensor
+  dense_shape:
+    dtype:
+    - tf.Tensor
+    ndim:
+    - 1
+    shape:
+    - '[ndims]'
+    tensor_t:
+    - tf.Tensor

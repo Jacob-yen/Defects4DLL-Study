@@ -1,0 +1,29 @@
+input_params:
+- name: ys
+  require: true
+  style: positional
+- name: xs
+  require: true
+  style: positional
+- name: grad_ys
+  require: false
+  style: keyword
+- name: name
+  require: false
+  style: keyword
+- name: colocate_gradients_with_ops
+  require: false
+  style: keyword
+- name: gate_gradients
+  require: false
+  style: keyword
+- name: aggregation_method
+  require: false
+  style: keyword
+- name: stop_gradients
+  require: false
+  style: keyword
+- name: unconnected_gradients
+  require: false
+  style: keyword
+return: Tensor

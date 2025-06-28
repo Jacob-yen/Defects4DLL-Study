@@ -1,0 +1,14 @@
+input_params:
+- name: input
+  require: true
+  style: positional
+- name: dtype
+  require: false
+  style: keyword
+- name: name
+  require: false
+  style: keyword
+- name: layout
+  require: false
+  style: keyword
+return: Tensor

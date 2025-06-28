@@ -1,0 +1,7 @@
+input_params:
+- name: seed
+  require: true
+  style: positional
+  type:
+  - int
+return: None

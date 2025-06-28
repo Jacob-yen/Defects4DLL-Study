@@ -1,0 +1,12 @@
+input_params:
+- name: name
+  require: false
+  style: keyword
+  type:
+  - string
+- name: dtype
+  require: false
+  style: keyword
+  type:
+  - tf.dtype
+return: None

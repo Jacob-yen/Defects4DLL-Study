@@ -1,0 +1,11 @@
+constraints:
+  funcs:
+    dtype:
+    - string
+    structure:
+    - list
+  trackable_obj:
+    dtype:
+    - string
+    default:
+    - None

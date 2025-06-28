@@ -1,0 +1,8 @@
+input_params:
+- name: module
+  require: true
+  style: positional
+- name: process_group
+  require: false
+  style: positional
+return: nn.Module

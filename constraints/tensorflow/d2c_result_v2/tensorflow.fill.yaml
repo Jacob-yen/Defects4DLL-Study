@@ -1,0 +1,22 @@
+constraints:
+  dims:
+    dtype:
+      - list
+      - tuple
+      - tf.tensor
+    shape:
+      - any
+  value:
+    dtype:
+      - int
+      - float
+  name:
+    dtype:
+      - string
+    default:
+      - None
+  layout:
+    dtype:
+      - tf.layout
+    default:
+      - None

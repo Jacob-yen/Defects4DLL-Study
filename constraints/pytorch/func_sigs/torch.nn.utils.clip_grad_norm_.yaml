@@ -1,0 +1,22 @@
+input_params:
+- name: parameters
+  require: true
+  style: positional
+  type:
+  - Union[torch.Tensor, Iterable[torch.Tensor]]
+- name: max_norm
+  require: true
+  style: positional
+  type:
+  - float
+- name: norm_type
+  require: false
+  style: positional
+  type:
+  - float
+- name: error_if_nonfinite
+  require: false
+  style: positional
+  type:
+  - bool
+return: torch.Tensor

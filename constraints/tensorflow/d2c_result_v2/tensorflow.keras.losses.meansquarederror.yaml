@@ -1,0 +1,11 @@
+constraints:
+  reduction:
+    dtype:
+    - tf.keras.losses.Reduction
+    default:
+    - losses_utils.ReductionV2.AUTO
+  name:
+    dtype:
+    - string
+    default:
+    - 'huber_loss'

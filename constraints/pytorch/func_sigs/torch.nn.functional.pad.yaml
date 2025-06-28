@@ -1,0 +1,22 @@
+input_params:
+- name: input
+  require: true
+  style: positional
+  type:
+  - torch.Tensor
+- name: pad
+  require: true
+  style: positional
+  type:
+  - List[int]
+- name: mode
+  require: false
+  style: positional
+  type:
+  - str
+- name: value
+  require: false
+  style: positional
+  type:
+  - float
+return: torch.Tensor

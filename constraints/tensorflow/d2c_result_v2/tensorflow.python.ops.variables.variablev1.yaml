@@ -1,0 +1,70 @@
+constraints:
+  initial_value:
+    dtype:
+      - tf.tensor
+    default: None
+    tensor_t:
+      - tf.tensor
+    ndim: any
+  use_resource:
+    dtype:
+      - bool
+  trainable:
+    dtype:
+    - bool
+    default: None
+  validate_shape:
+    dtype:
+    - bool
+    default: True
+  caching_device:
+    dtype:
+    - string
+    default: None
+  name:
+    dtype:
+    - string
+    default: None
+  variable_def:
+    dtype:
+    - string
+    default: None
+  dtype:
+    dtype:
+    - tf.dtype
+    default: None
+  import_scope:
+    dtype:
+    - string
+    default: None
+  constraint:
+    dtype:
+    - string
+    default: None
+  synchronization:
+    dtype:
+    - enum
+    default: tf.VariableSynchronization.AUTO
+    ndim: 0
+    enum:
+    - tf.VariableSynchronization.AUTO
+    - tf.VariableSynchronization.ON_READ
+    - tf.VariableSynchronization.ON_WRITE
+  aggregation:
+    dtype:
+    - enum
+    default: tf.compat.v1.VariableAggregation.NONE
+    ndim: 0
+    enum:
+    - tf.compat.v1.VariableAggregation.NONE
+    - tf.compat.v1.VariableAggregation.SUM
+    - tf.compat.v1.VariableAggregation.MEAN
+    - tf.compat.v1.VariableAggregation.ONLY_FIRST_REPLICA
+  shape:
+    dtype:
+    - int
+    structure: tuple
+    default: None
+    ndim: 1
+    shape:
+    - '(dim1, dim2, ...)'

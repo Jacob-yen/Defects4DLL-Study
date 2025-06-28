@@ -1,0 +1,13 @@
+constraints:
+  input:
+    doc_dtype: Tensor
+    dtype:
+      - torch.tensor
+  chunks:
+    dtype:
+      - int
+  dim:
+    default: 0
+    dtype:
+      - int
+

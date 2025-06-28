@@ -1,0 +1,21 @@
+constraints:
+  bytes_per_pack:
+    default:
+    - 0
+    dtype:
+    - int
+    range:
+    - '[0, inf)'
+  timeout_seconds:
+    default:
+    - None
+    dtype:
+    - float
+  implementation:
+    default: CommunicationImplementation.AUTO
+    dtype:
+    - enum
+    enum:
+    - CommunicationImplementation.AUTO
+    - CommunicationImplementation.RING
+    - CommunicationImplementation.NCCL

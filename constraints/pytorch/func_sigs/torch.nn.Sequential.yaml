@@ -1,0 +1,4 @@
+input_params:
+- name: module
+  require: true
+  style: positional

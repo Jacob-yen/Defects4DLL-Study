@@ -1,0 +1,6 @@
+input_params:
+- name: function
+  require: true
+  style: positional
+return: Tensor
+

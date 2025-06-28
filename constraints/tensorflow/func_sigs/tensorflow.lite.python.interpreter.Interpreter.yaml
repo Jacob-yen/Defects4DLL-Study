@@ -1,0 +1,20 @@
+input_params:
+- name: model_path
+  require: false
+  style: keyword
+- name: model_content
+  require: false
+  style: keyword
+- name: experimental_delegates
+  require: false
+  style: keyword
+- name: num_threads
+  require: false
+  style: keyword
+- name: experimental_op_resolver_type
+  require: false
+  style: keyword
+- name: experimental_preserve_all_tensors
+  require: false
+  style: keyword
+return: None

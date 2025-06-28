@@ -1,0 +1,37 @@
+input_params:
+- name: input
+  require: true
+  style: positional
+  type:
+  - torch.Tensor
+- name: weight
+  require: true
+  style: positional
+  type:
+  - torch.Tensor
+- name: padding_idx
+  require: false
+  style: positional
+  type:
+  - Union[int, NoneType]
+- name: max_norm
+  require: false
+  style: positional
+  type:
+  - Union[float, NoneType]
+- name: norm_type
+  require: false
+  style: positional
+  type:
+  - float
+- name: scale_grad_by_freq
+  require: false
+  style: positional
+  type:
+  - bool
+- name: sparse
+  require: false
+  style: positional
+  type:
+  - bool
+return: torch.Tensor

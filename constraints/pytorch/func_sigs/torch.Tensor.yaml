@@ -1,0 +1,21 @@
+input_params:
+- name: data
+  require: true
+  style: positional
+- default: None
+  name: dtype
+  require: false
+  style: keyword
+- default: None
+  name: device
+  require: false
+  style: keyword
+- default: 'False'
+  name: requires_grad
+  require: false
+  style: keyword
+- default: 'False'
+  name: pin_memory
+  require: false
+  style: keyword
+return: Tensor

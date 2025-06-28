@@ -1,0 +1,11 @@
+input_params:
+- name: dtype
+  require: true
+  style: positional
+- name: shape
+  require: false
+  style: keyword
+- name: name
+  require: false
+  style: keyword
+return: Tensor

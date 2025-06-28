@@ -1,0 +1,43 @@
+constraints:
+  inputs:
+    tensor:
+      dtype:
+      - tf.tensor
+      default: None
+      ndim: any
+      shape: '[num_rows, tensor_shape]'
+      tensor_t:
+        - tf.tensor
+    lengths:
+      dtype:
+      - int
+      default: None
+      ndim: 1
+      shape: '[tensor_shape[0]]'
+      structure:
+      - list
+      - tuple
+      tensor_t: 0
+    padding:
+      dtype:
+      - int
+      default: None
+      ndim: 0
+    ragged_rank:
+      dtype:
+      - int
+      default: 1
+      ndim: 0
+    name:
+      dtype:
+      - string
+      default: None
+      ndim: 0
+    row_splits_dtype:
+      dtype:
+      - enum
+      default: dtypes.int64
+      ndim: 0
+      enum:
+        - dtypes.int32
+        - dtypes.int64

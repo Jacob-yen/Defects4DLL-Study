@@ -1,0 +1,77 @@
+constraints:
+  ys:
+    dtype:
+      - tf.tensor
+    structure:
+      - list
+    tensor_t:
+      - tf.tensor
+    ndim:
+      - any
+    shape:
+      - any
+  xs:
+    dtype:
+      - tf.tensor
+    structure:
+      - list
+    tensor_t:
+      - tf.tensor
+      - SparseTensor
+    ndim:
+      - any
+    shape:
+      - any
+  grad_ys:
+    dtype:
+      - tf.tensor
+    structure:
+      - list
+    tensor_t:
+      - tf.tensor
+      - SparseTensor
+    ndim:
+      - any
+    shape:
+      - any
+    default:
+      - None
+  name:
+    dtype:
+      - string
+    default:
+      - 'gradients'
+  colocate_gradients_with_ops:
+    dtype:
+      - bool
+    default:
+      - False
+  gate_gradients:
+    dtype:
+      - bool
+    default:
+      - False
+  aggregation_method:
+    dtype:
+      - object
+    default:
+      - None
+  stop_gradients:
+    dtype:
+      - tf.tensor
+    structure:
+      - list
+    tensor_t:
+      - tf.tensor
+      - SparseTensor
+    ndim:
+      - any
+    shape:
+      - any
+  unconnected_gradients:
+    dtype:
+      - enum
+    enum:
+      - 'tf.UnconnectedGradients enum values'
+    default:
+      - tf.UnconnectedGradients.NONE

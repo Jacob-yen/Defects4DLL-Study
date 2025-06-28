@@ -1,0 +1,12 @@
+constraints:
+  other:
+    dtype:
+      - int
+  alpha:
+    default: 1
+    dtype:
+      - int
+  out:
+    default: None
+    dtype:
+      - torch.tensor

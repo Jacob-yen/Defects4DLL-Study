@@ -1,0 +1,40 @@
+constraints:
+  input:
+    descp: the input tensor.
+    doc_dtype: Tensor
+    dtype:
+      - torch.tensor
+    tensor_t:
+      - torch.tensor
+  size:
+    default: None
+    dtype:
+      - int
+      - tuple
+  scale_factor:
+    default: None
+    dtype:
+      - float
+      - tuple
+  mode:
+    default: 'nearest'
+    dtype:
+      - string
+  align_corners:
+    default: None
+    dtype:
+      - bool
+inputs:
+  optional:
+  - size
+  - scale_factor
+  - mode
+  - align_corners
+  required:
+  - input
+link: https://pytorch.org/docs/1.5.0/torch.html#torch.pow
+package: torch
+ret_type: Tensor
+target: pow
+title: torch.pow
+version: 1.5.0

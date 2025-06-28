@@ -1,0 +1,12 @@
+constraints:
+  y_true:
+    dtype:
+    - list
+  y_pred:
+    dtype:
+    - list
+inputs:
+  optional:
+  required:
+  - y_true
+  - y_pred

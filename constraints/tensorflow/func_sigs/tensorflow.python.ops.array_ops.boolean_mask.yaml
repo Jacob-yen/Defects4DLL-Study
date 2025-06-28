@@ -1,0 +1,14 @@
+input_params:
+- name: data
+  require: true
+  style: positional
+- name: mask
+  require: true
+  style: positional
+- name: axis
+  require: false
+  style: keyword
+- name: name
+  require: false
+  style: keyword
+return: Tensor

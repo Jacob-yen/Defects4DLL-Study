@@ -1,0 +1,19 @@
+input_params:
+- name: obj
+  require: true
+  style: positional
+- name: f
+  require: true
+  style: positional
+  type:
+  - Union[str, os.PathLike, BinaryIO, IO[bytes]]
+- name: pickle_module
+  require: false
+  style: positional
+- name: pickle_protocol
+  require: false
+  style: positional
+- name: _use_new_zipfile_serialization
+  require: false
+  style: positional
+return: None

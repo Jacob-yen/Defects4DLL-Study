@@ -1,0 +1,30 @@
+constraints:
+  start:
+    dtype:
+    - int
+    - float
+    - tf.tensor
+    default:
+    - None
+  limit:
+    dtype:
+    - int
+    - float
+    default:
+    - None
+  delta:
+    dtype:
+    - int
+    - float
+    default:
+    - 1
+  dtype:
+    dtype:
+    - tf.dtype
+    default:
+    - None
+  name:
+    dtype:
+    - string
+    default:
+    - "range"

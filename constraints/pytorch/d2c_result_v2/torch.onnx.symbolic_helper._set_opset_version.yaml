@@ -1,0 +1,4 @@
+constraints:
+  opset_version:
+    dtype:
+    - int

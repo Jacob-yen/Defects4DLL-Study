@@ -1,0 +1,20 @@
+constraints:
+  inputs:
+    dtype:
+      - tf.tensor
+    default: None
+    tensor_t:
+      - tf.tensor
+    ndim: any
+  outputs:
+    dtype:
+      - tf.tensor
+    default: None
+    tensor_t:
+      - tf.tensor
+    ndim: any
+  name:
+    dtype:
+    - string
+    default: None
+    ndim: 0

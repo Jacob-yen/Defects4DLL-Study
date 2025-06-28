@@ -1,0 +1,14 @@
+input_params:
+- name: input
+  require: true
+  style: positional
+- name: repeats
+  require: true
+  style: positional
+- name: dim
+  require: false
+  style: positional
+- name: output_size
+  require: false
+  style: keyword
+return: Tensor

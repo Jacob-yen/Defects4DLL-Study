@@ -1,0 +1,15 @@
+constraints:
+  value:
+    descp: 'String; ''float16'', ''float32'', or ''float64''. Example: `python from
+      keras import backend as K K.floatx() >>> ''float32'' K.set_floatx(''float16'')
+      K.floatx() >>> ''float16''`'
+    dtype:
+    - enum
+    enum:
+    - float16
+    - float32
+    - float64
+inputs:
+  optional: []
+  required:
+  - value

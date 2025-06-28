@@ -1,0 +1,12 @@
+constraints:
+  a:
+    dtype:
+      - tf.tensor
+    tensor_t:
+      - tf.tensor
+  b:
+    dtype:
+      - tf.tensor
+    tensor_t:
+      - tf.tensor
+

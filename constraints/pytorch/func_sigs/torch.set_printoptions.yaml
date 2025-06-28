@@ -1,0 +1,19 @@
+input_params:
+- name: precision
+  require: false
+  style: positional
+- name: threshold
+  require: false
+  style: positional
+- name: edgeitems
+  require: false
+  style: positional
+- name: linewidth
+  require: false
+  style: positional
+- name: profile
+  require: false
+  style: positional
+- name: sci_mode
+  require: false
+  style: positional

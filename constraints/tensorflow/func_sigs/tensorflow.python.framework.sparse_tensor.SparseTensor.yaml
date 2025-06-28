@@ -1,0 +1,10 @@
+input_params:
+- name: indices
+  require: true
+  style: positional
+- name: values
+  require: true
+  style: positional
+- name: dense_shape
+  require: true
+  style: positional

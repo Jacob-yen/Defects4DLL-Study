@@ -1,0 +1,32 @@
+input_params:
+- name: log_dir
+  require: false
+  style: keyword
+- name: histogram_freq
+  require: false
+  style: keyword
+- name: write_graph
+  require: false
+  style: keyword
+- name: write_images
+  require: false
+  style: keyword
+- name: write_steps_per_second
+  require: false
+  style: keyword
+- name: update_freq
+  require: false
+  style: keyword
+- name: profile_batch
+  require: false
+  style: keyword
+- name: embeddings_freq
+  require: false
+  style: keyword
+- name: embeddings_metadata
+  require: false
+  style: keyword
+- name: '**kwargs'
+  require: false
+  style: keyword
+return: None

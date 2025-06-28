@@ -1,0 +1,25 @@
+constraints:
+  file_name:
+    descp: 'path of the file in which to store the key-value pairs'
+    dtype:
+    - string
+    ndim: 0
+  world_size:
+    descp: 'The total number of processes using the store. Default is -1 (a negative value indicates a non-fixed number of store users).'
+    dtype:
+    - int
+    default: -1
+    ndim: 0
+    range:
+    - '[-inf, inf]'
+inputs:
+  optional:
+  - world_size
+  required:
+  - file_name
+layer_constructor: true
+link: https://pytorch.org/docs/1.11/distributed.html?highlight=torch%20distributed%20filestore#torch.distributed.FileStore
+package: torch
+target: FileStore
+title: torch.distributed.FileStore
+version: 1.11.0

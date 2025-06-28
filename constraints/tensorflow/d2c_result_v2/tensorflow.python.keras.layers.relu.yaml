@@ -1,0 +1,25 @@
+constraints:
+  max_value:
+    dtype:
+    - float
+    default:
+    - None
+    range:
+    - '[0,inf)'
+  negative_slope:
+    dtype:
+    - float
+    default:
+    - 0.0
+    range:
+    - '[0,inf)'
+  threshold:
+    dtype:
+    - float**
+    default:
+    - 0.0
+    range:
+    - '[0,inf)'
+  dtype:
+    dtype:
+      - tf.dtype

@@ -1,0 +1,46 @@
+constraints:
+  log_dir:
+    dtype:
+    - string
+    default: 'logs'
+  histogram_freq:
+    dtype:
+    - int
+    default: 0
+  write_graph:
+    dtype:
+    - bool
+    default: True
+  write_images:
+    dtype:
+    - bool
+    default: False
+  write_steps_per_second:
+    dtype:
+    - bool
+    default: False
+  update_freq:
+    dtype:
+    - string
+    - int
+    default: 'epoch'
+    enum:
+    - batch
+    - epoch
+  profile_batch:
+    dtype:
+    - int
+    - tuple
+    default: 0
+  embeddings_freq:
+    dtype:
+    - int
+    default: 0
+  embeddings_metadata:
+    dtype:
+    - string
+    - dict
+    default: None
+  '**kwargs':
+    dtype:
+      - string

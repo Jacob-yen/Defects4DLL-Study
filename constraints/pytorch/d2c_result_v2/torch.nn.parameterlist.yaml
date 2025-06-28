@@ -1,0 +1,19 @@
+check_nan: true
+constraints:
+  parameters:
+    dtype:
+    - Parameter
+    structure:
+    - iterable
+    default: None
+    ndim: any
+inputs:
+  optional:
+    - parameters
+  required: []
+layer_constructor: true
+link: https://pytorch.org/docs/1.11/generated/torch.nn.ParameterList.html?highlight=torch%20nn%20parameterlist#torch.nn.ParameterList
+package: torch
+target: ParameterList
+title: torch.nn.ParameterList
+version: 1.11.0

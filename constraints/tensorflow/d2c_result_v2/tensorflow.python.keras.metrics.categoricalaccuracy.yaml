@@ -1,0 +1,12 @@
+constraints:
+  inputs:
+    name:
+      dtype:
+      - string
+      default: 'categorical_accuracy'
+      ndim: 0
+    dtype:
+      dtype:
+      - tf.dtype
+      default: None
+      ndim: 0

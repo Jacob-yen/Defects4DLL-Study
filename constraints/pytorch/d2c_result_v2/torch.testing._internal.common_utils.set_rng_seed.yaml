@@ -1,0 +1,9 @@
+constraints:
+  seed:
+    dtype:
+    - int
+link:
+package: torch
+target: set_rng_seed
+title: torch.testing._internal.common_utils.set_rng_seed
+version: 1.11.0

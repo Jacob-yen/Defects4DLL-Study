@@ -1,0 +1,5 @@
+input_params:
+- name: seed
+  require: true
+  style: positional
+return: torch._C.Generator

@@ -1,0 +1,70 @@
+check_nan: true
+constraints:
+  module:
+    dtype:
+      - nn.Module
+    ndim: 0
+  device_ids:
+    dtype:
+      - int
+      - torch.device
+    structure: list
+    default: None
+    ndim: 0
+  output_device:
+    dtype:
+      - int
+      - torch.device
+    default: None
+    ndim: 0
+  dim:
+    dtype:
+      - int
+    default: 0
+    ndim: 0
+  broadcast_buffers:
+    dtype:
+      - bool
+    default: True
+    ndim: 0
+  process_group:
+    dtype:
+      - ProcessGroup
+    default: None
+    ndim: 0
+  bucket_cap_mb:
+    dtype:
+      - int
+    default: 25
+    ndim: 0
+    range:
+      - '[0, inf)'
+  find_unused_parameters:
+    dtype:
+      - bool
+    default: False
+    ndim: 0
+  check_reduction:
+    dtype:
+      - bool
+    default: None
+    ndim: 0
+  gradient_as_bucket_view:
+    dtype:
+      - bool
+    default: False
+    ndim: 0
+inputs:
+  optional:
+    - device_ids
+    - output_device
+    - dim
+    - broadcast_buffers
+    - process_group
+    - bucket_cap_mb
+    - find_unused_parameters
+    - check_reduction
+    - gradient_as_bucket_view
+  required:
+    - module
+

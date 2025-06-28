@@ -1,0 +1,25 @@
+constraints:
+  input:
+    descp: the input tensor.
+    doc_dtype: Tensor
+    dtype:
+      - torch.tensor
+    tensor_t:
+      - torch.tensor
+  kernel_size:
+    dtype:
+      - int
+      - tuple
+  dilation:
+    dtype:
+      - int
+      - tuple
+  padding:
+    dtype:
+      - int
+      - tuple
+  stride:
+    dtype:
+      - int
+      - tuple
+

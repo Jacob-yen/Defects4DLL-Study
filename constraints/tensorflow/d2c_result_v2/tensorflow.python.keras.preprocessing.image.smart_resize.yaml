@@ -1,0 +1,31 @@
+constraints:
+  x:
+    dtype:
+      - tf.tensor
+    tensor_t:
+      - tf.tensor
+    shape:
+    - '(-1, height, width, channels)'
+  size:
+    dtype:
+    - int
+    - tuple
+    structure: tuple
+    default: None
+    ndim: 1
+    shape:
+    - '(height, width)'
+  interpolation:
+    dtype:
+    - enum
+    default: bilinear
+    ndim: 0
+    enum:
+    - bilinear
+    - nearest
+    - bicubic
+    - area
+    - lanczos3
+    - lanczos5
+    - gaussian
+    - mitchellcubic

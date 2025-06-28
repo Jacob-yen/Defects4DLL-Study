@@ -1,0 +1,14 @@
+constraints:
+  iterable:
+    dtype:
+      - iterable
+    ndim: any
+    structure:
+    - tuple
+    - dict
+    - list
+  deepcopy:
+    dtype:
+    - bool
+    ndim: 0
+    default: True

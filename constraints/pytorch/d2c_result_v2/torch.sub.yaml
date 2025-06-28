@@ -1,0 +1,47 @@
+check_nan: true
+constraints:
+  input:
+    tensor_t:
+    - torch.tensor
+    dtype:
+      - torch.tensor
+    ndim: any
+  other:
+    dtype:
+    - int
+    - float
+    tensor_t:
+    - torch.tensor
+    ndim:
+    - any
+    - 0
+    range:
+    - "(-inf,inf)"
+  alpha:
+    dtype:
+    - int
+    - float
+    structure: 0
+    default: 1
+    range:
+    - "(-inf,inf)"
+  out:
+    tensor_t:
+    - torch.tensor
+    dtype:
+      - torch.tensor
+    default: None
+    ndim: any
+inputs:
+  optional:
+  - alpha
+  - out
+  required:
+  - input
+  - other
+layer_constructor: true
+link: https://pytorch.org/docs/1.11/generated/torch.sub.html?highlight=torch%20sub#torch.sub
+package: torch
+target: sub
+title: torch.sub
+version: 1.11.0

@@ -1,0 +1,47 @@
+constraints:
+  boxes:
+    dtype:
+    - tf.Tensor
+    ndim: '2'
+    shape:
+    - '[num_boxes, 4]'
+    tensor_t:
+    - tf.Tensor
+  scores:
+    dtype:
+    - tf.Tensor
+    ndim: '1'
+    shape:
+    - '[num_boxes]'
+    tensor_t:
+    - tf.Tensor
+  max_output_size:
+    dtype:
+    - int
+    ndim: '0'
+  iou_threshold:
+    dtype:
+    - tf.Tensor
+    ndim: '0'
+    tensor_t:
+    - tf.Tensor
+  score_threshold:
+    dtype:
+    - tf.Tensor
+    ndim: '0'
+    tensor_t:
+    - tf.Tensor
+  soft_nms_sigma:
+    dtype:
+    - tf.Tensor
+    ndim: '0'
+    tensor_t:
+    - tf.Tensor
+  pad_to_max_output_size:
+    default: False
+    dtype:
+    - bool
+  name:
+    default: None
+    dtype:
+    - string

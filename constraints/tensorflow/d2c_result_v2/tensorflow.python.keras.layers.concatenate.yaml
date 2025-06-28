@@ -1,0 +1,20 @@
+constraints:
+  axis:
+    dtype:
+    - int
+    default:
+    - -1
+    range:
+    - '(-inf,inf)'
+  kwargs:
+    dtype:
+    - string
+    - bool
+    - int
+    - float
+    structure:
+    - tuple
+    - dict
+    - list
+    ndim:
+    - 0

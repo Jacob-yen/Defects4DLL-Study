@@ -1,0 +1,23 @@
+input_params:
+- name: input
+  require: true
+  style: positional
+- name: fill_value
+  require: true
+  style: positional
+- name: dtype
+  require: false
+  style: keyword
+- name: layout
+  require: false
+  style: keyword
+- name: device
+  require: false
+  style: keyword
+- name: requires_grad
+  require: false
+  style: keyword
+- name: memory_format
+  require: false
+  style: keyword
+return: Tensor

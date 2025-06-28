@@ -1,0 +1,22 @@
+constraints:
+  primary:
+    dtype:
+      - tf.Tensor
+  val:
+    dtype:
+      - tf.Tensor
+    tensor_t:
+      - tf.Tensor
+  name:
+    dtype:
+      - string
+  colocate_with_primary:
+    dtype:
+      - bool
+    default:
+      - True
+  copy_xla_sharding:
+    dtype:
+      - bool
+    default:
+      - False

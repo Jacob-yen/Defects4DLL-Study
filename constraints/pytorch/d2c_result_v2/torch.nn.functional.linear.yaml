@@ -1,0 +1,40 @@
+constraints:
+  input:
+    ndim:
+    - '2'
+    shape:
+    - '[minibatch,in_channels]'
+    dtype:
+      - torch.tensor
+    tensor_t:
+    - torch.tensor
+  weight:
+    ndim:
+    - '2'
+    shape:
+    - '[out_channels,in_channels]'
+    dtype:
+      - torch.tensor
+    tensor_t:
+    - torch.tensor
+  bias:
+    dtype:
+    - torch.float64
+    - torch.float32
+    - torch.float16
+    default:
+    - None
+    range:
+    - '(-inf,inf)'
+inputs:
+  optional:
+  - bias
+  required:
+  - Input
+  - Weight
+layer_constructor: true
+link: https://pytorch.org/docs/1.11/generated/torch.nn.functional.linear.html?highlight=torch%20nn%20linear#torch.nn.functional.linear
+package: torch
+target: linear
+title: torch.nn.functional.linear
+version: 1.11.0

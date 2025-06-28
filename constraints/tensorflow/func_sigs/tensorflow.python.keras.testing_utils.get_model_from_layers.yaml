@@ -1,0 +1,23 @@
+input_params:
+- name: model_layers
+  require: true
+  style: positional
+- name: input_shape
+  require: false
+  style: keyword
+- name: input_dtype
+  require: false
+  style: keyword
+- name: name
+  require: false
+  style: keyword
+- name: input_ragged
+  require: false
+  style: keyword
+- name: input_sparse
+  require: false
+  style: keyword
+- name: model_type
+  require: false
+  style: keyword
+return: None

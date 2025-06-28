@@ -1,0 +1,16 @@
+constraints:
+  '**kwargs':
+    descp: deprecated arguments support. Supports `batch_shape` and`batch_input_shape`.
+    dtype:
+      - kwargs
+  use_scale:
+    default: 'True'
+    dtype:
+      - bool
+    ndim:
+      - '0'
+inputs:
+  optional:
+    - use_scale
+  required:
+    - '**kwargs'

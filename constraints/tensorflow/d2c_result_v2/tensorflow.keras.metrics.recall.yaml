@@ -1,0 +1,32 @@
+constraints:
+  dtype:
+    dtype:
+      - tf.dtype
+    default:
+      - None
+  thresholds:
+    dtype:
+    - float
+    default:
+    - None
+    range:
+    - [0, 1]
+  top_k:
+    dtype:
+    - int
+    default:
+    - None
+    range:
+    - (0, inf)
+  class_id:
+    dtype:
+    - int
+    default:
+    - None
+    range:
+    - '[0, num_classes)'
+  name:
+    dtype:
+    - string
+    default:
+    - None

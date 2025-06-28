@@ -1,0 +1,20 @@
+input_params:
+- name: input
+  require: true
+  style: positional
+- name: mat1
+  require: true
+  style: positional
+- name: mat2
+  require: true
+  style: positional
+- name: beta
+  require: false
+  style: keyword
+- name: alpha
+  require: false
+  style: keyword
+- name: out
+  require: false
+  style: keyword
+return: Tensor

@@ -1,0 +1,22 @@
+constraints:
+  name:
+    dtype:
+      - string
+  image:
+    descp: Either a 3-D float Tensor of shape [height, width, depth], or a 4-D Tensor
+      of shape [batch_size, height, width, depth].
+    dtype:
+    - tf.tensor
+    ndim:
+    - '3'
+    - '4'
+    shape:
+    - '[batch_size,height,width,depth]'
+    - '[height,width,depth]'
+    tensor_t:
+    - tf.tensor
+inputs:
+  optional:
+  - name
+  required:
+  - image

@@ -1,0 +1,8 @@
+input_params:
+- name: equation
+  require: true
+  style: positional
+- name: operands
+  require: true
+  style: positional
+return: Tensor

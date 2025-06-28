@@ -1,0 +1,11 @@
+input_params:
+- name: dimension
+  require: true
+  style: positional
+- name: size
+  require: true
+  style: positional
+- name: step
+  require: true
+  style: positional
+return: Tensor

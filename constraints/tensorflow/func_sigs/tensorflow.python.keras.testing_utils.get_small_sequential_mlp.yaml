@@ -1,0 +1,11 @@
+input_params:
+- name: num_hidden
+  require: true
+  style: positional
+- name: num_classes
+  require: true
+  style: positional
+- name: input_dim
+  require: false
+  style: keyword
+return: None

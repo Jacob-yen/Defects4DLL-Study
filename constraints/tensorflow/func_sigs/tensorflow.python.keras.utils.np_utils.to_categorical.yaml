@@ -1,0 +1,11 @@
+input_params:
+- name: y
+  require: true
+  style: positional
+- name: num_classes
+  require: false
+  style: keyword
+- name: dtype
+  require: false
+  style: keyword
+return: None

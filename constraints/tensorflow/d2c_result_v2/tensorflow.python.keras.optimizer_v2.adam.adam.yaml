@@ -1,0 +1,42 @@
+constraints:
+  learning_rate:
+    default: 0.001
+    dtype:
+    - float
+    range:
+    - '(0,inf)'
+  beta_1:
+    default: 0.9
+    dtype:
+    - float
+    range:
+    - '(0,1)'
+  beta_2:
+    default: 0.999
+    dtype:
+    - float
+    range:
+    - '(0,1)'
+  epsilon:
+    default: 1e-07
+    dtype:
+    - float
+    range:
+    - '(0,inf)'
+  amsgrad:
+    default: False
+    dtype:
+    - bool
+  name:
+    default: 'Adam'
+    dtype:
+    - string
+  clipnorm:
+    dtype:
+      - float
+  clipvalue:
+    dtype:
+      - float
+  '**kwargs':
+    dtype:
+    - float

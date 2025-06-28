@@ -1,0 +1,40 @@
+constraints:
+  message:
+    default: None
+    descp: A string to prefix to the default message.
+    dtype:
+    - string
+    ndim:
+    - '0'
+  name:
+    default: None
+    descp: A name for this operation (optional).  Defaults to "assert_near".
+    dtype:
+    - string
+    ndim:
+    - '0'
+  summarize:
+    default: None
+    descp: Print this many entries of each tensor.
+    dtype:
+      - string
+  x:
+    descp: Float or complex `Tensor`.
+    dtype:
+    - float
+    tensor_t:
+    - tf.tensor
+  y:
+    descp: Float or complex `Tensor`, same dtype as and broadcastable to `x`.
+    dtype:
+      - float
+    tensor_t:
+      - tf.tensor
+inputs:
+  optional:
+  - message
+  - summarize
+  - name
+  required:
+  - x
+  - y

@@ -1,0 +1,23 @@
+constraints:
+  module:
+    dtype:
+    - Module
+  name:
+    dtype:
+    - string
+    ndim: 0
+    default: 'weight'
+  n_power_iterations:
+    dtype:
+    - int
+    ndim: 0
+    default: 1
+  eps:
+    dtype:
+    - float
+    default: 1e-12
+  dim:
+    dtype:
+    - int
+    ndim: 0
+    default: None

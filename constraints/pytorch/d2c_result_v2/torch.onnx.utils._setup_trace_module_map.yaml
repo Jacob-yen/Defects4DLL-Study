@@ -1,0 +1,8 @@
+constraints:
+#  Input:
+    model:
+      dtype:
+      - torch.nn.Module
+    export_modules_as_functions:
+      dtype:
+      - bool

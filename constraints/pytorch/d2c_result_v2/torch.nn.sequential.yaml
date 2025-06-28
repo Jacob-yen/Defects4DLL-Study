@@ -1,0 +1,18 @@
+check_nan: true
+constraints:
+  module:
+    descp: module to append
+    dtype:
+      - nn.Module
+    doc_dtype: Module
+
+inputs:
+  optional: []
+  required:
+    - module
+layer_constructor: true
+link: https://pytorch.org/docs/1.11/generated/torch.nn.Sequential.html?highlight=torch%20nn%20sequential#torch.nn.Sequential
+package: torch
+target: Sequential
+title: torch.nn.Sequential
+version: 1.11.0

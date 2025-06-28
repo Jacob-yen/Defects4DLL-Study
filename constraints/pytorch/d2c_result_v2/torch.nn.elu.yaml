@@ -1,0 +1,10 @@
+constraints:
+  alpha:
+    dtype:
+      - float
+    default: 1.0
+  inplace:
+    dtype:
+      - bool
+    default: False
+

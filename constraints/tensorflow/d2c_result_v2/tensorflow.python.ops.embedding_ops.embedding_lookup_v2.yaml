@@ -1,0 +1,31 @@
+constraints:
+  params:
+    dtype:
+    - tf.tensor
+    ndim:
+    - any
+    structure:
+    - list
+    tensor_t:
+    - tf.tensor
+  ids:
+    dtype:
+    - int
+    ndim:
+    - any
+  max_norm:
+    dtype:
+    - float
+    default:
+    - None
+    ndim:
+    - 0
+    range:
+    - '(0, inf)'
+  name:
+    dtype:
+    - string
+    default:
+    - None
+    ndim:
+    - 0

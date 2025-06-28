@@ -1,0 +1,18 @@
+input_params:
+- name: obj
+  require: true
+  style: positional
+- name: optimize
+  require: false
+  style: positional
+- name: _frames_up
+  require: false
+  style: positional
+- name: _rcb
+  require: false
+  style: positional
+- name: example_inputs
+  require: false
+  style: positional
+  type:
+  - Union[List[Tuple], Dict[Callable, List[Tuple]], NoneType]

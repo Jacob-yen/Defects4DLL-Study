@@ -1,0 +1,25 @@
+constraints:
+  q_int_repeat:
+    dtype:
+      - torch.tensor
+    tensor_t:
+      - torch.tensor
+  scale:
+    dtype:
+      - float
+    default:
+      - None
+    range:
+      - '(-inf,inf)'
+  zero_point:
+    dtype:
+      - int
+    default:
+      - None
+    range:
+      - '[0,255]'
+link:
+package: torch
+target: _jit_pass_fuse_linear
+title: torch._C._jit_pass_fuse_linear
+version: 1.11.0

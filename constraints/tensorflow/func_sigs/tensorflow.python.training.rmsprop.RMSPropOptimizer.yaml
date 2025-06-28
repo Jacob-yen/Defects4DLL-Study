@@ -1,0 +1,23 @@
+input_params:
+- name: learning_rate
+  require: true
+  style: positional
+- name: decay
+  require: false
+  style: keyword
+- name: momentum
+  require: false
+  style: keyword
+- name: epsilon
+  require: false
+  style: keyword
+- name: use_locking
+  require: false
+  style: keyword
+- name: centered
+  require: false
+  style: keyword
+- name: name
+  require: false
+  style: keyword
+return: None

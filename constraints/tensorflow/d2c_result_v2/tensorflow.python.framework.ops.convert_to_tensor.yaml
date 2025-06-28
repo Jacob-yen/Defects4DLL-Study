@@ -1,0 +1,37 @@
+constraints:
+  dtype:
+    default: None
+    descp: Optional element type for the returned tensor. If missing, the type is
+      inferred from the type of `value`.
+    dtype:
+    - tf.dtype
+  dtype_hint:
+    default: None
+    descp: Optional element type for the returned tensor, used when dtype is None.
+      In some cases, a caller may not have a dtype in mind when converting to a tensor,
+      so dtype_hint can be used as a soft preference. If the conversion to `dtype_hint`
+      is not possible, this argument has no effect.
+    dtype:
+      - tf.dtype
+    tensor_t:
+    - tf.tensor
+  name:
+    default: None
+    descp: Optional name to use if a new `Tensor` is created.
+    dtype:
+    - string
+    ndim:
+    - '0'
+    tensor_t:
+    - tf.tensor
+  value:
+    descp: An object whose type has a registered `Tensor` conversion function.
+    dtype:
+    - tf.tensor
+inputs:
+  optional:
+  - dtype
+  - dtype_hint
+  - name
+  required:
+  - value

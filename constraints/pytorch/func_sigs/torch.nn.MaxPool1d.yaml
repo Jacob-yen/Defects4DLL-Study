@@ -1,0 +1,32 @@
+input_params:
+- name: kernel_size
+  require: true
+  style: positional
+  type:
+  - Union[int, Tuple[int, ...]]
+- name: stride
+  require: false
+  style: positional
+  type:
+  - Union[int, Tuple[int, ...], NoneType]
+- name: padding
+  require: false
+  style: positional
+  type:
+  - Union[int, Tuple[int, ...]]
+- name: dilation
+  require: false
+  style: positional
+  type:
+  - Union[int, Tuple[int, ...]]
+- name: return_indices
+  require: false
+  style: positional
+  type:
+  - bool
+- name: ceil_mode
+  require: false
+  style: positional
+  type:
+  - bool
+return: None

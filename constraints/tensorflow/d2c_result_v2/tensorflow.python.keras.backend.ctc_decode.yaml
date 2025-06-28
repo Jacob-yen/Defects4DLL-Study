@@ -1,0 +1,26 @@
+constraints:
+  inputs:
+    dtype:
+    - tf.tensor
+    ndim:
+    - any
+  input_length:
+    dtype:
+    - tf.tensor
+    ndim:
+    - 2
+  greedy:
+    dtype:
+    - bool
+    default:
+    - False
+  beam_width:
+    dtype:
+    - int
+    range:
+    - '[1,inf)'
+  top_paths:
+    dtype:
+    - int
+    range:
+    - '[1,inf)'

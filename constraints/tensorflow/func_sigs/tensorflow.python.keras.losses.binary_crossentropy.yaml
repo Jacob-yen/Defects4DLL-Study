@@ -1,0 +1,14 @@
+input_params:
+- name: y_true
+  require: true
+  style: positional
+- name: y_pred
+  require: true
+  style: positional
+- name: from_logits
+  require: false
+  style: keyword
+- name: label_smoothing
+  require: false
+  style: keyword
+return: None

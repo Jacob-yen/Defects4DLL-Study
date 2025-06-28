@@ -1,0 +1,19 @@
+constraints:
+  input:
+    dtype:
+      - torch.tensor
+    tensor_t:
+    - torch.tensor
+    ndim: any
+  diagonal:
+    dtype:
+    - int
+    ndim: 0
+    default: 0
+  out:
+    dtype:
+      - torch.tensor
+    tensor_t:
+    - torch.tensor
+    ndim: any
+    default: None

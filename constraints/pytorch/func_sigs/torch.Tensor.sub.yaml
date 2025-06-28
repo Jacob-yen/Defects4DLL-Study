@@ -1,0 +1,11 @@
+input_params:
+- name: other
+  require: true
+  style: positional
+- name: alpha
+  require: false
+  style: keyword
+- name: out
+  require: false
+  style: keyword
+return: Tensor

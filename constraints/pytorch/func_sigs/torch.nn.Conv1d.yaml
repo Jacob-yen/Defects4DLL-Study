@@ -1,0 +1,29 @@
+input_params:
+  - name: in_channels
+    require: true
+    style: positional
+  - name: out_channels
+    require: true
+    style: positional
+  - name: kernel_size
+    require: true
+    style: positional
+  - name: stride
+    require: false
+    style: keyword
+  - name: padding
+    require: false
+    style: keyword
+  - name: padding_mode
+    require: false
+    style: keyword
+  - name: dilation
+    require: false
+    style: keyword
+  - name: groups
+    require: false
+    style: keyword
+  - name: bias
+    require: false
+    style: keyword
+return: Tensor

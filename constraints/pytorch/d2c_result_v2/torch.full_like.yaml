@@ -1,0 +1,69 @@
+constraints:
+  input:
+    dtype:
+      - torch.tensor
+    tensor_t: torch.tensor
+    ndim: any
+  fill_value:
+    dtype:
+      - int
+      - float
+    ndim: 0
+    range:
+      - '(-inf, inf)'
+  dtype:
+    dtype:
+      - torch.dtype
+    default: None
+    ndim: 0
+    enum:
+      - torch.float64
+      - torch.float32
+      - torch.float16
+      - torch.int64
+      - torch.int32
+      - torch.int16
+  layout:
+    dtype:
+      - torch.layout
+    default: torch.strided
+    ndim: 0
+    enum:
+      - torch.strided
+      - torch.sparse_coo
+  device:
+    dtype:
+      - torch.device
+    default: None
+    ndim: 0
+  requires_grad:
+    dtype:
+      - bool
+    default: False
+    ndim: 0
+  memory_format:
+    dtype:
+      - string
+    default: torch.preserve_format
+    ndim: 0
+    enum:
+      - torch.preserve_format
+      - torch.contiguous_format
+      - torch.channels_last
+      - torch.channels_last_3d
+inputs:
+  optional:
+    - dtype
+    - layout
+    - device
+    - requires_grad
+    - memory_format
+  required:
+    - input
+    - fill_value
+layer_constructor: true
+link: https://pytorch.org/docs/1.11/generated/torch.full_like.html?highlight=torch%20full_like#torch.full_like
+package: torch
+target: full_like
+title: torch.full_like
+version: 1.11.0

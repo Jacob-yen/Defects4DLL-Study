@@ -1,0 +1,7 @@
+input_params:
+- name: arg0
+  require: true
+  style: positional
+  type:
+  - str
+return: torch::jit::Graph

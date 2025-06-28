@@ -1,0 +1,11 @@
+input_params:
+- name: x
+  require: true
+  style: positional
+- name: size
+  require: true
+  style: positional
+- name: interpolation
+  require: false
+  style: keyword
+return: None

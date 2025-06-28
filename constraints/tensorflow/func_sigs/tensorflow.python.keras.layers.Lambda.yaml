@@ -1,0 +1,20 @@
+input_params:
+- name: function
+  require: true
+  style: positional
+- name: output_shape
+  require: false
+  style: keyword
+- name: mask
+  require: false
+  style: keyword
+- name: arguments
+  require: false
+  style: keyword
+- name: dynamic
+  require: false
+  style: keyword
+- name: '**kwargs'
+  require: false
+  style: keyword
+return: None

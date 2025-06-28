@@ -1,0 +1,41 @@
+constraints:
+  '**kwargs':
+    descp: Passed to `tf.Session.run`.
+  inputs:
+    descp: List of placeholder tensors.
+    dtype:
+      - tf.tensor
+    structure:
+    - list
+    tensor_t:
+    - tf.tensor
+  name:
+    default: None
+    descp: String, name of function.
+    dtype:
+    - string
+    ndim:
+    - '0'
+  outputs:
+    descp: List of output tensors.
+    structure:
+    - list
+    dtype:
+      - tf.tensor
+    tensor_t:
+    - tf.tensor
+  updates:
+    default: None
+    descp: List of update ops.
+    dtype:
+      - tf.ops
+    structure:
+      - list
+inputs:
+  optional:
+  - updates
+  - name
+  required:
+  - inputs
+  - outputs
+  - '**kwargs'

@@ -1,0 +1,53 @@
+input_params:
+- name: in_channels
+  require: true
+  style: positional
+  type:
+  - int
+- name: out_channels
+  require: true
+  style: positional
+  type:
+  - int
+- name: kernel_size
+  require: true
+  style: positional
+  type:
+  - Union[int, Tuple[int, int]]
+- name: stride
+  require: false
+  style: positional
+  type:
+  - Union[int, Tuple[int, int]]
+- name: padding
+  require: false
+  style: positional
+  type:
+  - Union[str, int, Tuple[int, int]]
+- name: dilation
+  require: false
+  style: positional
+  type:
+  - Union[int, Tuple[int, int]]
+- name: groups
+  require: false
+  style: positional
+  type:
+  - int
+- name: bias
+  require: false
+  style: positional
+  type:
+  - bool
+- name: padding_mode
+  require: false
+  style: positional
+  type:
+  - str
+- name: device
+  require: false
+  style: positional
+- name: dtype
+  require: false
+  style: positional
+return: None

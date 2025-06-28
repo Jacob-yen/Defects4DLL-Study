@@ -1,0 +1,8 @@
+input_params:
+- name: bytes_or_text
+  require: true
+  style: positional
+- name: encoding
+  require: false
+  style: keyword
+return: None

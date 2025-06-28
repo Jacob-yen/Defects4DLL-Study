@@ -1,0 +1,13 @@
+constraints:
+  equation:
+    dtype:
+    - string
+    ndim: 0
+  operands:
+    dtype:
+    - torch.tensor
+    structure:
+    - list
+    ndim: any
+    tensor_t:
+    - torch.tensor

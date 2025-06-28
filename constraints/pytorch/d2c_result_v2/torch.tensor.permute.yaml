@@ -1,0 +1,5 @@
+constraints:
+  dims:
+    default: (0, 2, 1)
+    dtype:
+      - tuple

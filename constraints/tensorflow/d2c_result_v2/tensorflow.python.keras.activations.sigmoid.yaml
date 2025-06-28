@@ -1,0 +1,5 @@
+constraints:
+  x:
+    descp: Input tensor.
+    dtype:
+      - tf.tensor

@@ -1,0 +1,18 @@
+constraints:
+  num_hidden:
+    dtype:
+    - int
+    range:
+    - (0, inf)
+  num_classes:
+    dtype:
+    - int
+    range:
+    - (0, inf)
+  input_dim:
+    dtype:
+    - int
+    default:
+    - None
+    range:
+    - (0, inf)

@@ -1,0 +1,13 @@
+input_params:
+- name: input
+  require: true
+  style: positional
+- name: diagonal
+  require: false
+  style: keyword
+  default: 0
+- name: out
+  require: false
+  style: keyword
+  default: None
+return: Tensor

@@ -1,0 +1,59 @@
+check_nan: true
+constraints:
+  shape:
+    dtype:
+      - int
+    structure:
+      - tuple
+    ndim: any
+  device:
+    descp: 'The device of the returned tensor'
+    dtype:
+    - torch.device
+  dtype:
+    descp: 'The data type of the returned tensor.'
+    dtype:
+      - torch.dtype
+  low:
+    dtype:
+      - int
+      - float
+    default: None
+    range:
+      - '(-inf, inf)'
+  high:
+    dtype:
+      - int
+      - float
+    default: None
+    range:
+      - '(-inf, inf)'
+  requires_grad:
+    dtype:
+      - bool
+    default: False
+  noncontiguous:
+    dtype:
+      - bool
+    default: False
+  exclude_zero:
+    dtype:
+      - bool
+    default: False
+inputs:
+  optional:
+    - low
+    - high
+    - requires_grad
+    - noncontiguous
+    - exclude_zero
+  required:
+    - shape
+    - device
+    - dtype
+layer_constructor: true
+link: https://pytorch.org/docs/1.11/testing.html?highlight=torch%20testing%20make_tensor#torch.testing.make_tensor
+package: torch
+target: make_tensor
+title: torch.testing.make_tensor
+version: 1.11.0

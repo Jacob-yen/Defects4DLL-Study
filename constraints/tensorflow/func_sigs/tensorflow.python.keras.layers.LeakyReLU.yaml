@@ -1,0 +1,5 @@
+input_params:
+- name: dtype
+  require: false
+  style: keyword
+return: Tensor

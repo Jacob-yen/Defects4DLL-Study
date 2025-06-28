@@ -1,0 +1,66 @@
+check_nan: true
+constraints:
+  enabled:
+    dtype:
+    - bool
+    default: True
+    ndim: 0
+  use_cuda:
+    dtype:
+    - bool
+    default: False
+    ndim: 0
+  record_shapes:
+    dtype:
+    - bool
+    default: False
+    ndim: 0
+  with_flops:
+    dtype:
+    - bool
+    default: False
+    ndim: 0
+  profile_memory:
+    dtype:
+    - bool
+    default: False
+    ndim: 0
+  with_stack:
+    dtype:
+    - bool
+    default: False
+    ndim: 0
+  with_modules:
+    dtype:
+    - bool
+    default: False
+    ndim: 0
+  use_kineto:
+    dtype:
+    - bool
+    default: False
+    ndim: 0
+  use_cpu:
+    dtype:
+    - bool
+    default: True
+    ndim: 0
+inputs:
+  optional:
+    - enabled
+    - use_cuda
+    - record_shapes
+    - with_flops
+    - profile_memory
+    - with_stack
+    - with_modules
+    - use_kineto
+    - use_cpu
+  required:
+  -
+layer_constructor: true
+link: https://pytorch.org/docs/1.11/autograd.html?highlight=torch%20autograd%20profiler%20profile#torch.autograd.profiler.profile
+package: torch
+target: profile
+title: torch.autograd.profiler.profile
+version: 1.11.0

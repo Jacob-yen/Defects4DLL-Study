@@ -1,0 +1,18 @@
+constraints:
+  kernel_size:
+    dtype:
+      - int
+      - tuple
+  dilation:
+    dtype:
+      - int
+      - tuple
+  padding:
+    dtype:
+      - int
+      - tuple
+  stride:
+    dtype:
+      - int
+      - tuple
+

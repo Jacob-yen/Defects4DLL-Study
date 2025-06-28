@@ -1,0 +1,11 @@
+input_params:
+- name: input
+  require: true
+  style: positional
+- name: beta
+  require: false
+  style: positional
+- name: threshold
+  require: false
+  style: positional
+return: Tensor

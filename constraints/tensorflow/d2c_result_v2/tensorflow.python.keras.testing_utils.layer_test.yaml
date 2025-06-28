@@ -1,0 +1,80 @@
+constraints:
+  layer_cls:
+    dtype:
+    - object
+  kwargs:
+    dtype:
+    - string
+    default:
+    - None
+  input_shape:
+    dtype:
+    - int
+    default:
+    - None
+    structure:
+    - tuple
+  input_dtype:
+    dtype:
+    - enum
+    default:
+    - None
+    enum:
+    - bool
+    - int
+    - float
+    - complex
+  input_data:
+    dtype:
+    - np.ndarray
+    default:
+    - None
+  expected_output:
+    dtype:
+    - np.ndarray
+    default:
+    - None
+  expected_output_dtype:
+    dtype:
+    - enum
+    default:
+    - None
+    enum:
+    - bool
+    - int
+    - float
+    - complex
+  expected_output_shape:
+    dtype:
+    - int
+    default:
+    - None
+    structure:
+    - tuple
+  validate_training:
+    dtype:
+    - bool
+    default:
+    - True
+  adapt_data:
+    dtype:
+    - object
+    default:
+    - None
+  custom_objects:
+    dtype:
+    - object
+    default:
+    - None
+    structure:
+    - dict
+  test_harness:
+    dtype:
+    - object
+    default:
+    - None
+  supports_masking:
+    dtype:
+    - bool
+    default:
+    - None

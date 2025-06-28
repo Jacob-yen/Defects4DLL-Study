@@ -1,0 +1,50 @@
+constraints:
+  indices:
+    dtype:
+    - int
+    tensor_t:
+    - tf.Tensor
+    ndim:
+    - any
+  values:
+    dtype:
+    - int
+    tensor_t:
+    - tf.Tensor
+    ndim:
+    - any
+  dense_shape:
+    dtype:
+    - int
+    tensor_t:
+    - tf.Tensor
+    ndim:
+    - any
+  weights:
+    dtype:
+    - int
+    - float
+    tensor_t:
+    - tf.Tensor
+    ndim:
+    - any
+  binary_output:
+    dtype:
+    - bool
+    default: None
+  minlength:
+    dtype:
+    - int
+    default: -1
+    range:
+    - '[-1, inf)'
+  maxlength:
+    dtype:
+    - int
+    default: -1
+    range:
+    - '[-1, inf)'
+  name:
+    dtype:
+    - string
+    default: None

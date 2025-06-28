@@ -1,0 +1,42 @@
+constraints:
+  learning_rate:
+    dtype:
+    - float
+    default: None
+    shape: 0
+  decay:
+    dtype:
+    - float
+    default: '0.9'
+    ndim: 0
+    range:
+    - '[0, 1]'
+  momentum:
+    dtype:
+    - float
+    default: '0.0'
+    ndim: 0
+    range:
+    - '[0, 1]'
+  epsilon:
+    dtype:
+    - float
+    default: '1e-10'
+    ndim: 0
+    range:
+    - '(0,inf)'
+  use_locking:
+    dtype:
+    - bool
+    default: False
+    ndim: 0
+  centered:
+    dtype:
+    - bool
+    default: False
+    ndim: 0
+  name:
+    dtype:
+    - string
+    default: 'RMSProp'
+    ndim: 0

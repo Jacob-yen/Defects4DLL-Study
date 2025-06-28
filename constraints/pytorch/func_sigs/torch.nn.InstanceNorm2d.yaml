@@ -1,0 +1,33 @@
+input_params:
+- name: num_features
+  require: true
+  style: positional
+  type:
+  - int
+- name: eps
+  require: false
+  style: positional
+  type:
+  - float
+- name: momentum
+  require: false
+  style: positional
+  type:
+  - float
+- name: affine
+  require: false
+  style: positional
+  type:
+  - bool
+- name: track_running_stats
+  require: false
+  style: positional
+  type:
+  - bool
+- name: device
+  require: false
+  style: positional
+- name: dtype
+  require: false
+  style: positional
+return: None

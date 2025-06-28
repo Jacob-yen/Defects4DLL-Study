@@ -1,0 +1,19 @@
+constraints:
+  axes:
+    descp: Integer or iterable of integers. Axes to reverse.
+    dtype:
+    - int
+    structure:
+    - list
+  x:
+    descp: Tensor to reverse.
+    dtype:
+      - tf.tensor
+    tensor_t:
+    - tf.tensor
+inputs:
+  optional: []
+  required:
+  - x
+  - axes
+

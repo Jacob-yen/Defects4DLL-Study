@@ -1,0 +1,33 @@
+constraints:
+  values:
+    dtype:
+    - tf.tensor
+    ndim:
+    - any
+    shape:
+    - '[nvals, ...]'
+    tensor_t:
+    - tf.tensor
+  row_splits:
+    dtype:
+    - int
+    ndim:
+    - 1
+    shape:
+    - '[nrows+1]'
+    structure:
+    - list
+  name:
+    dtype:
+    - string
+    default:
+    - None
+    ndim:
+    - 0
+  validate:
+    dtype:
+    - bool
+    default:
+    - true
+    ndim:
+    - 0

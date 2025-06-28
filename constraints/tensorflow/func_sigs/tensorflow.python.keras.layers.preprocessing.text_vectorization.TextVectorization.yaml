@@ -1,0 +1,32 @@
+input_params:
+- name: max_tokens
+  require: false
+  style: keyword
+- name: standardize
+  require: false
+  style: keyword
+- name: split
+  require: false
+  style: keyword
+- name: ngrams
+  require: false
+  style: keyword
+- name: output_mode
+  require: false
+  style: keyword
+- name: output_sequence_length
+  require: false
+  style: keyword
+- name: pad_to_max_tokens
+  require: false
+  style: keyword
+- name: '**kwargs'
+  require: false
+  style: keyword
+- name: data
+  require: false
+  style: keyword
+- name: reset_state
+  require: false
+  style: keyword
+return: None

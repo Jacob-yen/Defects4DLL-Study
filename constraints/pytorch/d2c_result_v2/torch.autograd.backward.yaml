@@ -1,0 +1,44 @@
+constraints:
+  tensors:
+    dtype:
+    - torch.tensor
+    ndim:
+    - any
+    tensor_t:
+    - torch.tensor
+    - SparseTensor
+  grad_tensors:
+    dtype:
+    - torch.tensor
+    default:
+    - None
+    ndim:
+    - any
+    tensor_t:
+    - torch.tensor
+    - SparseTensor
+  retain_graph:
+    dtype:
+    - bool
+    default:
+    - None
+  create_graph:
+    dtype:
+    - bool
+    default:
+    - False
+  grad_variables:
+    dtype:
+      - string
+    default:
+      - None
+  inputs:
+    dtype:
+    - torch.tensor
+    default:
+    - None
+    ndim:
+    - any
+    tensor_t:
+    - torch.tensor
+    - SparseTensor

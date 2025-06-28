@@ -1,0 +1,22 @@
+constraints:
+  export_dir:
+    descp: A directory in which to write the SavedModel.
+    dtype:
+      - string
+  tags:
+    default: None
+    dtype:
+      - object
+  options:
+    default: None
+    dtype:
+      - object
+    descp: Optional, `tf.saved_model.SaveOptions` object that specifies options for
+      saving.
+inputs:
+  optional:
+  - signatures
+  - options
+  required:
+  - obj
+  - export_dir

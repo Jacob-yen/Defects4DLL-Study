@@ -1,0 +1,26 @@
+input_params:
+- name: func
+  require: false
+  style: keyword
+- name: input_signature
+  require: false
+  style: keyword
+- name: autograph
+  require: false
+  style: keyword
+- name: autograph
+  require: false
+  style: keyword
+- name: experimental_implements
+  require: false
+  style: keyword
+- name: experimental_autograph_options
+  require: false
+  style: keyword
+- name: experimental_relax_shapes
+  require: false
+  style: keyword
+- name: experimental_compile
+  require: false
+  style: keyword
+return: None

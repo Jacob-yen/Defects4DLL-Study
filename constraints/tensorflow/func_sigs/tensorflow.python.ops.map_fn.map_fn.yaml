@@ -1,0 +1,26 @@
+input_params:
+- name: fn
+  require: true
+  style: positional
+- name: elems
+  require: true
+  style: positional
+- name: dtype
+  require: false
+  style: keyword
+- name: parallel_iterations
+  require: false
+  style: keyword
+- name: back_prop
+  require: false
+  style: keyword
+- name: swap_memory
+  require: false
+  style: keyword
+- name: infer_shape
+  require: false
+  style: keyword
+- name: name
+  require: false
+  style: keyword
+return: Tensor

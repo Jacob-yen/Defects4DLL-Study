@@ -1,0 +1,29 @@
+constraints:
+  arg0:
+    dtype:
+    - object
+    enum:
+    - torch.distributed.TCPStore
+    - torch.distributed.FileStore
+    - torch.distributed.HashStore
+    - torch.distributed.ConsulStore
+    - torch.distributed.ZooKeeperStore
+    - torch.distributed.etcd.EtcdStore
+  arg1:
+    dtype:
+    - int
+  arg2:
+    dtype:
+    - int
+  arg3:
+    dtype:
+    - object
+    enum:
+    - torch.distributed.ProcessGroupGloo.Options
+    default:
+    - None
+link:
+package: torch
+target: ProcessGroupGloo
+title: torch.distributed.ProcessGroupGloo
+version: 1.11.0

@@ -1,0 +1,23 @@
+constraints:
+  input:
+    dtype:
+      - torch.tensor
+    tensor_t:
+    - torch.tensor
+    ndim: any
+  k:
+    dtype:
+      - int
+  dim:
+    dtype:
+    - int
+    default: None
+  keepdim:
+    dtype:
+    - bool
+    default: False
+  out:
+    dtype:
+      - tuple
+    default: None
+

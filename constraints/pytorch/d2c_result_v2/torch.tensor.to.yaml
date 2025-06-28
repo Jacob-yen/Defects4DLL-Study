@@ -1,0 +1,4 @@
+constraints:
+  device:
+    dtype:
+      - torch.device

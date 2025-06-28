@@ -1,0 +1,18 @@
+constraints:
+  name:
+    default: 'mean'
+    dtype:
+      - string
+  dtype:
+    default: None
+    dtype:
+    - tf.dtype
+inputs:
+  optional:
+  - name
+  - dtype
+  required:
+  -
+link: https://www.tensorflow.org/versions/r2.8/api_docs/python/tf/keras/metrics/Mean
+package: tensorflow
+target: Mean

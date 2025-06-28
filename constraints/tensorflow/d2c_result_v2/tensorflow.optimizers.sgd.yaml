@@ -1,0 +1,28 @@
+constraints:
+  learning_rate:
+    dtype:
+    - float
+    default: 0.01
+    ndim: 0
+    range:
+      - '[0, inf)'
+  momentum:
+    dtype:
+    - float
+    default: 0.0
+    ndim: 0
+    range:
+    - '[0, inf)'
+  nesterov:
+    dtype:
+    - bool
+    default: False
+    ndim: 0
+  name:
+    dtype:
+    - string
+    default: 'SGD'
+    ndim: 0
+  '**kwargs':
+    dtype:
+    - string

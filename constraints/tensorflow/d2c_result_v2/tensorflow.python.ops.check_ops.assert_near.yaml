@@ -1,0 +1,54 @@
+constraints:
+  atol:
+    default: None
+    descp: '`Tensor`.  Same `dtype` as, and broadcastable to, `x`. The absolute tolerance.  Default
+      is `10 * eps`.'
+    dtype:
+      - tf.tensor
+  message:
+    default: None
+    descp: A string to prefix to the default message.
+    dtype:
+    - string
+    ndim:
+    - '0'
+  name:
+    default: None
+    descp: A name for this operation (optional).  Defaults to "assert_near".
+    dtype:
+    - string
+    ndim:
+    - '0'
+  rtol:
+    default: None
+    descp: '`Tensor`.  Same `dtype` as, and broadcastable to, `x`. The relative tolerance.  Default
+      is `10 * eps`.'
+    dtype:
+      - tf.tensor
+  summarize:
+    default: None
+    descp: Print this many entries of each tensor.
+    dtype:
+      - string
+  x:
+    descp: Float or complex `Tensor`.
+    dtype:
+    - float
+    tensor_t:
+    - tf.tensor
+  y:
+    descp: Float or complex `Tensor`, same dtype as and broadcastable to `x`.
+    dtype:
+      - float
+    tensor_t:
+      - tf.tensor
+inputs:
+  optional:
+  - rtol
+  - atol
+  - message
+  - summarize
+  - name
+  required:
+  - x
+  - y

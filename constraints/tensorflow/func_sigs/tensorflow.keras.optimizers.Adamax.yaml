@@ -1,0 +1,20 @@
+input_params:
+- name: learning_rate
+  require: false
+  style: keyword
+- name: beta_1
+  require: false
+  style: keyword
+- name: beta_2
+  require: false
+  style: keyword
+- name: epsilon
+  require: false
+  style: keyword
+- name: name
+  require: false
+  style: keyword
+- name: '**kwargs'
+  require: false
+  style: keyword
+return: None

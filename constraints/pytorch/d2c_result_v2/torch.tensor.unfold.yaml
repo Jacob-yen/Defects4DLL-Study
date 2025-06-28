@@ -1,0 +1,10 @@
+constraints:
+  dimension:
+    dtype:
+      - int
+  size:
+    dtype:
+      - int
+  step:
+    dtype:
+      - int

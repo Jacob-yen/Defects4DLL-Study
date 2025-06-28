@@ -1,0 +1,12 @@
+constraints:
+  qengine:
+    dtype:
+    - string
+    enum:
+    - 'fbgemm'
+    - 'qnnpack'
+link:
+package: torch
+target: override_quantized_engine
+title: torch.testing._internal.common_quantized.override_quantized_engine
+version: 1.11.0
