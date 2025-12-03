@@ -1,0 +1,52 @@
+Traceback (most recent call last):
+  File "./Result/tf-41426/tf-41426-original.py", line 25, in <module>
+    fx.test_add_loss_crossentropy_backtracking()
+  File "./Result/tf-41426/tf-41426-original.py", line 21, in test_add_loss_crossentropy_backtracking
+    model.fit([x, y])
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/keras/engine/training.py", line 108, in _method_wrapper
+    return method(self, *args, **kwargs)
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/keras/engine/training.py", line 1098, in fit
+    tmp_logs = train_function(iterator)
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 780, in __call__
+    result = self._call(*args, **kwds)
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 823, in _call
+    self._initialize(args, kwds, add_initializers_to=initializers)
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 697, in _initialize
+    *args, **kwds))
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 2855, in _get_concrete_function_internal_garbage_collected
+    graph_function, _, _ = self._maybe_define_function(args, kwargs)
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 3213, in _maybe_define_function
+    graph_function = self._create_graph_function(args, kwargs)
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 3075, in _create_graph_function
+    capture_by_value=self._capture_by_value),
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/framework/func_graph.py", line 986, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 600, in wrapped_fn
+    return weak_wrapped_fn().__wrapped__(*args, **kwds)
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/framework/func_graph.py", line 973, in wrapper
+    raise e.ag_error_metadata.to_exception(e)
+ValueError: in user code:
+
+    /root/.local/lib/python3.7/site-packages/tensorflow/python/keras/engine/training.py:806 train_function  *
+        return step_function(self, iterator)
+    /root/.local/lib/python3.7/site-packages/tensorflow/python/keras/engine/training.py:796 step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    /root/.local/lib/python3.7/site-packages/tensorflow/python/distribute/distribute_lib.py:1211 run
+        return self._extended.call_for_each_replica(fn, args=args, kwargs=kwargs)
+    /root/.local/lib/python3.7/site-packages/tensorflow/python/distribute/distribute_lib.py:2585 call_for_each_replica
+        return self._call_for_each_replica(fn, args, kwargs)
+    /root/.local/lib/python3.7/site-packages/tensorflow/python/distribute/distribute_lib.py:2945 _call_for_each_replica
+        return fn(*args, **kwargs)
+    /root/.local/lib/python3.7/site-packages/tensorflow/python/keras/engine/training.py:789 run_step  **
+        outputs = model.train_step(data)
+    /root/.local/lib/python3.7/site-packages/tensorflow/python/keras/engine/training.py:757 train_step
+        self.trainable_variables)
+    /root/.local/lib/python3.7/site-packages/tensorflow/python/keras/engine/training.py:2737 _minimize
+        trainable_variables))
+    /root/.local/lib/python3.7/site-packages/tensorflow/python/keras/optimizer_v2/optimizer_v2.py:562 _aggregate_gradients
+        filtered_grads_and_vars = _filter_grads(grads_and_vars)
+    /root/.local/lib/python3.7/site-packages/tensorflow/python/keras/optimizer_v2/optimizer_v2.py:1271 _filter_grads
+        ([v.name for _, v in grads_and_vars],))
+
+    ValueError: No gradients provided for any variable: ['dense/kernel:0', 'dense/bias:0'].
+

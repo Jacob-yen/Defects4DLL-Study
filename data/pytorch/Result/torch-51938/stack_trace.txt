@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "data/pytorch/Result/torch-51938/torch-51938-original.py", line 26, in <module>
+    fx.test_index_put_slice_index()
+  File "data/pytorch/Result/torch-51938/torch-51938-original.py", line 21, in test_index_put_slice_index
+    run_test(IndexPutModel9(), (x,))
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-51938/util.py", line 39, in run_test
+    _run_test(script_model)
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-51938/util.py", line 30, in _run_test
+    return run_model_test(m, batch_size=batch_size, input=
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-51938/util.py", line 132, in run_model_test
+    ort_sess = convert_to_onnx(model, input=input, opset_version=opset_version,
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-51938/util.py", line 68, in convert_to_onnx
+    ort_sess = onnxruntime.InferenceSession(f.getvalue())
+  File "/root/anaconda3/envs/torch-51938-buggy/lib/python3.8/site-packages/onnxruntime/capi/onnxruntime_inference_collection.py", line 383, in __init__
+    self._create_inference_session(providers, provider_options, disabled_optimizers)
+  File "/root/anaconda3/envs/torch-51938-buggy/lib/python3.8/site-packages/onnxruntime/capi/onnxruntime_inference_collection.py", line 426, in _create_inference_session
+    sess = C.InferenceSession(session_options, self._model_bytes, False, self._read_config_from_model)
+onnxruntime.capi.onnxruntime_pybind11_state.Fail: [ONNXRuntimeError] : 1 : FAIL : Type Error: Type parameter (T) of Optype (ScatterND) bound to different types (tensor(float) and tensor(int64) in node (ScatterND_66).

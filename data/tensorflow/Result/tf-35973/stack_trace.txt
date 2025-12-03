@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "tf-35973-original.py", line 17, in <module>
+    partitionedCallTest.test_numpy_arguments()
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-2.1.0/lib/python3.7/site-packages/tensorflow_core/python/framework/test_util.py", line 1138, in decorated
+    run_eagerly(self, **kwargs)
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-2.1.0/lib/python3.7/site-packages/tensorflow_core/python/framework/test_util.py", line 1120, in run_eagerly
+    f(self, *args, **kwargs)
+  File "tf-35973-original.py", line 13, in test_numpy_arguments
+    script_ops.numpy_function(plus, [1, 2], dtypes.int32)
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-2.1.0/lib/python3.7/site-packages/tensorflow_core/python/ops/script_ops.py", line 591, in numpy_function
+    return py_func_common(func, inp, Tout, stateful=True, name=name)
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-2.1.0/lib/python3.7/site-packages/tensorflow_core/python/ops/script_ops.py", line 488, in py_func_common
+    result = func(*[x.numpy() for x in inp])
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-2.1.0/lib/python3.7/site-packages/tensorflow_core/python/ops/script_ops.py", line 488, in <listcomp>
+    result = func(*[x.numpy() for x in inp])
+AttributeError: 'int' object has no attribute 'numpy'

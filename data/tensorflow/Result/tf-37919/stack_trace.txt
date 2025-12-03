@@ -1,0 +1,59 @@
+Traceback (most recent call last):
+  File "tf-37919-original.py", line 29, in <module>
+    fx.test_gradients_are_none()
+  File "tf-37919-original.py", line 25, in test_gradients_are_none
+    model.fit(inputs, targets)
+  File "/root/anaconda3/envs/tf-37919-buggy/lib/python3.7/site-packages/tensorflow/python/keras/engine/training.py", line 65, in _method_wrapper
+    return method(self, *args, **kwargs)
+  File "/root/anaconda3/envs/tf-37919-buggy/lib/python3.7/site-packages/tensorflow/python/keras/engine/training.py", line 783, in fit
+    tmp_logs = train_function(iterator)
+  File "/root/anaconda3/envs/tf-37919-buggy/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 580, in __call__
+    result = self._call(*args, **kwds)
+  File "/root/anaconda3/envs/tf-37919-buggy/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 627, in _call
+    self._initialize(args, kwds, add_initializers_to=initializers)
+  File "/root/anaconda3/envs/tf-37919-buggy/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 506, in _initialize
+    *args, **kwds))
+  File "/root/anaconda3/envs/tf-37919-buggy/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 2446, in _get_concrete_function_internal_garbage_collected
+    graph_function, _, _ = self._maybe_define_function(args, kwargs)
+  File "/root/anaconda3/envs/tf-37919-buggy/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 2777, in _maybe_define_function
+    graph_function = self._create_graph_function(args, kwargs)
+  File "/root/anaconda3/envs/tf-37919-buggy/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 2667, in _create_graph_function
+    capture_by_value=self._capture_by_value),
+  File "/root/anaconda3/envs/tf-37919-buggy/lib/python3.7/site-packages/tensorflow/python/framework/func_graph.py", line 981, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "/root/anaconda3/envs/tf-37919-buggy/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 441, in wrapped_fn
+    return weak_wrapped_fn().__wrapped__(*args, **kwds)
+  File "/root/anaconda3/envs/tf-37919-buggy/lib/python3.7/site-packages/tensorflow/python/framework/func_graph.py", line 968, in wrapper
+    raise e.ag_error_metadata.to_exception(e)
+ValueError: in user code:
+
+    /root/anaconda3/envs/tf-37919-buggy/lib/python3.7/site-packages/tensorflow/python/keras/engine/training.py:503 train_function  *
+        outputs = self.distribute_strategy.run(
+    /root/anaconda3/envs/tf-37919-buggy/lib/python3.7/site-packages/tensorflow/python/distribute/distribute_lib.py:951 run  **
+        return self._extended.call_for_each_replica(fn, args=args, kwargs=kwargs)
+    /root/anaconda3/envs/tf-37919-buggy/lib/python3.7/site-packages/tensorflow/python/distribute/distribute_lib.py:2290 call_for_each_replica
+        return self._call_for_each_replica(fn, args, kwargs)
+    /root/anaconda3/envs/tf-37919-buggy/lib/python3.7/site-packages/tensorflow/python/distribute/distribute_lib.py:2649 _call_for_each_replica
+        return fn(*args, **kwargs)
+    /root/anaconda3/envs/tf-37919-buggy/lib/python3.7/site-packages/tensorflow/python/keras/engine/training.py:473 train_step  **
+        _minimize(tape, self.optimizer, loss, self.trainable_variables)
+    /root/anaconda3/envs/tf-37919-buggy/lib/python3.7/site-packages/tensorflow/python/keras/engine/training.py:1733 _minimize
+        gradients = optimizer._clip_gradients(gradients)  # pylint: disable=protected-access
+    /root/anaconda3/envs/tf-37919-buggy/lib/python3.7/site-packages/tensorflow/python/keras/optimizer_v2/optimizer_v2.py:346 _clip_gradients
+        grads = [clip_ops.clip_by_norm(g, self.clipnorm) for g in grads]
+    /root/anaconda3/envs/tf-37919-buggy/lib/python3.7/site-packages/tensorflow/python/keras/optimizer_v2/optimizer_v2.py:346 <listcomp>
+        grads = [clip_ops.clip_by_norm(g, self.clipnorm) for g in grads]
+    /root/anaconda3/envs/tf-37919-buggy/lib/python3.7/site-packages/tensorflow/python/ops/clip_ops.py:195 clip_by_norm
+        t.values if isinstance(t, ops.IndexedSlices) else t, name="t")
+    /root/anaconda3/envs/tf-37919-buggy/lib/python3.7/site-packages/tensorflow/python/framework/ops.py:1341 convert_to_tensor
+        ret = conversion_func(value, dtype=dtype, name=name, as_ref=as_ref)
+    /root/anaconda3/envs/tf-37919-buggy/lib/python3.7/site-packages/tensorflow/python/framework/constant_op.py:321 _constant_tensor_conversion_function
+        return constant(v, dtype=dtype, name=name)
+    /root/anaconda3/envs/tf-37919-buggy/lib/python3.7/site-packages/tensorflow/python/framework/constant_op.py:262 constant
+        allow_broadcast=True)
+    /root/anaconda3/envs/tf-37919-buggy/lib/python3.7/site-packages/tensorflow/python/framework/constant_op.py:300 _constant_impl
+        allow_broadcast=allow_broadcast))
+    /root/anaconda3/envs/tf-37919-buggy/lib/python3.7/site-packages/tensorflow/python/framework/tensor_util.py:439 make_tensor_proto
+        raise ValueError("None values not supported.")
+
+    ValueError: None values not supported.

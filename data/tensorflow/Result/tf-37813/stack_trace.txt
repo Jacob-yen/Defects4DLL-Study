@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "tf-37813-original.py", line 29, in <module>
+    partitionedCallTest.test_while_loop_with_else()
+  File "tf-37813-original.py", line 25, in test_while_loop_with_else
+    self.assertTransformedEquivalent(test_fn, 4)
+  File "tf-37813-original.py", line 15, in assertTransformedEquivalent
+    self.assertEqual(test_fn(*inputs), result.test_fn(*inputs))
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-2.2.0/lib/python3.8/unittest/case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-2.2.0/lib/python3.8/unittest/case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 3.0 != 2.0

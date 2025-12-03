@@ -1,0 +1,40 @@
+Traceback (most recent call last):
+  File "./Result/tf-48887/tf-48887-original.py", line 43, in <module>
+    fx.test_rnn_with_ragged_input(layer=rnn_v1.SimpleRNN)
+  File "./Result/tf-48887/tf-48887-original.py", line 39, in test_rnn_with_ragged_input
+    self.assertAllClose(keras.backend.reverse(output_ragged, [1]), output_dense)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/framework/test_util.py", line 1246, in decorated
+    return f(*args, **kwds)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/framework/test_util.py", line 2735, in assertAllClose
+    return self._assertRaggedClose(a, b, rtol, atol, msg)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/framework/test_util.py", line 3182, in _assertRaggedClose
+    self._assertListCloseRecursive(a_list, b_list, rtol, atol, msg)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/framework/test_util.py", line 3194, in _assertListCloseRecursive
+    self._assertListCloseRecursive(a[i], b[i], rtol, atol, msg,
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/framework/test_util.py", line 3194, in _assertListCloseRecursive
+    self._assertListCloseRecursive(a[i], b[i], rtol, atol, msg,
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/framework/test_util.py", line 3194, in _assertListCloseRecursive
+    self._assertListCloseRecursive(a[i], b[i], rtol, atol, msg,
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/framework/test_util.py", line 3197, in _assertListCloseRecursive
+    self._assertAllCloseRecursive(a, b, rtol, atol, path, msg)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/framework/test_util.py", line 2690, in _assertAllCloseRecursive
+    self._assertArrayLikeAllClose(
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/framework/test_util.py", line 2630, in _assertArrayLikeAllClose
+    np.testing.assert_allclose(
+  File "/root/anaconda3/envs/tf-48887-buggy/lib/python3.8/site-packages/numpy/testing/_private/utils.py", line 1527, in assert_allclose
+    assert_array_compare(compare, actual, desired, err_msg=str(err_msg),
+  File "/root/anaconda3/envs/tf-48887-buggy/lib/python3.8/site-packages/numpy/testing/_private/utils.py", line 840, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Not equal to tolerance rtol=1e-06, atol=1e-06
+Mismatched value: a[v][a][l][u][e][[][0][]][[][0][]][[][0][]] is different from b[v][a][l][u][e][[][0][]][[][0][]][[][0][]]. 
+not close lhs = -0.8936782479286194
+not close rhs = -0.9773108959197998
+not close dif = 0.08363264799118042
+not close tol = 1.9773108959197998e-06
+dtype = float64, shape = ()
+Mismatched elements: 1 / 1 (100%)
+Max absolute difference: 0.08363265
+Max relative difference: 0.08557425
+ x: array(-0.893678)
+ y: array(-0.977311)

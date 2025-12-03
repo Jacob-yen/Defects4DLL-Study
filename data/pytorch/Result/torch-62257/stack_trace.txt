@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/data/defects4-dll-study/data/pytorch/Result/torch-62257/torch-62257-original.py", line 31, in <module>
+    fx.test_largemodel_without_use_external_data_format_param()
+  File "/data/defects4-dll-study/data/pytorch/Result/torch-62257/torch-62257-original.py", line 26, in test_largemodel_without_use_external_data_format_param
+    run_model_test_with_external_data(LargeModel(), x, use_external_data_format=None)
+  File "/data/defects4-dll-study/data/pytorch/Result/torch-62257/util.py", line 50, in run_model_test_with_external_data
+    torch.onnx.export(model, input_copy, model_file_name,
+  File "/root/anaconda3/envs/torch-62257-buggy/lib/python3.8/site-packages/torch/onnx/__init__.py", line 316, in export
+    return utils.export(model, args, f, export_params, verbose, training,
+  File "/root/anaconda3/envs/torch-62257-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 102, in export
+    _export(model, args, f, export_params, verbose, training, input_names, output_names,
+  File "/root/anaconda3/envs/torch-62257-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 729, in _export
+    proto, export_map = graph._export_onnx(
+RuntimeError: Exporting model exceed maximum protobuf size of 2GB. Please call torch.onnx.export with use_external_data_format=True.
+
+ERROR conda.cli.main_run:execute(125): `conda run python /data/defects4-dll-study/data/pytorch/Result/torch-62257/torch-62257-original.py` failed. (See above for error)

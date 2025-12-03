@@ -1,0 +1,33 @@
+Traceback (most recent call last):
+  File "data/pytorch/Result/torch-54033/torch-54033-original.py", line 25, in <module>
+    fx.test_embedding()
+  File "data/pytorch/Result/torch-54033/torch-54033-original.py", line 20, in test_embedding
+    run_test(model, (x, embedding_matrix))
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-54033/util.py", line 39, in run_test
+    _run_test(script_model)
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-54033/util.py", line 30, in _run_test
+    return run_model_test(m, batch_size=batch_size, input=
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-54033/util.py", line 142, in run_model_test
+    ort_compare_with_pytorch(ort_outs, output, rtol, atol)
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-54033/util.py", line 97, in ort_compare_with_pytorch
+    [np.testing.assert_allclose(out, ort_out, rtol=rtol, atol=atol) for out, ort_out in zip(outputs, ort_outs)]
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-54033/util.py", line 97, in <listcomp>
+    [np.testing.assert_allclose(out, ort_out, rtol=rtol, atol=atol) for out, ort_out in zip(outputs, ort_outs)]
+  File "/root/anaconda3/envs/torch-54033-buggy/lib/python3.8/site-packages/numpy/testing/_private/utils.py", line 1527, in assert_allclose
+    assert_array_compare(compare, actual, desired, err_msg=str(err_msg),
+  File "/root/anaconda3/envs/torch-54033-buggy/lib/python3.8/site-packages/numpy/testing/_private/utils.py", line 844, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError:
+Not equal to tolerance rtol=0.001, atol=1e-07
+
+Mismatched elements: 6 / 12 (50%)
+Max absolute difference: 0.89644474
+Max relative difference: 1.
+ x: array([[0.      , 0.      , 0.      ],
+       [0.168859, 0.293888, 0.518522],
+       [0.      , 0.      , 0.      ],
+       [0.307423, 0.634079, 0.490093]], dtype=float32)
+ y: array([[0.896445, 0.455628, 0.632306],
+       [0.168859, 0.293888, 0.518522],
+       [0.896445, 0.455628, 0.632306],
+       [0.307423, 0.634079, 0.490093]], dtype=float32)

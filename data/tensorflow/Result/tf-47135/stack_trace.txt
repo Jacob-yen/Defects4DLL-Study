@@ -1,0 +1,49 @@
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/tf-47135-buggy/lib/python3.8/site-packages/tensorflow/python/framework/ops.py", line 1868, in _create_c_op
+    c_op = pywrap_tf_session.TF_FinishOperation(op_desc)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Dimensions must be equal, but are 10 and 3 for '{{node lambda/truediv_1}} = RealDiv[T=DT_FLOAT](lambda/BiasAdd, lambda/truediv_1/y)' with input shapes: [?,3,10,10], [3].
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "tf-47135-original.py", line 19, in <module>
+    pc.test_preprocess_input_symbolic()
+  File "tf-47135-original.py", line 14, in test_preprocess_input_symbolic
+    keras.layers.Lambda(lambda x: utils.preprocess_input(x, 'channels_first', mode=mode),
+  File "/root/anaconda3/envs/tf-47135-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 971, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-47135-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1110, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-47135-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 841, in _keras_tensor_symbolic_call
+    return self._infer_output_signature(inputs, args, kwargs, input_masks)
+  File "/root/anaconda3/envs/tf-47135-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 882, in _infer_output_signature
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "/root/anaconda3/envs/tf-47135-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 918, in call
+    result = self.function(inputs, **kwargs)
+  File "tf-47135-original.py", line 14, in <lambda>
+    keras.layers.Lambda(lambda x: utils.preprocess_input(x, 'channels_first', mode=mode),
+  File "/root/anaconda3/envs/tf-47135-buggy/lib/python3.8/site-packages/tensorflow/python/keras/applications/imagenet_utils.py", line 118, in preprocess_input
+    return _preprocess_symbolic_input(
+  File "/root/anaconda3/envs/tf-47135-buggy/lib/python3.8/site-packages/tensorflow/python/keras/applications/imagenet_utils.py", line 292, in _preprocess_symbolic_input
+    x /= std
+  File "/root/anaconda3/envs/tf-47135-buggy/lib/python3.8/site-packages/tensorflow/python/ops/math_ops.py", line 1203, in binary_op_wrapper
+    return func(x, y, name=name)
+  File "/root/anaconda3/envs/tf-47135-buggy/lib/python3.8/site-packages/tensorflow/python/util/dispatch.py", line 206, in wrapper
+    return target(*args, **kwargs)
+  File "/root/anaconda3/envs/tf-47135-buggy/lib/python3.8/site-packages/tensorflow/python/ops/math_ops.py", line 1377, in truediv
+    return _truediv_python3(x, y, name)
+  File "/root/anaconda3/envs/tf-47135-buggy/lib/python3.8/site-packages/tensorflow/python/ops/math_ops.py", line 1316, in _truediv_python3
+    return gen_math_ops.real_div(x, y, name=name)
+  File "/root/anaconda3/envs/tf-47135-buggy/lib/python3.8/site-packages/tensorflow/python/ops/gen_math_ops.py", line 7522, in real_div
+    _, _, _op, _outputs = _op_def_library._apply_op_helper(
+  File "/root/anaconda3/envs/tf-47135-buggy/lib/python3.8/site-packages/tensorflow/python/framework/op_def_library.py", line 748, in _apply_op_helper
+    op = g._create_op_internal(op_type_name, inputs, dtypes=None,
+  File "/root/anaconda3/envs/tf-47135-buggy/lib/python3.8/site-packages/tensorflow/python/framework/func_graph.py", line 598, in _create_op_internal
+    return super(FuncGraph, self)._create_op_internal(  # pylint: disable=protected-access
+  File "/root/anaconda3/envs/tf-47135-buggy/lib/python3.8/site-packages/tensorflow/python/framework/ops.py", line 3545, in _create_op_internal
+    ret = Operation(
+  File "/root/anaconda3/envs/tf-47135-buggy/lib/python3.8/site-packages/tensorflow/python/framework/ops.py", line 2029, in __init__
+    self._c_op = _create_c_op(self._graph, node_def, inputs,
+  File "/root/anaconda3/envs/tf-47135-buggy/lib/python3.8/site-packages/tensorflow/python/framework/ops.py", line 1871, in _create_c_op
+    raise ValueError(str(e))
+ValueError: Dimensions must be equal, but are 10 and 3 for '{{node lambda/truediv_1}} = RealDiv[T=DT_FLOAT](lambda/BiasAdd, lambda/truediv_1/y)' with input shapes: [?,3,10,10], [3].

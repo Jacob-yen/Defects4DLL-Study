@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "torch-51396/torch-51396-original.py", line 34, in <module>
+    fx.test_chunk()
+  File "torch-51396/torch-51396-original.py", line 27, in test_chunk
+    run_test(model_neg_dim, x, test_with_inputs=[y],
+  File "/jtj/jtj_project/compile/gdefects4dll/data/pytorch/Result/torch-51396/util.py", line 31, in run_test
+    _run_test(model)
+  File "/jtj/jtj_project/compile/gdefects4dll/data/pytorch/Result/torch-51396/util.py", line 24, in _run_test
+    return run_model_test(m, batch_size=batch_size,
+  File "/jtj/jtj_project/compile/gdefects4dll/data/pytorch/Result/torch-51396/util.py", line 93, in run_model_test
+    ort_test_with_input(ort_sess, input_copy, output, rtol, atol)
+  File "/jtj/jtj_project/compile/gdefects4dll/data/pytorch/Result/torch-51396/util.py", line 48, in ort_test_with_input
+    ort_outs = ort_sess.run(None, ort_inputs)
+  File "/root/anaconda3/envs/torch-51396-buggy/lib/python3.8/site-packages/onnxruntime/capi/onnxruntime_inference_collection.py", line 217, in run
+    return self._sess.run(output_names, input_feed, run_options)
+onnxruntime.capi.onnxruntime_pybind11_state.Fail: [ONNXRuntimeError] : 1 : FAIL : Non-zero status code returned while running Slice node. Name:'Slice_17' Status Message: slice.cc:196 FillVectorsFromInput Starts and axes shape mismatch

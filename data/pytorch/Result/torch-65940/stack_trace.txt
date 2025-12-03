@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "./torch-65940-original.py", line 59, in <module>
+    fx.test_einsum()
+  File "./torch-65940-original.py", line 54, in test_einsum
+    self.run_test(EinsumModelBatchDiagonal(), input=(x,))
+  File "./torch-65940-original.py", line 45, in run_test
+    _run_test(script_model, scripting_remained_onnx_input_idx, flatten=False)
+  File "./torch-65940-original.py", line 29, in _run_test
+    return run_model_test(self, m, batch_size=batch_size,
+  File "/jtj/mutation_evaluate/gdefects4dll/data/pytorch/newBug/torch-65940/util.py", line 128, in run_model_test
+    ort_sess = convert_to_onnx(model, input=input, opset_version=self.opset_version,
+  File "/jtj/mutation_evaluate/gdefects4dll/data/pytorch/newBug/torch-65940/util.py", line 62, in convert_to_onnx
+    ort_sess = onnxruntime.InferenceSession(f.getvalue())
+  File "/root/anaconda3/envs/torch-65940-buggy/lib/python3.8/site-packages/onnxruntime/capi/onnxruntime_inference_collection.py", line 383, in __init__
+    self._create_inference_session(providers, provider_options, disabled_optimizers)
+  File "/root/anaconda3/envs/torch-65940-buggy/lib/python3.8/site-packages/onnxruntime/capi/onnxruntime_inference_collection.py", line 426, in _create_inference_session
+    sess = C.InferenceSession(session_options, self._model_bytes, False, self._read_config_from_model)
+onnxruntime.capi.onnxruntime_pybind11_state.InvalidGraph: [ONNXRuntimeError] : 10 : INVALID_GRAPH : This is an invalid model. Type Error: Type 'tensor(bool)' of input parameter (x.1) of operator (Einsum) in node (Einsum_0) is invalid.

@@ -1,0 +1,27 @@
+Traceback (most recent call last):
+  File "data/pytorch/Result/torch-64230/torch-64230-original.py", line 28, in <module>
+    fx.test_remainder_scalar()
+  File "data/pytorch/Result/torch-64230/torch-64230-original.py", line 23, in test_remainder_scalar
+    run_test(RemainderModel(2), x)
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-64230/util.py", line 48, in run_test
+    _run_test(script_model, scripting_remained_onnx_input_idx,
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-64230/util.py", line 32, in _run_test
+    return run_model_test(m, batch_size=batch_size, input=
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-64230/util.py", line 186, in run_model_test
+    ort_compare_with_pytorch(ort_outs, output, rtol, atol)
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-64230/util.py", line 128, in ort_compare_with_pytorch
+    [np.testing.assert_allclose(out, ort_out, rtol=rtol, atol=atol) for out, ort_out in zip(outputs, ort_outs)]
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-64230/util.py", line 128, in <listcomp>
+    [np.testing.assert_allclose(out, ort_out, rtol=rtol, atol=atol) for out, ort_out in zip(outputs, ort_outs)]
+  File "/root/anaconda3/envs/torch-64230-buggy/lib/python3.8/site-packages/numpy/testing/_private/utils.py", line 1527, in assert_allclose
+    assert_array_compare(compare, actual, desired, err_msg=str(err_msg),
+  File "/root/anaconda3/envs/torch-64230-buggy/lib/python3.8/site-packages/numpy/testing/_private/utils.py", line 844, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError:
+Not equal to tolerance rtol=0.001, atol=1e-07
+
+Mismatched elements: 1 / 4 (25%)
+Max absolute difference: 2
+Max relative difference: 2.
+ x: array([1, 0, 1, 0])
+ y: array([ 1,  0, -1,  0], dtype=int64)

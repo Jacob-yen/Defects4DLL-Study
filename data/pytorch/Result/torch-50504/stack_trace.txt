@@ -1,0 +1,47 @@
+Traceback (most recent call last):
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-50504/torch-50504-original.py", line 21, in <module>
+    fx.test_unfold_dynamic_inputs()
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-50504/torch-50504-original.py", line 17, in test_unfold_dynamic_inputs
+    run_test(UnfoldModel(), x)
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-50504/util.py", line 146, in run_test
+    _run_test(script_model)
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-50504/util.py", line 138, in _run_test
+    return run_model_test(m, batch_size=batch_size,
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-50504/util.py", line 102, in run_model_test
+    ort_sess = convert_to_onnx(model, input=input, opset_version=opset_version,
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-50504/util.py", line 28, in convert_to_onnx
+    torch.onnx._export(model, input_copy, f,
+  File "/root/anaconda3/envs/torch-50504-buggy/lib/python3.8/site-packages/torch/onnx/__init__.py", line 28, in _export
+    result = utils._export(*args, **kwargs)
+  File "/root/anaconda3/envs/torch-50504-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 686, in _export
+    _model_to_graph(model, args, verbose, input_names,
+  File "/root/anaconda3/envs/torch-50504-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 456, in _model_to_graph
+    graph = _optimize_graph(graph, operator_export_type,
+  File "/root/anaconda3/envs/torch-50504-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 206, in _optimize_graph
+    graph = torch._C._jit_pass_onnx(graph, operator_export_type)
+  File "/root/anaconda3/envs/torch-50504-buggy/lib/python3.8/site-packages/torch/onnx/__init__.py", line 309, in _run_symbolic_function
+    return utils._run_symbolic_function(*args, **kwargs)
+  File "/root/anaconda3/envs/torch-50504-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 989, in _run_symbolic_function
+    return symbolic_fn(g, *inputs, **attrs)
+  File "/root/anaconda3/envs/torch-50504-buggy/lib/python3.8/site-packages/torch/onnx/symbolic_helper.py", line 135, in wrapper
+    return fn(g, *args, **kwargs)
+  File "/root/anaconda3/envs/torch-50504-buggy/lib/python3.8/site-packages/torch/onnx/symbolic_opset12.py", line 140, in unfold
+    low_indices = g.op("Range", low_start, low_end, step)
+  File "/root/anaconda3/envs/torch-50504-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 882, in _graph_op
+    args = list(const_if_tensor(arg) for arg in raw_args)
+  File "/root/anaconda3/envs/torch-50504-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 882, in <genexpr>
+    args = list(const_if_tensor(arg) for arg in raw_args)
+  File "/root/anaconda3/envs/torch-50504-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 880, in const_if_tensor
+    return g.op("Constant", value_z=arg)
+  File "/root/anaconda3/envs/torch-50504-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 883, in _graph_op
+    n = g.insertNode(_newNode(g, opname, outputs, *args, **kwargs))
+  File "/root/anaconda3/envs/torch-50504-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 836, in _newNode
+    _add_attribute(n, k, v, aten=aten)
+  File "/root/anaconda3/envs/torch-50504-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 814, in _add_attribute
+    return getattr(node, kind + "_")(name, value)
+TypeError: z_(): incompatible function arguments. The following argument types are supported:
+    1. (self: torch._C.Node, arg0: str, arg1: at::Tensor) -> torch._C.Node
+
+Invoked with: %10 : Tensor = onnx::Constant()
+, 'value', 1
+(Occurred when translating unfold).

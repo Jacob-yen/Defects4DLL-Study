@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "tf-46375-original.py", line 29, in <module>
+    fx.testTrace_withProfiler()
+  File "tf-46375-original.py", line 25, in testTrace_withProfiler
+    summary_ops_v2.trace_export(name='foo', step=1, profiler_outdir=profiler_outdir)
+  File "/root/anaconda3/envs/tf-46375-buggy/lib/python3.8/site-packages/tensorflow/python/ops/summary_ops_v2.py", line 1355, in trace_export
+    trace_off()
+  File "/root/anaconda3/envs/tf-46375-buggy/lib/python3.8/site-packages/tensorflow/python/ops/summary_ops_v2.py", line 1373, in trace_off
+    _profiler.stop()
+  File "/root/anaconda3/envs/tf-46375-buggy/lib/python3.8/site-packages/tensorflow/python/util/deprecation.py", line 340, in new_func
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/tf-46375-buggy/lib/python3.8/site-packages/tensorflow/python/eager/profiler.py", line 104, in stop
+    raise ProfilerNotRunningError(
+tensorflow.python.eager.profiler.ProfilerNotRunningError: Cannot stop profiling. No profiler is running.

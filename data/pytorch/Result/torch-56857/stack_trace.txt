@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "data/pytorch/Result/torch-56857/torch-56857-original.py", line 25, in <module>
+    fx.test_to_device()
+  File "data/pytorch/Result/torch-56857/torch-56857-original.py", line 20, in test_to_device
+    run_test(M_ToDevice(), (x, y))
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-56857/util.py", line 40, in run_test
+    _run_test(script_model)
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-56857/util.py", line 31, in _run_test
+    return run_model_test(m, batch_size=batch_size, input=
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-56857/util.py", line 133, in run_model_test
+    ort_sess = convert_to_onnx(model, input=input, opset_version=opset_version,
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-56857/util.py", line 58, in convert_to_onnx
+    torch.onnx._export(model, input_copy, f,
+  File "/root/anaconda3/envs/torch-56857-buggy/lib/python3.8/site-packages/torch/onnx/__init__.py", line 28, in _export
+    result = utils._export(*args, **kwargs)
+  File "/root/anaconda3/envs/torch-56857-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 676, in _export
+    _model_to_graph(model, args, verbose, input_names,
+  File "/root/anaconda3/envs/torch-56857-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 450, in _model_to_graph
+    graph = _optimize_graph(graph, operator_export_type,
+  File "/root/anaconda3/envs/torch-56857-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 200, in _optimize_graph
+    graph = torch._C._jit_pass_onnx(graph, operator_export_type)
+  File "/root/anaconda3/envs/torch-56857-buggy/lib/python3.8/site-packages/torch/onnx/__init__.py", line 309, in _run_symbolic_function
+    return utils._run_symbolic_function(*args, **kwargs)
+  File "/root/anaconda3/envs/torch-56857-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 981, in _run_symbolic_function
+    return symbolic_fn(g, *inputs, **attrs)
+  File "/root/anaconda3/envs/torch-56857-buggy/lib/python3.8/site-packages/torch/onnx/symbolic_opset9.py", line 1959, in to
+    dtype = other.type().scalarType()
+RuntimeError: rINTERNAL ASSERT FAILED at "/jtj/batch_experiment/torch-project/torch-56857/pytorch/aten/src/ATen/core/jit_type_base.h":184, please report a bug to PyTorch.

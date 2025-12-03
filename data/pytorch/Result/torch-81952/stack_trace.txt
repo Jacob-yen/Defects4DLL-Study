@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "torch-81952-original.py", line 9, in <module>
+    print(model(src, src_mask))
+  File "/home/jiangtianjie/anaconda3/envs/torch-1.12.0/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/jiangtianjie/anaconda3/envs/torch-1.12.0/lib/python3.8/site-packages/torch/nn/modules/transformer.py", line 437, in forward
+    return torch._transformer_encoder_layer_fwd(
+RuntimeError: Expected attn_mask->sizes()[0] == batch_size to be true, but got false.  (Could this error message be improved?  If so, please report an enhancement request to PyTorch.)

@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "./Result/tf-48315/tf-48315-original.py", line 66, in <module>
+    fx.test_logs_conversion()
+  File "./Result/tf-48315/tf-48315-original.py", line 61, in test_logs_conversion
+    cb_list.on_epoch_begin(0, logs={"all": 0})
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/keras/callbacks.py", line 413, in on_epoch_begin
+    callback.on_epoch_begin(epoch, numpy_logs)
+  File "./Result/tf-48315/tf-48315-original.py", line 46, in _run
+    self.assertDictEqual(logs, {"all": 0, "numpy": 1, "tf": 2})
+  File "/root/anaconda3/envs/tf-48315-buggy/lib/python3.8/site-packages/absl/testing/absltest.py", line 1733, in assertDictEqual
+    raise self.failureException('\n'.join(message))
+AssertionError: {'all': 0, 'numpy': 1} != {'all': 0, 'numpy': 1, 'tf': 2}
+Unexpected, but present entries:
+'tf': 2
+

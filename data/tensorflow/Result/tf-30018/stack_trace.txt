@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "tf-30018/tf-30018-original.py", line 27, in <module>
+    fx.testCreateSlotFromFirstMDimensionVariable()
+  File "/root/anaconda3/envs/tf-30018-buggy/lib/python3.7/site-packages/tensorflow_core/python/framework/test_util.py", line 1189, in decorated
+    return f(self, *args, **kwargs)
+  File "tf-30018/tf-30018-original.py", line 23, in testCreateSlotFromFirstMDimensionVariable
+    self.assertAllEqual([2], si.full_shape)
+  File "/root/anaconda3/envs/tf-30018-buggy/lib/python3.7/site-packages/tensorflow_core/python/framework/test_util.py", line 1095, in decorated
+    return f(*args, **kwds)
+  File "/root/anaconda3/envs/tf-30018-buggy/lib/python3.7/site-packages/tensorflow_core/python/framework/test_util.py", line 2471, in assertAllEqual
+    " Contents: %s. \n%s." % (a.shape, b.shape, b, msg))
+  File "/root/anaconda3/envs/tf-30018-buggy/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/root/anaconda3/envs/tf-30018-buggy/lib/python3.7/unittest/case.py", line 1069, in assertTupleEqual
+    self.assertSequenceEqual(tuple1, tuple2, msg, seq_type=tuple)
+  File "/root/anaconda3/envs/tf-30018-buggy/lib/python3.7/unittest/case.py", line 1040, in assertSequenceEqual
+    self.fail(msg)
+  File "/root/anaconda3/envs/tf-30018-buggy/lib/python3.7/site-packages/absl/testing/absltest.py", line 1823, in fail
+    return super(TestCase, self).fail(self._formatMessage(prefix, msg))
+  File "/root/anaconda3/envs/tf-30018-buggy/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: Tuples differ: (1,) != (2,)

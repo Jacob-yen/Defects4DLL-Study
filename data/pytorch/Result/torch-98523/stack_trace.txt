@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/data/defects4-dll-study/data/pytorch/Result/torch-98523/torch-98523-original.py", line 62, in <module>
+    fx.test_legacy_custom_sharding()
+  File "/data/defects4-dll-study/data/pytorch/Result/torch-98523/torch-98523-original.py", line 58, in test_legacy_custom_sharding
+    self.assertEqual([1, 20], items)
+  File "/root/anaconda3/envs/torch-98523-buggy/lib/python3.8/site-packages/torch/testing/_internal/common_utils.py", line 2930, in assertEqual
+    error_metas = not_close_error_metas(
+  File "/root/anaconda3/envs/torch-98523-buggy/lib/python3.8/site-packages/torch/testing/_comparison.py", line 1219, in not_close_error_metas
+    raise error_meta.to_error() from None
+AssertionError: The length of the sequences mismatch: 2 != 6
+
+ERROR conda.cli.main_run:execute(125): `conda run python /data/defects4-dll-study/data/pytorch/Result/torch-98523/torch-98523-original.py` failed. (See above for error)

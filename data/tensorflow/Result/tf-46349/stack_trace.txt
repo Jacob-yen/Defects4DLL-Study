@@ -1,0 +1,36 @@
+Traceback (most recent call last):
+  File "tf-46349-original.py", line 29, in <module>
+    atestClass.test_optimizer()
+  File "tf-46349-original.py", line 25, in test_optimizer
+    opt.minimize(lambda: x + y, var_list=[x, y])
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/optimizer_v2/optimizer_v2.py", line 498, in minimize
+    return self.apply_gradients(grads_and_vars, name=name)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/optimizer_v2/optimizer_v2.py", line 631, in apply_gradients
+    return distribute_ctx.get_replica_context().merge_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/distribute/distribute_lib.py", line 2941, in merge_call
+    return self._merge_call(merge_fn, args, kwargs)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/distribute/distribute_lib.py", line 2948, in _merge_call
+    return merge_fn(self._strategy, *args, **kwargs)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/autograph/impl/api.py", line 572, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/optimizer_v2/optimizer_v2.py", line 682, in _distributed_apply
+    update_ops.extend(distribution.extended.update(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/distribute/distribute_lib.py", line 2494, in update
+    return self._update(var, fn, args, kwargs, group)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/distribute/distribute_lib.py", line 3431, in _update
+    return self._update_non_slot(var, fn, (var,) + tuple(args), kwargs, group)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/distribute/distribute_lib.py", line 3437, in _update_non_slot
+    result = fn(*args, **kwargs)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/autograph/impl/api.py", line 572, in wrapper
+    return func(*args, **kwargs)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/optimizer_v2/optimizer_v2.py", line 658, in apply_grad_to_update_var
+    update_op = self._resource_apply_dense(grad, var, **apply_kwargs)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/optimizer_v2/rmsprop.py", line 220, in _resource_apply_dense
+    return state_ops.assign(var, var_t, use_locking=self._use_locking).op
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/mixed_precision/autocast_variable.py", line 120, in __getattr__
+    return getattr(self._variable, name)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/ops/resource_variable_ops.py", line 596, in op
+    return self._handle.op
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/framework/ops.py", line 1222, in op
+    raise AttributeError(
+AttributeError: Tensor.op is meaningless when eager execution is enabled.

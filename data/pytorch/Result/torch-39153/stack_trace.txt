@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./mutated_code_jtj/torch-39153/torch-39153-original.py", line 35, in <module>
+    fx.test_clip_grad_norm_multi_device()
+  File "./mutated_code_jtj/torch-39153/torch-39153-original.py", line 30, in test_clip_grad_norm_multi_device
+    norm = clip_grad_norm_(test_model.parameters(), 0.5, norm_type=
+  File "/root/anaconda3/envs/torch-39153-buggy/lib/python3.8/site-packages/torch/nn/utils/clip_grad.py", line 30, in clip_grad_norm_
+    total_norm = torch.norm(torch.stack([torch.norm(p.grad.detach(), norm_type) for p in parameters]), norm_type)
+RuntimeError: All input tensors must be on the same device. Received cuda:0 and cuda:1

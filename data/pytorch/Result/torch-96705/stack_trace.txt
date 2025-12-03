@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "data/pytorch/Result/torch-96705/torch-96705-original.py", line 46, in <module>
+    fx.test_modify_fqn()
+  File "data/pytorch/Result/torch-96705/torch-96705-original.py", line 42, in test_modify_fqn
+    wrap_module(model.seq1)
+  File "/root/anaconda3/envs/torch-96705-buggy/lib/python3.8/unittest/case.py", line 240, in __exit__
+    self._raiseFailure('"{}" does not match "{}"'.format(
+  File "/root/anaconda3/envs/torch-96705-buggy/lib/python3.8/unittest/case.py", line 164, in _raiseFailure
+    raise self.test_case.failureException(msg)
+AssertionError: "Check parameters, Composable distributed API implementations cannot modify FQNs" does not match "Composable distributed API implementations cannot modify FQNs.
+Only in original FQNs: {'0.weight', '1.bias', '1.weight', '0.bias'},
+Only in new FQNs: {'module.0.bias', 'module.1.bias', 'module.0.weight', 'module.1.weight'}"

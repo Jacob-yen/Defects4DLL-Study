@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "torch-98017-original.py", line 23, in <module>
+    fx.test_full_backward_pre_hooks()
+  File "torch-98017-original.py", line 19, in test_full_backward_pre_hooks
+    self.assertEqual(a.grad, torch.zeros_like(a))
+  File "/home/jiangtianjie/anaconda3/envs/torch-2.0.0/lib/python3.8/site-packages/torch/testing/_internal/common_utils.py", line 2967, in assertEqual
+    raise error_metas[0].to_error(
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 2 / 2 (100.0%)
+Greatest absolute difference: 1.0057555437088013 at index (0,) (up to 1e-05 allowed)
+Greatest relative difference: inf at index (0,) (up to 1.3e-06 allowed)

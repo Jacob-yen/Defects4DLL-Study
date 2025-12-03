@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "tf-37798-original.py", line 32, in <module>
+    converter.convert()
+  File "/root/anaconda3/envs/tf-37798-buggy/lib/python3.7/site-packages/tensorflow/lite/python/lite.py", line 525, in convert
+    raise ValueError("This converter can only convert a single "
+ValueError: This converter can only convert a single ConcreteFunction. Converting multiple functions is under development.

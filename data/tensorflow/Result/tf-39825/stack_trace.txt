@@ -1,0 +1,27 @@
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/tf-39825-buggy/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py", line 470, in _apply_op_helper
+    preferred_dtype=default_dtype)
+  File "/root/anaconda3/envs/tf-39825-buggy/lib/python3.7/site-packages/tensorflow/python/framework/ops.py", line 1466, in convert_to_tensor
+    (dtype.name, value.dtype.name, value))
+ValueError: Tensor conversion requested dtype complex128 for Tensor with dtype float64: <tf.Tensor 'assert_near/Abs:0' shape=() dtype=float64>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "tf-39825-original.py", line 20, in <module>
+    fx.test_doesnt_raise_complex()
+  File "/root/anaconda3/envs/tf-39825-buggy/lib/python3.7/site-packages/tensorflow/python/framework/test_util.py", line 1146, in decorated
+    f(self, *args, **kwargs)
+  File "tf-39825-original.py", line 16, in test_doesnt_raise_complex
+    check_ops.assert_near(x, y, atol=0., rtol=0.5, message="failure message")
+  File "/root/anaconda3/envs/tf-39825-buggy/lib/python3.7/site-packages/tensorflow/python/ops/check_ops.py", line 835, in assert_near
+    tol = atol + rtol * math_ops.abs(y)
+  File "/root/anaconda3/envs/tf-39825-buggy/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py", line 1093, in binary_op_wrapper
+    return func(x, y, name=name)
+  File "/root/anaconda3/envs/tf-39825-buggy/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py", line 1392, in _mul_dispatch
+    return gen_math_ops.mul(x, y, name=name)
+  File "/root/anaconda3/envs/tf-39825-buggy/lib/python3.7/site-packages/tensorflow/python/ops/gen_math_ops.py", line 6153, in mul
+    "Mul", x=x, y=y, name=name)
+  File "/root/anaconda3/envs/tf-39825-buggy/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py", line 506, in _apply_op_helper
+    inferred_from[input_arg.type_attr]))
+TypeError: Input 'y' of 'Mul' Op has type float64 that does not match type complex128 of argument 'x'.

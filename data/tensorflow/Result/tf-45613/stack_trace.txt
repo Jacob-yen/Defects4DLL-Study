@@ -1,0 +1,34 @@
+Traceback (most recent call last):
+  File "./Result/tf-45613/tf-45613-original.py", line 24, in <module>
+    testClass.testCentralFractionTensor()
+  File "./Result/tf-45613/tf-45613-original.py", line 20, in testCentralFractionTensor
+    self.evaluate(f(x_np, c_np))
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/eager/def_function.py", line 797, in __call__
+    result = self._call(*args, **kwds)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/eager/def_function.py", line 841, in _call
+    self._initialize(args, kwds, add_initializers_to=initializers)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/eager/def_function.py", line 694, in _initialize
+    self._stateful_fn._get_concrete_function_internal_garbage_collected(  # pylint: disable=protected-access
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/eager/function.py", line 2998, in _get_concrete_function_internal_garbage_collected
+    graph_function, _ = self._maybe_define_function(args, kwargs)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/eager/function.py", line 3390, in _maybe_define_function
+    graph_function = self._create_graph_function(args, kwargs)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/eager/function.py", line 3225, in _create_graph_function
+    func_graph_module.func_graph_from_py_func(
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/framework/func_graph.py", line 998, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/eager/def_function.py", line 603, in wrapped_fn
+    out = weak_wrapped_fn().__wrapped__(*args, **kwds)
+  File "./Result/tf-45613/tf-45613-original.py", line 16, in f
+    return image_ops.central_crop(x, central_fraction)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/util/dispatch.py", line 206, in wrapper
+    return target(*args, **kwargs)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/ops/image_ops_impl.py", line 904, in central_crop
+    if central_fraction <= 0.0 or central_fraction > 1.0:
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/framework/ops.py", line 886, in __bool__
+    self._disallow_bool_casting()
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/framework/ops.py", line 486, in _disallow_bool_casting
+    self._disallow_when_autograph_disabled(
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/framework/ops.py", line 470, in _disallow_when_autograph_disabled
+    raise errors.OperatorNotAllowedInGraphError(
+tensorflow.python.framework.errors_impl.OperatorNotAllowedInGraphError: using a `tf.Tensor` as a Python `bool` is not allowed: AutoGraph is disabled in this function. Try decorating it directly with @tf.function.

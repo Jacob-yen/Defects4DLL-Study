@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "torch-39344/torch-39344-original.py", line 21, in <module>
+    testClass.test_convert_sync_batchnorm()
+  File "torch-39344/torch-39344-original.py", line 17, in test_convert_sync_batchnorm
+    self.assertEqual(layer.state_dict()[key].device, converted_layer.state_dict()[key].device)
+  File "/root/anaconda3/envs/torch-39344-buggy/lib/python3.8/unittest/case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/root/anaconda3/envs/torch-39344-buggy/lib/python3.8/unittest/case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: device(type='cuda', index=0) != device(type='cpu')

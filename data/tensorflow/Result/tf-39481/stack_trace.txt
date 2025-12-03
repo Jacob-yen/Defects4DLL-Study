@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "./Result/tf-39481/tf-39481-original.py", line 15, in <module>
+    fx.testWithPythonValue()
+  File "./Result/tf-39481/tf-39481-original.py", line 11, in testWithPythonValue
+    self.assertTrue(isinstance(x, ops.Tensor))
+  File "/root/anaconda3/envs/tf-39481-buggy/lib/python3.7/unittest/case.py", line 705, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true

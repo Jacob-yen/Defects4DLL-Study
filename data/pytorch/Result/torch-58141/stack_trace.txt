@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "data/pytorch/Result/torch-58141/torch-58141-original.py", line 22, in <module>
+    fx.test_sum_empty_tensor()
+  File "data/pytorch/Result/torch-58141/torch-58141-original.py", line 17, in test_sum_empty_tensor
+    run_test(M(), (x,))
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-58141/util.py", line 39, in run_test
+    _run_test(script_model)
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-58141/util.py", line 30, in _run_test
+    return run_model_test(m, batch_size=batch_size, input=
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-58141/util.py", line 137, in run_model_test
+    ort_outs = run_ort(ort_sess, input)
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-58141/util.py", line 82, in run_ort
+    ort_outs = ort_sess.run(None, ort_inputs)
+  File "/root/anaconda3/envs/torch-58141-buggy/lib/python3.8/site-packages/onnxruntime/capi/onnxruntime_inference_collection.py", line 217, in run
+    return self._sess.run(output_names, input_feed, run_options)
+onnxruntime.capi.onnxruntime_pybind11_state.RuntimeException: [ONNXRuntimeError] : 6 : RUNTIME_EXCEPTION : Non-zero status code returned while running ReduceSum node. Name:'ReduceSum_1' Status Message: /onnxruntime_src/onnxruntime/core/providers/cpu/reduction/reduction_ops.cc:809 void onnxruntime::ValidateKeepDims(const onnxruntime::TensorShape&, int64_t) keepdims was false. Can't reduce on dim with value of 0 if 'keepdims' is false. Invalid output shape would be produced. input_shape:{0}

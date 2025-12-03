@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/data/defects4-dll-study/data/pytorch/Result/torch-60554/torch-60554-original.py", line 22, in <module>
+    a.test_pad_types()
+  File "/data/defects4-dll-study/data/pytorch/Result/torch-60554/torch-60554-original.py", line 17, in test_pad_types
+    run_test(Pad(), (x, y))
+  File "/data/defects4-dll-study/data/pytorch/Result/torch-60554/util.py", line 45, in run_test
+    _run_test(script_model, scripting_remained_onnx_input_idx,
+  File "/data/defects4-dll-study/data/pytorch/Result/torch-60554/util.py", line 30, in _run_test
+    return run_model_test(m, batch_size=batch_size, input=
+  File "/data/defects4-dll-study/data/pytorch/Result/torch-60554/util.py", line 170, in run_model_test
+    ort_sess = convert_to_onnx(model, input=input, opset_version=opset_version,
+  File "/data/defects4-dll-study/data/pytorch/Result/torch-60554/util.py", line 89, in convert_to_onnx
+    torch.onnx._export(model, input_copy, f,
+  File "/root/anaconda3/envs/torch-60554-buggy/lib/python3.8/site-packages/torch/onnx/__init__.py", line 28, in _export
+    result = utils._export(*args, **kwargs)
+  File "/root/anaconda3/envs/torch-60554-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 724, in _export
+    _model_to_graph(model, args, verbose, input_names,
+  File "/root/anaconda3/envs/torch-60554-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 536, in _model_to_graph
+    assert len(params) + len(flatten_args) == sum(1 for _ in graph.inputs())
+AssertionError
+
+ERROR conda.cli.main_run:execute(125): `conda run python /data/defects4-dll-study/data/pytorch/Result/torch-60554/torch-60554-original.py` failed. (See above for error)

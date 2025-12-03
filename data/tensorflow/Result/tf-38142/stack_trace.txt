@@ -1,0 +1,34 @@
+Traceback (most recent call last):
+  File "./Result/tf-38142/tf-38142-original.py", line 23, in <module>
+    fx.testShape()
+  File "./Result/tf-38142/tf-38142-original.py", line 19, in testShape
+    tf.function(test_fn)(tensor)
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 579, in __call__
+    result = self._call(*args, **kwds)
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 626, in _call
+    self._initialize(args, kwds, add_initializers_to=initializers)
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 506, in _initialize
+    *args, **kwds))
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 2446, in _get_concrete_function_internal_garbage_collected
+    graph_function, _, _ = self._maybe_define_function(args, kwargs)
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 2777, in _maybe_define_function
+    graph_function = self._create_graph_function(args, kwargs)
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 2667, in _create_graph_function
+    capture_by_value=self._capture_by_value),
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/framework/func_graph.py", line 981, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 441, in wrapped_fn
+    return weak_wrapped_fn().__wrapped__(*args, **kwds)
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/framework/func_graph.py", line 968, in wrapper
+    raise e.ag_error_metadata.to_exception(e)
+AssertionError: in user code:
+
+    ./Result/tf-38142/tf-38142-original.py:13 test_fn  *
+        self.assertEqual(tensor.shape.rank, 2)
+    /root/anaconda3/envs/tf-38142-buggy/lib/python3.7/unittest/case.py:852 assertEqual  **
+        assertion_func(first, second, msg=msg)
+    /root/anaconda3/envs/tf-38142-buggy/lib/python3.7/unittest/case.py:845 _baseAssertEqual
+        raise self.failureException(msg)
+
+    AssertionError: None != 2
+

@@ -1,0 +1,41 @@
+Traceback (most recent call last):
+  File "tf-39123-original.py", line 48, in <module>
+    train_step(x, y)
+  File "/root/anaconda3/envs/tf-39123-buggy/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 766, in __call__
+    result = self._call(*args, **kwds)
+  File "/root/anaconda3/envs/tf-39123-buggy/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 809, in _call
+    self._initialize(args, kwds, add_initializers_to=initializers)
+  File "/root/anaconda3/envs/tf-39123-buggy/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 688, in _initialize
+    *args, **kwds))
+  File "/root/anaconda3/envs/tf-39123-buggy/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 2836, in _get_concrete_function_internal_garbage_collected
+    graph_function, _, _ = self._maybe_define_function(args, kwargs)
+  File "/root/anaconda3/envs/tf-39123-buggy/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 3193, in _maybe_define_function
+    graph_function = self._create_graph_function(args, kwargs)
+  File "/root/anaconda3/envs/tf-39123-buggy/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 3055, in _create_graph_function
+    capture_by_value=self._capture_by_value),
+  File "/root/anaconda3/envs/tf-39123-buggy/lib/python3.7/site-packages/tensorflow/python/framework/func_graph.py", line 981, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "/root/anaconda3/envs/tf-39123-buggy/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 595, in wrapped_fn
+    return weak_wrapped_fn().__wrapped__(*args, **kwds)
+  File "/root/anaconda3/envs/tf-39123-buggy/lib/python3.7/site-packages/tensorflow/python/framework/func_graph.py", line 968, in wrapper
+    raise e.ag_error_metadata.to_exception(e)
+TypeError: in user code:
+
+    tf-39123-original.py:19 train_step  *
+        loss = loss_object(outputs, targets)
+    /root/anaconda3/envs/tf-39123-buggy/lib/python3.7/site-packages/tensorflow/python/keras/losses.py:145 __call__  **
+        losses = self.call(y_true, y_pred)
+    /root/anaconda3/envs/tf-39123-buggy/lib/python3.7/site-packages/tensorflow/python/keras/losses.py:248 call
+        return self.fn(y_true, y_pred, **self._fn_kwargs)
+    /root/anaconda3/envs/tf-39123-buggy/lib/python3.7/site-packages/tensorflow/python/keras/losses.py:1440 huber
+        math_ops.multiply(delta, linear)),
+    /root/anaconda3/envs/tf-39123-buggy/lib/python3.7/site-packages/tensorflow/python/util/dispatch.py:180 wrapper
+        return target(*args, **kwargs)
+    /root/anaconda3/envs/tf-39123-buggy/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:490 multiply
+        return gen_math_ops.mul(x, y, name)
+    /root/anaconda3/envs/tf-39123-buggy/lib/python3.7/site-packages/tensorflow/python/ops/gen_math_ops.py:6153 mul
+        "Mul", x=x, y=y, name=name)
+    /root/anaconda3/envs/tf-39123-buggy/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py:506 _apply_op_helper
+        inferred_from[input_arg.type_attr]))
+
+    TypeError: Input 'y' of 'Mul' Op has type float64 that does not match type float32 of argument 'x'.

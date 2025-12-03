@@ -1,0 +1,27 @@
+Traceback (most recent call last):
+  File "tf-32511-original.py", line 35, in <module>
+    partitionedCallTest.test_functional_cloning_with_tensor_kwarg()
+  File "tf-32511-original.py", line 31, in test_functional_cloning_with_tensor_kwarg
+    keras.models.clone_model(model)
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-1.14.0/lib/python3.7/site-packages/tensorflow/python/keras/models.py", line 326, in clone_model
+    model, input_tensors=input_tensors, layer_fn=clone_function)
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-1.14.0/lib/python3.7/site-packages/tensorflow/python/keras/models.py", line 172, in _clone_functional_model
+    output_tensors = layer(computed_tensors, **kwargs)
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-1.14.0/lib/python3.7/site-packages/tensorflow/python/keras/engine/base_layer.py", line 634, in __call__
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-1.14.0/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 149, in wrapper
+    raise e.ag_error_metadata.to_exception(type(e))
+ValueError: in converted code:
+
+    tf-32511-original.py:19 call
+        return inputs * math_ops.cast(tensor, dtypes.float32)
+    /home/jiangtianjie/anaconda3/envs/tf-gpu-1.14.0/lib/python3.7/site-packages/tensorflow/python/ops/math_ops.py:882 binary_op_wrapper
+        with ops.name_scope(None, op_name, [x, y]) as name:
+    /home/jiangtianjie/anaconda3/envs/tf-gpu-1.14.0/lib/python3.7/site-packages/tensorflow/python/framework/ops.py:6508 __enter__
+        g = _get_graph_from_inputs(self._values)
+    /home/jiangtianjie/anaconda3/envs/tf-gpu-1.14.0/lib/python3.7/site-packages/tensorflow/python/framework/ops.py:6135 _get_graph_from_inputs
+        _assert_same_graph(original_graph_element, graph_element)
+    /home/jiangtianjie/anaconda3/envs/tf-gpu-1.14.0/lib/python3.7/site-packages/tensorflow/python/framework/ops.py:6071 _assert_same_graph
+        (item, original_item))
+
+    ValueError: Tensor("Cast:0", shape=(?,), dtype=float32) must be from the same graph as Tensor("input_1:0", shape=(?, 3), dtype=float32, device=/device:CPU:0).

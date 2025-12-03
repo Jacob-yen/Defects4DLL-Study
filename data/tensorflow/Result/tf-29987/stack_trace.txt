@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "tf-29987-original.py", line 14, in <module>
+    fx.testMixedDType()
+  File "tf-29987-original.py", line 11, in testMixedDType
+    math_ops.range(constant, dtype=dtypes.float32)
+  File "/root/anaconda3/envs/tf-29987-buggy/lib/python3.7/site-packages/tensorflow_core/python/ops/math_ops.py", line 1353, in range
+    limit = ops.convert_to_tensor(limit, dtype=dtype, name="limit")
+  File "/root/anaconda3/envs/tf-29987-buggy/lib/python3.7/site-packages/tensorflow_core/python/framework/ops.py", line 1090, in convert_to_tensor
+    return convert_to_tensor_v2(value, dtype, preferred_dtype, name)
+  File "/root/anaconda3/envs/tf-29987-buggy/lib/python3.7/site-packages/tensorflow_core/python/framework/ops.py", line 1148, in convert_to_tensor_v2
+    as_ref=False)
+  File "/root/anaconda3/envs/tf-29987-buggy/lib/python3.7/site-packages/tensorflow_core/python/framework/ops.py", line 1177, in internal_convert_to_tensor
+    (dtype.name, value.dtype.name, value))
+ValueError: Tensor conversion requested dtype float32 for Tensor with dtype int32: <tf.Tensor 'Const:0' shape=() dtype=int32>

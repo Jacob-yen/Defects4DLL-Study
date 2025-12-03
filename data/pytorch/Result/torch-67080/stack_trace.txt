@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "data/pytorch/Result/torch-67080/torch-67080-original.py", line 50, in <module>
+    fx.test_large_model_with_non_str_file()
+  File "data/pytorch/Result/torch-67080/torch-67080-original.py", line 45, in test_large_model_with_non_str_file
+    torch.onnx.export(LargeModel(), x, f)
+  File "/root/anaconda3/envs/torch-67080-buggy/lib/python3.8/unittest/case.py", line 240, in __exit__
+    self._raiseFailure('"{}" does not match "{}"'.format(
+  File "/root/anaconda3/envs/torch-67080-buggy/lib/python3.8/unittest/case.py", line 164, in _raiseFailure
+    raise self.test_case.failureException(msg)
+AssertionError: "The serialized model is larger than the 2GiB limit imposed by the protobuf library. Therefore the output file must be a file path, so that the ONNX external data can be written to the same directory. Please specify the output file name." does not match "Exporting model exceed maximum protobuf size of 2GB. Please call torch.onnx.export without setting use_external_data_format parameter."

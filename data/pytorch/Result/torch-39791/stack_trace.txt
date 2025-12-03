@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/data/defects4-dll-study/data/pytorch/Result/torch-39791/torch-39791-original.py", line 21, in <module>
+    fx.test_pow()
+  File "/data/defects4-dll-study/data/pytorch/Result/torch-39791/torch-39791-original.py", line 16, in test_pow
+    run_test(PowModule(), (x, y))
+  File "/data/defects4-dll-study/data/pytorch/Result/torch-39791/util.py", line 31, in run_test
+    _run_test(model)
+  File "/data/defects4-dll-study/data/pytorch/Result/torch-39791/util.py", line 24, in _run_test
+    return run_model_test(m, batch_size=batch_size,
+  File "/data/defects4-dll-study/data/pytorch/Result/torch-39791/util.py", line 94, in run_model_test
+    ort_sess = onnxruntime.InferenceSession(f.getvalue())
+  File "/root/anaconda3/envs/torch-39791-buggy/lib/python3.8/site-packages/onnxruntime/capi/onnxruntime_inference_collection.py", line 383, in __init__
+    self._create_inference_session(providers, provider_options, disabled_optimizers)
+  File "/root/anaconda3/envs/torch-39791-buggy/lib/python3.8/site-packages/onnxruntime/capi/onnxruntime_inference_collection.py", line 426, in _create_inference_session
+    sess = C.InferenceSession(session_options, self._model_bytes, False, self._read_config_from_model)
+onnxruntime.capi.onnxruntime_pybind11_state.InvalidGraph: [ONNXRuntimeError] : 10 : INVALID_GRAPH : This is an invalid model. Type Error: Type 'tensor(int64)' of input parameter (0) of operator (Pow) in node (Pow_1) is invalid.
+
+ERROR conda.cli.main_run:execute(125): `conda run python /data/defects4-dll-study/data/pytorch/Result/torch-39791/torch-39791-original.py` failed. (See above for error)

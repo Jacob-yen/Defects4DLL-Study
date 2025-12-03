@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "data/pytorch/Result/torch-78762/torch-78762-original.py", line 16, in <module>
+    fx.test_basics()
+  File "data/pytorch/Result/torch-78762/torch-78762-original.py", line 12, in test_basics
+    self.assertEqual(list(dl), list(dl2))
+  File "/root/anaconda3/envs/torch-78762-buggy/lib/python3.8/site-packages/torch/testing/_internal/common_utils.py", line 2228, in assertEqual
+    assert_equal(
+  File "/root/anaconda3/envs/torch-78762-buggy/lib/python3.8/site-packages/torch/testing/_comparison.py", line 1061, in assert_equal
+    raise error_meta.to_error() from None
+AssertionError: The length of the sequences mismatch: 668 != 334

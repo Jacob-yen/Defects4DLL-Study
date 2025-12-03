@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "torch-96452-original.py", line 7, in <module>
+    writer.add_histogram('distribution centers', x + i, i)
+  File "/root/anaconda3/lib/python3.8/site-packages/torch/utils/tensorboard/writer.py", line 485, in add_histogram
+    histogram(tag, values, bins, max_bins=max_bins), global_step, walltime
+  File "/root/anaconda3/lib/python3.8/site-packages/torch/utils/tensorboard/summary.py", line 358, in histogram
+    hist = make_histogram(values.astype(float), bins, max_bins)
+  File "/root/anaconda3/lib/python3.8/site-packages/torch/utils/tensorboard/summary.py", line 386, in make_histogram
+    cum_counts = np.cumsum(np.greater(counts, 0, dtype=np.int32))
+TypeError: No loop matching the specified signature and casting was found for ufunc greater

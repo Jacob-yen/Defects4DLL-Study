@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "tf-32220/tf-32220-original.py", line 46, in <module>
+    fx.test_add_metric_order()
+  File "tf-32220/tf-32220-original.py", line 44, in test_add_metric_order
+    self.assertDictEqual(history.history, {'loss': [0.0, 0.0, 0.0], 'three': [3.0, 3.0, 3.0], 'two': [2.0, 2.0, 2.0], 'one': [1.0, 1.0, 1.0]})
+  File "/root/anaconda3/envs/tf-32220-buggy/lib/python3.7/site-packages/absl/testing/absltest.py", line 1726, in assertDictEqual
+    raise self.failureException('\n'.join(message))
+AssertionError: {'loss': [0.0, 0.0, 0.0], 'one': [3.0, 3.0, 3.0], 'three': [2.0, 2.0, 2.0], 'two': [1.0, 1.0, 1.0]} != {'loss': [0.0, 0.0, 0.0], 'one': [1.0, 1.0, 1.0], 'three': [3.0, 3.0, 3.0], 'two': [2.0, 2.0, 2.0]}
+repr() of differing entries:
+'one': [3.0, 3.0, 3.0] != [1.0, 1.0, 1.0]
+'three': [2.0, 2.0, 2.0] != [3.0, 3.0, 3.0]
+'two': [1.0, 1.0, 1.0] != [2.0, 2.0, 2.0]

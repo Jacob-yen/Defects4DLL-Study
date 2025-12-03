@@ -1,0 +1,34 @@
+Traceback (most recent call last):
+  File "data/pytorch/Result/torch-51222/torch-51222-original.py", line 30, in <module>
+    fx.test_scatter_add()
+  File "data/pytorch/Result/torch-51222/torch-51222-original.py", line 25, in test_scatter_add
+    run_test(ScatterModel(), (src, index))
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-51222/util.py", line 37, in run_test
+    _run_test(script_model)
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-51222/util.py", line 29, in _run_test
+    return run_model_test(m, batch_size=batch_size,
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-51222/util.py", line 130, in run_model_test
+    ort_sess = convert_to_onnx(model, input=input, opset_version=opset_version,
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-51222/util.py", line 55, in convert_to_onnx
+    torch.onnx._export(model, input_copy, f,
+  File "/root/anaconda3/envs/torch-51222-buggy/lib/python3.8/site-packages/torch/onnx/__init__.py", line 28, in _export
+    result = utils._export(*args, **kwargs)
+  File "/root/anaconda3/envs/torch-51222-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 686, in _export
+    _model_to_graph(model, args, verbose, input_names,
+  File "/root/anaconda3/envs/torch-51222-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 456, in _model_to_graph
+    graph = _optimize_graph(graph, operator_export_type,
+  File "/root/anaconda3/envs/torch-51222-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 206, in _optimize_graph
+    graph = torch._C._jit_pass_onnx(graph, operator_export_type)
+  File "/root/anaconda3/envs/torch-51222-buggy/lib/python3.8/site-packages/torch/onnx/__init__.py", line 309, in _run_symbolic_function
+    return utils._run_symbolic_function(*args, **kwargs)
+  File "/root/anaconda3/envs/torch-51222-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 989, in _run_symbolic_function
+    return symbolic_fn(g, *inputs, **attrs)
+  File "/root/anaconda3/envs/torch-51222-buggy/lib/python3.8/site-packages/torch/onnx/symbolic_helper.py", line 135, in wrapper
+    return fn(g, *args, **kwargs)
+  File "/root/anaconda3/envs/torch-51222-buggy/lib/python3.8/site-packages/torch/onnx/symbolic_opset9.py", line 2324, in scatter_add
+    to_add = zeros_like(self, dtype)
+  File "/root/anaconda3/envs/torch-51222-buggy/lib/python3.8/site-packages/torch/onnx/symbolic_helper.py", line 135, in wrapper
+    return fn(g, *args, **kwargs)
+  File "/root/anaconda3/envs/torch-51222-buggy/lib/python3.8/site-packages/torch/onnx/symbolic_opset9.py", line 1679, in zeros_like
+    shape = g.op("Shape", input)
+AttributeError: 'torch._C.Value' object has no attribute 'op'

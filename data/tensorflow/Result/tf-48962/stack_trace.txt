@@ -1,0 +1,50 @@
+WARNING:tensorflow:Mixed precision compatibility check (mixed_float16): WARNING
+The dtype policy mixed_float16 may run slowly because this machine does not have a GPU. Only Nvidia GPUs with compute capability of at least 7.0 run quickly with mixed_float16.
+If you will use compatible GPU(s) not attached to this host, e.g. by running a multi-worker model, you can ignore this warning. This message will only be logged once
+Traceback (most recent call last):
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/ops/math_ops.py", line 1245, in binary_op_wrapper
+    out = r_op(x)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/ops/math_ops.py", line 1266, in r_binary_op_wrapper
+    y, x = maybe_promote_tensors(y, x)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/ops/math_ops.py", line 1202, in maybe_promote_tensors
+    ops.convert_to_tensor(tensor, dtype, name="x"))
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/profiler/trace.py", line 163, in wrapped
+    return func(*args, **kwargs)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/framework/ops.py", line 1533, in convert_to_tensor
+    raise ValueError(
+ValueError: Tensor conversion requested dtype float32 for Tensor with dtype float16: <tf.Tensor 'Placeholder:0' shape=(None, 36, 512) dtype=float16>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./Result/tf-48962/tf-48962-original.py", line 21, in <module>
+    fx.test_mixed_float16_policy()
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/keras/testing_utils.py", line 921, in wrapper
+    return fn(*args, **kwargs)
+  File "./Result/tf-48962/tf-48962-original.py", line 17, in test_mixed_float16_policy
+    _ = average_layer(inputs1, inputs2)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 970, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1108, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 841, in _keras_tensor_symbolic_call
+    return self._infer_output_signature(inputs, args, kwargs, input_masks)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 881, in _infer_output_signature
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/keras/layers/pooling.py", line 978, in call
+    inputs *= mask
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/ops/math_ops.py", line 1250, in binary_op_wrapper
+    raise e
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/ops/math_ops.py", line 1234, in binary_op_wrapper
+    return func(x, y, name=name)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/ops/math_ops.py", line 1575, in _mul_dispatch
+    return multiply(x, y, name=name)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/util/dispatch.py", line 206, in wrapper
+    return target(*args, **kwargs)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/ops/math_ops.py", line 530, in multiply
+    return gen_math_ops.mul(x, y, name)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/ops/gen_math_ops.py", line 6238, in mul
+    _, _, _op, _outputs = _op_def_library._apply_op_helper(
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/framework/op_def_library.py", line 555, in _apply_op_helper
+    raise TypeError(
+TypeError: Input 'y' of 'Mul' Op has type float32 that does not match type float16 of argument 'x'.

@@ -1,0 +1,31 @@
+Traceback (most recent call last):
+  File "data/pytorch/Result/torch-64289/torch-64289-original.py", line 22, in <module>
+    fx.test_reduced_sum_dtypes()
+  File "data/pytorch/Result/torch-64289/torch-64289-original.py", line 17, in test_reduced_sum_dtypes
+    run_test(NoDimModel(), input)
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-64289/util.py", line 46, in run_test
+    _run_test(script_model, scripting_remained_onnx_input_idx,
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-64289/util.py", line 31, in _run_test
+    return run_model_test(m, batch_size=batch_size, input=
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-64289/util.py", line 167, in run_model_test
+    ort_sess = convert_to_onnx(model, input=input, opset_version=opset_version,
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-64289/util.py", line 90, in convert_to_onnx
+    torch.onnx._export(model, input_copy, f,
+  File "/root/anaconda3/envs/torch-64289-buggy/lib/python3.8/site-packages/torch/onnx/__init__.py", line 28, in _export
+    result = utils._export(*args, **kwargs)
+  File "/root/anaconda3/envs/torch-64289-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 716, in _export
+    proto, export_map = graph._export_onnx(
+RuntimeError: ONNX export failed: Couldn't export operator aten::sum
+
+Defined at:
+  File "data/pytorch/Result/torch-64289/torch-64289-original.py", line 14
+            def forward(self, input):
+                return input.sum(dtype=torch.float)
+                       ~~~~~~~~~ <--- HERE
+
+
+Graph we tried to export:
+graph(%input.1 : Half(4, 4, strides=[4, 1], requires_grad=0, device=cpu)):
+  %1 : Long(requires_grad=0, device=cpu) = onnx::Constant[value={6}]()
+  %2 : Float(requires_grad=0, device=cpu) = aten::sum(%input.1, %1) # data/pytorch/Result/torch-64289/torch-64289-original.py:14:23
+  return (%2)

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/jtj/all-rebug-test/result_20240305_jtj/our/tf-48707/tf-48707-original.py", line 57, in <module>
+    test_case.test_progbar_logging_with_stateful_metrics()
+  File "/jtj/all-rebug-test/result_20240305_jtj/our/tf-48707/tf-48707-original.py", line 53, in test_progbar_logging_with_stateful_metrics
+    self.assertRegex(printed.contents(), expected_log)
+  File "/root/anaconda3/envs/tf-48707-buggy/lib/python3.8/unittest/case.py", line 1388, in assertRegex
+    raise self.failureException(msg)
+AssertionError: Regex didn't match: '(.*- loss:.*- my_acc:.*- add_all_ones: 7.0000)+' not found in '\n1/2 [==============>...............] - ETA: 0s - loss: 0.5579 - my_acc: 0.0000e+00 - add_all_ones: 4.0000\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\x08\n2/2 [==============================] - 1s 2ms/step - loss: 0.5264 - my_acc: 0.0833 - add_all_ones: 6.0000\n'
+/root/anaconda3/envs/tf-48707-buggy/lib/python3.8/site-packages/coverage/inorout.py:507: CoverageWarning: Module tensorflow_core was never imported. (module-not-imported)
+  self.warn(f"Module {pkg} was never imported.", slug="module-not-imported")

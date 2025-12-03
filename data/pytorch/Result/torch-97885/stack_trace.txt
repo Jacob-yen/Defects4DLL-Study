@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "torch-97885-original.py", line 52, in <module>
+    fx.test_functional_fused_optimizer_with_foundinf()
+  File "torch-97885-original.py", line 42, in test_functional_fused_optimizer_with_foundinf
+    self.assertEqual(
+  File "/home/jiangtianjie/anaconda3/envs/torch-2.0.0/lib/python3.8/site-packages/torch/testing/_internal/common_utils.py", line 2967, in assertEqual
+    raise error_metas[0].to_error(
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 1 / 1 (100.0%)
+Greatest absolute difference: 1.0 at index (0,) (up to 1e-05 allowed)
+Greatest relative difference: 1.0 at index (0,) (up to 1.3e-06 allowed)
+
+The failure occurred for item [0]

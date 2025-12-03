@@ -1,0 +1,67 @@
+Traceback (most recent call last):
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/util/dispatch.py", line 206, in wrapper
+    return target(*args, **kwargs)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/ops/math_ops.py", line 548, in subtract
+    return gen_math_ops.sub(x, y, name)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/ops/gen_math_ops.py", line 10641, in sub
+    return sub_eager_fallback(
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/ops/gen_math_ops.py", line 10661, in sub_eager_fallback
+    _attr_T, _inputs_T = _execute.args_to_matching_eager([x, y], ctx, [_dtypes.bfloat16, _dtypes.half, _dtypes.float32, _dtypes.float64, _dtypes.uint8, _dtypes.int8, _dtypes.uint16, _dtypes.int16, _dtypes.int32, _dtypes.int64, _dtypes.complex64, _dtypes.complex128, _dtypes.uint32, _dtypes.uint64, ])
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/eager/execute.py", line 280, in args_to_matching_eager
+    ret = [ops.convert_to_tensor(t, dtype, ctx=ctx) for t in l]
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/eager/execute.py", line 280, in <listcomp>
+    ret = [ops.convert_to_tensor(t, dtype, ctx=ctx) for t in l]
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/profiler/trace.py", line 163, in wrapped
+    return func(*args, **kwargs)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/framework/ops.py", line 1566, in convert_to_tensor
+    ret = conversion_func(value, dtype=dtype, name=name, as_ref=as_ref)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/framework/constant_op.py", line 339, in _constant_tensor_conversion_function
+    return constant(v, dtype=dtype, name=name)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/framework/constant_op.py", line 264, in constant
+    return _constant_impl(value, dtype, shape, name, verify_shape=False,
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/framework/constant_op.py", line 276, in _constant_impl
+    return _constant_eager_impl(ctx, value, dtype, shape, verify_shape)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/framework/constant_op.py", line 301, in _constant_eager_impl
+    t = convert_to_eager_tensor(value, ctx, dtype)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/framework/constant_op.py", line 98, in convert_to_eager_tensor
+    return ops.EagerTensor(value, ctx.device_name, dtype)
+ValueError: TypeError: object of type 'RaggedTensor' has no len()
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./Result/tf-49609/tf-49609-original.py", line 15, in <module>
+    testClass.testReduceVar()
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/framework/test_util.py", line 1260, in decorated
+    run_eagerly(self, **kwargs)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/framework/test_util.py", line 1244, in run_eagerly
+    f(self, *args, **kwargs)
+  File "./Result/tf-49609/tf-49609-original.py", line 11, in testReduceVar
+    math_ops.reduce_variance(x, axis=0)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/util/dispatch.py", line 206, in wrapper
+    return target(*args, **kwargs)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/ops/math_ops.py", line 2500, in reduce_variance
+    diff = input_tensor - means
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/util/dispatch.py", line 210, in wrapper
+    result = dispatch(wrapper, args, kwargs)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/util/dispatch.py", line 122, in dispatch
+    result = dispatcher.handle(args, kwargs)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/ops/ragged/ragged_dispatch.py", line 217, in handle
+    bcast_shape = ragged_tensor_shape.broadcast_dynamic_shape(
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/ops/ragged/ragged_tensor_shape.py", line 470, in broadcast_dynamic_shape
+    shape_x = shape_x.broadcast_dimension(axis, shape_y.dimension_size(axis))
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/ops/ragged/ragged_tensor_shape.py", line 350, in broadcast_dimension
+    broadcast_check = control_flow_ops.Assert(
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/util/dispatch.py", line 206, in wrapper
+    return target(*args, **kwargs)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/util/tf_should_use.py", line 247, in wrapped
+    return _add_should_use_warning(fn(*args, **kwargs),
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/ops/control_flow_ops.py", line 160, in Assert
+    raise errors.InvalidArgumentError(
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Expected 'tf.Tensor(False, shape=(), dtype=bool)' to be true. Summarized data: b'Unable to broadcast: dimension size mismatch in dimension'
+1
+b'lengths='
+4
+b'dim_size='
+4, 0, 3, 1, 0

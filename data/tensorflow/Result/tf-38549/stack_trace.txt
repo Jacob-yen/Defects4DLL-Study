@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "tf-38549-original.py", line 22, in <module>
+    partitionedCallTest.testGlimpseNonNormalizedNonCentered()
+  File "tf-38549-original.py", line 17, in testGlimpseNonNormalizedNonCentered
+    self.assertAllEqual(np.asarray([[0, 1, 2], [5, 6, 7], [10, 11, 12]]),
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-2.2.0/lib/python3.8/site-packages/tensorflow/python/framework/test_util.py", line 1151, in decorated
+    return f(*args, **kwds)
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-2.2.0/lib/python3.8/site-packages/tensorflow/python/framework/test_util.py", line 2610, in assertAllEqual
+    np.testing.assert_array_equal(a, b, err_msg="\n".join(msgs))
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-2.2.0/lib/python3.8/site-packages/numpy/testing/_private/utils.py", line 932, in assert_array_equal
+    assert_array_compare(operator.__eq__, x, y, err_msg=err_msg,
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-2.2.0/lib/python3.8/site-packages/numpy/testing/_private/utils.py", line 842, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError:
+Arrays are not equal
+
+not equal where = (array([0, 0, 0, 1, 1, 1, 2, 2, 2]), array([0, 1, 2, 0, 1, 2, 0, 1, 2]))
+not equal lhs = [ 0  1  2  5  6  7 10 11 12]
+not equal rhs = [ 5.2990665  8.447082  14.263988   4.2312984  0.         1.
+ 21.448923   5.         6.       ]
+Mismatched elements: 9 / 9 (100%)
+Max absolute difference: 12
+Max relative difference: 6.
+ x: array([[ 0,  1,  2],
+       [ 5,  6,  7],
+       [10, 11, 12]])
+ y: array([[ 5,  8, 14],
+       [ 4,  0,  1],
+       [21,  5,  6]])

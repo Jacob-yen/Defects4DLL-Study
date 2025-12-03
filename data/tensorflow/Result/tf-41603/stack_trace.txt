@@ -1,0 +1,47 @@
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/tf-41603-buggy/lib/python3.8/site-packages/tensorflow/python/framework/tensor_util.py", line 330, in _AssertCompatible
+    fn(values)
+  File "/root/anaconda3/envs/tf-41603-buggy/lib/python3.8/site-packages/tensorflow/python/framework/tensor_util.py", line 256, in _check_quantized
+    _check_failed(values)
+  File "/root/anaconda3/envs/tf-41603-buggy/lib/python3.8/site-packages/tensorflow/python/framework/tensor_util.py", line 250, in _check_failed
+    raise ValueError(v)
+ValueError: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "tf-41603-original.py", line 20, in <module>
+    fx.testQintDtype()
+  File "tf-41603-original.py", line 16, in testQintDtype
+    self.evaluate(f())
+  File "/root/anaconda3/envs/tf-41603-buggy/lib/python3.8/site-packages/tensorflow/python/eager/def_function.py", line 786, in __call__
+    result = self._call(*args, **kwds)
+  File "/root/anaconda3/envs/tf-41603-buggy/lib/python3.8/site-packages/tensorflow/python/eager/def_function.py", line 829, in _call
+    self._initialize(args, kwds, add_initializers_to=initializers)
+  File "/root/anaconda3/envs/tf-41603-buggy/lib/python3.8/site-packages/tensorflow/python/eager/def_function.py", line 702, in _initialize
+    self._stateful_fn._get_concrete_function_internal_garbage_collected(  # pylint: disable=protected-access
+  File "/root/anaconda3/envs/tf-41603-buggy/lib/python3.8/site-packages/tensorflow/python/eager/function.py", line 2883, in _get_concrete_function_internal_garbage_collected
+    graph_function, _, _ = self._maybe_define_function(args, kwargs)
+  File "/root/anaconda3/envs/tf-41603-buggy/lib/python3.8/site-packages/tensorflow/python/eager/function.py", line 3240, in _maybe_define_function
+    graph_function = self._create_graph_function(args, kwargs)
+  File "/root/anaconda3/envs/tf-41603-buggy/lib/python3.8/site-packages/tensorflow/python/eager/function.py", line 3092, in _create_graph_function
+    func_graph_module.func_graph_from_py_func(
+  File "/root/anaconda3/envs/tf-41603-buggy/lib/python3.8/site-packages/tensorflow/python/framework/func_graph.py", line 986, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "/root/anaconda3/envs/tf-41603-buggy/lib/python3.8/site-packages/tensorflow/python/eager/def_function.py", line 606, in wrapped_fn
+    return weak_wrapped_fn().__wrapped__(*args, **kwds)
+  File "tf-41603-original.py", line 13, in f
+    ones = array_ops.ones([2, 3], dtype=dtypes_lib.quint8)
+  File "/root/anaconda3/envs/tf-41603-buggy/lib/python3.8/site-packages/tensorflow/python/util/dispatch.py", line 201, in wrapper
+    return target(*args, **kwargs)
+  File "/root/anaconda3/envs/tf-41603-buggy/lib/python3.8/site-packages/tensorflow/python/ops/array_ops.py", line 3074, in ones
+    output = fill(shape, constant(one, dtype=dtype), name=name)
+  File "/root/anaconda3/envs/tf-41603-buggy/lib/python3.8/site-packages/tensorflow/python/framework/constant_op.py", line 264, in constant
+    return _constant_impl(value, dtype, shape, name, verify_shape=False,
+  File "/root/anaconda3/envs/tf-41603-buggy/lib/python3.8/site-packages/tensorflow/python/framework/constant_op.py", line 281, in _constant_impl
+    tensor_util.make_tensor_proto(
+  File "/root/anaconda3/envs/tf-41603-buggy/lib/python3.8/site-packages/tensorflow/python/framework/tensor_util.py", line 457, in make_tensor_proto
+    _AssertCompatible(values, dtype)
+  File "/root/anaconda3/envs/tf-41603-buggy/lib/python3.8/site-packages/tensorflow/python/framework/tensor_util.py", line 336, in _AssertCompatible
+    raise TypeError("Expected %s, got %s of type '%s' instead." %
+TypeError: Expected quint8, got 1 of type 'int' instead.

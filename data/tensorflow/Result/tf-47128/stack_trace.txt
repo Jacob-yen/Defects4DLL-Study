@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "./Result/tf-47128/tf-47128-original.py", line 16, in <module>
+    fx.test_serialize_type_object_initializer()
+  File "./Result/tf-47128/tf-47128-original.py", line 12, in test_serialize_type_object_initializer
+    keras.layers.serialize(layer)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/keras/layers/serialization.py", line 155, in serialize
+    return generic_utils.serialize_keras_object(layer)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/keras/utils/generic_utils.py", line 485, in serialize_keras_object
+    config = instance.get_config()
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 1234, in get_config
+    initializers.serialize(self.kernel_initializer),
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/keras/initializers/__init__.py", line 135, in serialize
+    return generic_utils.serialize_keras_object(initializer)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/keras/utils/generic_utils.py", line 485, in serialize_keras_object
+    config = instance.get_config()
+TypeError: get_config() missing 1 required positional argument: 'self'

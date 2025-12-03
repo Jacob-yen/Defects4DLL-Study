@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "tf-30258-original.py", line 44, in <module>
+    fx.test_dict_validation_input()
+  File "tf-30258-original.py", line 40, in test_dict_validation_input
+    {'input_0': val_input_0, 'input_1': val_input_1}, val_labels))
+  File "/root/anaconda3/envs/tf-30258-buggy/lib/python3.7/site-packages/tensorflow_core/python/keras/engine/training.py", line 693, in fit
+    use_multiprocessing=use_multiprocessing)
+  File "/root/anaconda3/envs/tf-30258-buggy/lib/python3.7/site-packages/tensorflow_core/python/keras/engine/training_arrays.py", line 669, in fit
+    steps_name='steps_per_epoch')
+  File "/root/anaconda3/envs/tf-30258-buggy/lib/python3.7/site-packages/tensorflow_core/python/keras/engine/training_arrays.py", line 210, in model_iteration
+    val_samples_or_steps = val_inputs and val_inputs[0].shape[0] or None
+KeyError: 0

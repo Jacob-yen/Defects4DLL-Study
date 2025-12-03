@@ -1,0 +1,63 @@
+WARNING:tensorflow:Please add `keras.layers.InputLayer` instead of `keras.Input` to Sequential model. `keras.Input` is intended to be used by Functional model.
+Traceback (most recent call last):
+  File "./Result/tf-45015/tf-45015-original.py", line 54, in <module>
+    model.fit(x_train, y_train)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/keras/engine/training.py", line 1135, in fit
+    tmp_logs = self.train_function(iterator)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/eager/def_function.py", line 797, in __call__
+    result = self._call(*args, **kwds)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/eager/def_function.py", line 841, in _call
+    self._initialize(args, kwds, add_initializers_to=initializers)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/eager/def_function.py", line 694, in _initialize
+    self._stateful_fn._get_concrete_function_internal_garbage_collected(  # pylint: disable=protected-access
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/eager/function.py", line 2998, in _get_concrete_function_internal_garbage_collected
+    graph_function, _ = self._maybe_define_function(args, kwargs)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/eager/function.py", line 3390, in _maybe_define_function
+    graph_function = self._create_graph_function(args, kwargs)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/eager/function.py", line 3225, in _create_graph_function
+    func_graph_module.func_graph_from_py_func(
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/framework/func_graph.py", line 998, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/eager/def_function.py", line 603, in wrapped_fn
+    out = weak_wrapped_fn().__wrapped__(*args, **kwds)
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/framework/func_graph.py", line 985, in wrapper
+    raise e.ag_error_metadata.to_exception(e)
+TypeError: in user code:
+
+    /root/.local/lib/python3.8/site-packages/tensorflow/python/keras/engine/training.py:840 train_function  *
+        return step_function(self, iterator)
+    /root/.local/lib/python3.8/site-packages/tensorflow/python/keras/engine/training.py:830 step_function  **
+        outputs = model.distribute_strategy.run(run_step, args=(data,))
+    /root/.local/lib/python3.8/site-packages/tensorflow/python/distribute/distribute_lib.py:1263 run
+        return self._extended.call_for_each_replica(fn, args=args, kwargs=kwargs)
+    /root/.local/lib/python3.8/site-packages/tensorflow/python/distribute/distribute_lib.py:2735 call_for_each_replica
+        return self._call_for_each_replica(fn, args, kwargs)
+    /root/.local/lib/python3.8/site-packages/tensorflow/python/distribute/distribute_lib.py:3424 _call_for_each_replica
+        return fn(*args, **kwargs)
+    /root/.local/lib/python3.8/site-packages/tensorflow/python/keras/engine/training.py:823 run_step  **
+        outputs = model.train_step(data)
+    /root/.local/lib/python3.8/site-packages/tensorflow/python/keras/engine/training.py:790 train_step
+        loss = self.compiled_loss(
+    /root/.local/lib/python3.8/site-packages/tensorflow/python/keras/engine/compile_utils.py:212 __call__
+        batch_dim = array_ops.shape(y_t)[0]
+    /root/.local/lib/python3.8/site-packages/tensorflow/python/util/dispatch.py:206 wrapper
+        return target(*args, **kwargs)
+    /root/.local/lib/python3.8/site-packages/tensorflow/python/ops/array_ops.py:650 shape
+        return shape_internal(input, name, optimize=True, out_type=out_type)
+    /root/.local/lib/python3.8/site-packages/tensorflow/python/ops/array_ops.py:674 shape_internal
+        input = ops.convert_to_tensor(input)
+    /root/.local/lib/python3.8/site-packages/tensorflow/python/profiler/trace.py:163 wrapped
+        return func(*args, **kwargs)
+    /root/.local/lib/python3.8/site-packages/tensorflow/python/framework/ops.py:1544 convert_to_tensor
+        ret = conversion_func(value, dtype=dtype, name=name, as_ref=as_ref)
+    /root/.local/lib/python3.8/site-packages/tensorflow/python/framework/constant_op.py:339 _constant_tensor_conversion_function
+        return constant(v, dtype=dtype, name=name)
+    /root/.local/lib/python3.8/site-packages/tensorflow/python/framework/constant_op.py:264 constant
+        return _constant_impl(value, dtype, shape, name, verify_shape=False,
+    /root/.local/lib/python3.8/site-packages/tensorflow/python/framework/constant_op.py:281 _constant_impl
+        tensor_util.make_tensor_proto(
+    /root/.local/lib/python3.8/site-packages/tensorflow/python/framework/tensor_util.py:551 make_tensor_proto
+        raise TypeError("Failed to convert object of type %s to Tensor. "
+
+    TypeError: Failed to convert object of type <class 'tensorflow.python.ops.ragged.ragged_tensor.RaggedTensor'> to Tensor. Contents: tf.RaggedTensor(values=tf.RaggedTensor(values=Tensor("Cast_1:0", shape=(None, 1), dtype=float32), row_splits=Tensor("RaggedFromVariant_1/RaggedTensorFromVariant:1", shape=(None,), dtype=int64)), row_splits=Tensor("RaggedFromVariant_1/RaggedTensorFromVariant:0", shape=(None,), dtype=int64)). Consider casting elements to a supported type.
+

@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "./mutated_code_jtj/torch-47735/torch-47735-original.py", line 21, in <module>
+    testClass.test_max()
+  File "./mutated_code_jtj/torch-47735/torch-47735-original.py", line 16, in test_max
+    self.assertEqual(type(r), type(rs))
+  File "/root/anaconda3/envs/torch-47735-buggy/lib/python3.8/unittest/case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/root/anaconda3/envs/torch-47735-buggy/lib/python3.8/unittest/case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: <class 'torch.return_types.max'> != <class 'tuple'>

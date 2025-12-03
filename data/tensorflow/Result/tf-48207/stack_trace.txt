@@ -1,0 +1,1747 @@
+Traceback (most recent call last):
+  File "tf-48207/tf-48207-original.py", line 15, in <module>
+    testClass.test_dynamic()
+  File "tf-48207/tf-48207-original.py", line 11, in test_dynamic
+    keras.layers.Lambda(lambda x_input: x_input, dynamic=True)(inp)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 881, in compute_output_shape
+    return super(Lambda, self).compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 755, in compute_output_shape
+    outputs = self(inputs, training=False)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 819, in _keras_tensor_symbolic_call
+    output_signature = self.compute_output_signature(input_signature)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 797, in compute_output_signature
+    output_shape = self.compute_output_shape(input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/utils/tf_utils.py", line 272, in wrapper
+    output_shape = fn(instance, input_shape)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 879, in compute_output_shape
+    with context.eager_mode():
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/eager/context.py", line 807, in _mode
+    self.context_switches.push(False, eager_mode, None)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/eager/context.py", line 230, in push
+    ContextSwitch(is_building_function, enter_context_fn, device_stack))
+  File "<string>", line 1, in __new__
+RecursionError: maximum recursion depth exceeded while calling a Python object

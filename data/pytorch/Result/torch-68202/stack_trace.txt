@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "torch-68202-original.py", line 86, in <module>
+    fx.test_deduplicate_initializers()
+  File "torch-68202-original.py", line 82, in test_deduplicate_initializers
+    self._test_deduplicate_initializers(torchscript=False)
+  File "torch-68202-original.py", line 79, in _test_deduplicate_initializers
+    self.assertSetEqual(set([i.name for i in graph.graph.initializer]), param_name_set)
+  File "/home/jiangtianjie/anaconda3/envs/torch-1.11.0/lib/python3.8/unittest/case.py", line 1172, in assertSetEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/home/jiangtianjie/anaconda3/envs/torch-1.11.0/lib/python3.8/unittest/case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: Items in the first set but not the second:
+'param2'

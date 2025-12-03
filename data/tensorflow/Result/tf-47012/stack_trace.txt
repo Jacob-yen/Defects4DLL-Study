@@ -1,0 +1,43 @@
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/util/dispatch.py", line 201, in wrapper
+    return target(*args, **kwargs)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/activations.py", line 82, in softmax
+    raise ValueError('Cannot apply softmax to a tensor that is 1D. '
+ValueError: Cannot apply softmax to a tensor that is 1D. Received input: KerasTensor(type_spec=TensorSpec(shape=(None,), dtype=tf.float32, name=None), description="created by layer 'input_1'")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/absl/testing/parameterized.py", line 314, in bound_param_test
+    return test_method(self, **testcase_params)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/framework/test_combinations.py", line 366, in decorated
+    execute_test_method()
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/framework/test_combinations.py", line 349, in execute_test_method
+    test_method(**kwargs_to_pass)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/absl/testing/parameterized.py", line 316, in bound_param_test
+    return test_method(self, *testcase_params)
+  File "tf-47012/tf-47012-original.py", line 19, in test_softmax
+    f = backend.function([x], [activations.softmax(x, axis=-1)])
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/util/dispatch.py", line 205, in wrapper
+    result = dispatch(wrapper, args, kwargs)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/util/dispatch.py", line 122, in dispatch
+    result = dispatcher.handle(op, args, kwargs)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 1450, in handle
+    return TFOpLambda(op)(*args, **kwargs)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 951, in __call__
+    return self._functional_construction_call(inputs, args, kwargs,
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 1090, in _functional_construction_call
+    outputs = self._keras_tensor_symbolic_call(
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 822, in _keras_tensor_symbolic_call
+    return self._infer_output_signature(inputs, args, kwargs, input_masks)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py", line 863, in _infer_output_signature
+    outputs = call_fn(inputs, *args, **kwargs)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 1327, in _call_wrapper
+    return self._call_wrapper(*args, **kwargs)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/layers/core.py", line 1359, in _call_wrapper
+    result = self.function(*args, **kwargs)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/util/dispatch.py", line 201, in wrapper
+    return target(*args, **kwargs)
+  File "/root/anaconda3/envs/tf-46349-buggy/lib/python3.8/site-packages/tensorflow/python/keras/activations.py", line 82, in softmax
+    raise ValueError('Cannot apply softmax to a tensor that is 1D. '
+ValueError: Cannot apply softmax to a tensor that is 1D. Received input: Tensor("Placeholder:0", shape=(None,), dtype=float32)

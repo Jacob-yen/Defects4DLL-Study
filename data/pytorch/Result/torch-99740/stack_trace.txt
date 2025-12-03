@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "torch-99740-original.py", line 26, in <module>
+    fx.test_mutation()
+  File "torch-99740-original.py", line 22, in test_mutation
+    aot_fn(x, y)
+  File "/home/jiangtianjie/anaconda3/envs/torch-2.0.0/lib/python3.8/site-packages/torch/_dynamo/eval_frame.py", line 209, in _fn
+    return fn(*args, **kwargs)
+  File "torch-99740-original.py", line 9, in fn
+    def fn(param, y):
+  File "/home/jiangtianjie/anaconda3/envs/torch-2.0.0/lib/python3.8/site-packages/torch/_dynamo/eval_frame.py", line 209, in _fn
+    return fn(*args, **kwargs)
+  File "/home/jiangtianjie/anaconda3/envs/torch-2.0.0/lib/python3.8/site-packages/torch/_functorch/aot_autograd.py", line 2819, in forward
+    return compiled_fn(full_args)
+  File "/home/jiangtianjie/anaconda3/envs/torch-2.0.0/lib/python3.8/site-packages/torch/_functorch/aot_autograd.py", line 1222, in g
+    return f(*args)
+  File "/home/jiangtianjie/anaconda3/envs/torch-2.0.0/lib/python3.8/site-packages/torch/_functorch/aot_autograd.py", line 2386, in debug_compiled_function
+    return compiled_function(*args)
+  File "/home/jiangtianjie/anaconda3/envs/torch-2.0.0/lib/python3.8/site-packages/torch/_functorch/aot_autograd.py", line 1970, in runtime_wrapper
+    original_inpt.copy_(updated_inpt)
+RuntimeError: a leaf Variable that requires grad is being used in an in-place operation.

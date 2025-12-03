@@ -1,0 +1,30 @@
+Traceback (most recent call last):
+  File "data/tensorflow/Result/tf-38808/tf-38808-original.py", line 25, in <module>
+    fx.test()
+  File "data/tensorflow/Result/tf-38808/tf-38808-original.py", line 21, in test
+    self.assertAllClose(batch_1, batch_2)
+  File "/root/anaconda3/envs/tf-38808-buggy/lib/python3.7/site-packages/tensorflow/python/framework/test_util.py", line 1151, in decorated
+    return f(*args, **kwds)
+  File "/root/anaconda3/envs/tf-38808-buggy/lib/python3.7/site-packages/tensorflow/python/framework/test_util.py", line 2496, in assertAllClose
+    self._assertAllCloseRecursive(a, b, rtol=rtol, atol=atol, msg=msg)
+  File "/root/anaconda3/envs/tf-38808-buggy/lib/python3.7/site-packages/tensorflow/python/framework/test_util.py", line 2463, in _assertAllCloseRecursive
+    (path_str, path_str, msg)))
+  File "/root/anaconda3/envs/tf-38808-buggy/lib/python3.7/site-packages/tensorflow/python/framework/test_util.py", line 2398, in _assertArrayLikeAllClose
+    a, b, rtol=rtol, atol=atol, err_msg="\n".join(msgs), equal_nan=True)
+  File "/root/anaconda3/envs/tf-38808-buggy/lib/python3.7/site-packages/numpy/testing/_private/utils.py", line 1533, in assert_allclose
+    verbose=verbose, header=header, equal_nan=equal_nan)
+  File "/root/anaconda3/envs/tf-38808-buggy/lib/python3.7/site-packages/numpy/testing/_private/utils.py", line 846, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError:
+Not equal to tolerance rtol=1e-06, atol=1e-06
+Mismatched value: a is different from b.
+not close lhs = 9.666666984558105
+not close rhs = 9.5
+not close dif = 0.16666698455810547
+not close tol = 1.05e-05
+dtype = float64, shape = ()
+Mismatched elements: 1 / 1 (100%)
+Max absolute difference: 0.16666698
+Max relative difference: 0.01754389
+ x: array(9.666667)
+ y: array(9.5)

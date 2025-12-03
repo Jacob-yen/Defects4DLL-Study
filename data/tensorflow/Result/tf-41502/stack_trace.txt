@@ -1,0 +1,41 @@
+Traceback (most recent call last):
+  File "tf-41502-original.py", line 20, in <module>
+    fx.test_smart_resize_tf_dataset()
+  File "tf-41502-original.py", line 16, in test_smart_resize_tf_dataset
+    test_ds.map(resize)
+  File "/root/anaconda3/envs/tf-41502-buggy/lib/python3.7/site-packages/tensorflow/python/data/ops/dataset_ops.py", line 2509, in map
+    MapDataset(self, map_func, preserve_cardinality=False))
+  File "/root/anaconda3/envs/tf-41502-buggy/lib/python3.7/site-packages/tensorflow/python/data/ops/dataset_ops.py", line 4047, in __init__
+    use_legacy_function=use_legacy_function)
+  File "/root/anaconda3/envs/tf-41502-buggy/lib/python3.7/site-packages/tensorflow/python/data/ops/dataset_ops.py", line 3371, in __init__
+    self._function = wrapper_fn.get_concrete_function()
+  File "/root/anaconda3/envs/tf-41502-buggy/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 2966, in get_concrete_function
+    *args, **kwargs)
+  File "/root/anaconda3/envs/tf-41502-buggy/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 2933, in _get_concrete_function_garbage_collected
+    graph_function, args, kwargs = self._maybe_define_function(args, kwargs)
+  File "/root/anaconda3/envs/tf-41502-buggy/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 3240, in _maybe_define_function
+    graph_function = self._create_graph_function(args, kwargs)
+  File "/root/anaconda3/envs/tf-41502-buggy/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 3102, in _create_graph_function
+    capture_by_value=self._capture_by_value),
+  File "/root/anaconda3/envs/tf-41502-buggy/lib/python3.7/site-packages/tensorflow/python/framework/func_graph.py", line 986, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "/root/anaconda3/envs/tf-41502-buggy/lib/python3.7/site-packages/tensorflow/python/data/ops/dataset_ops.py", line 3364, in wrapper_fn
+    ret = _wrapper_helper(*args)
+  File "/root/anaconda3/envs/tf-41502-buggy/lib/python3.7/site-packages/tensorflow/python/data/ops/dataset_ops.py", line 3299, in _wrapper_helper
+    ret = autograph.tf_convert(func, ag_ctx)(*nested_args)
+  File "/root/anaconda3/envs/tf-41502-buggy/lib/python3.7/site-packages/tensorflow/python/autograph/impl/api.py", line 667, in wrapper
+    raise e.ag_error_metadata.to_exception(e)
+tensorflow.python.framework.errors_impl.OperatorNotAllowedInGraphError: in user code:
+
+    tf-41502-original.py:13 None  *
+        lambda img: preprocessing_image.smart_resize(img, size=size)
+    /root/anaconda3/envs/tf-41502-buggy/lib/python3.7/site-packages/tensorflow/python/keras/preprocessing/image.py:126 smart_resize  **
+        if target_ratio < img_ratio:
+    /root/anaconda3/envs/tf-41502-buggy/lib/python3.7/site-packages/tensorflow/python/framework/ops.py:878 __bool__
+        self._disallow_bool_casting()
+    /root/anaconda3/envs/tf-41502-buggy/lib/python3.7/site-packages/tensorflow/python/framework/ops.py:491 _disallow_bool_casting
+        self._disallow_in_graph_mode("using a `tf.Tensor` as a Python `bool`")
+    /root/anaconda3/envs/tf-41502-buggy/lib/python3.7/site-packages/tensorflow/python/framework/ops.py:480 _disallow_in_graph_mode
+        " this function with @tf.function.".format(task))
+
+    OperatorNotAllowedInGraphError: using a `tf.Tensor` as a Python `bool` is not allowed in Graph execution. Use Eager execution or decorate this function with @tf.function.

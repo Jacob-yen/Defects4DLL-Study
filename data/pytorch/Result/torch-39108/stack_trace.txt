@@ -1,0 +1,14 @@
+/root/anaconda3/envs/torch-39108-buggy/lib/python3.8/site-packages/torch/nn/parallel/distributed.py:302: UserWarning: Single-Process Multi-GPU is not the recommended mode for DDP. In this mode, each DDP instance operates on multiple devices and creates multiple module replicas within one process. The overhead of scatter/gather and GIL contention in every forward pass can slow down training. Please consider using one DDP instance per device or per module replica by explicitly setting device_ids or CUDA_VISIBLE_DEVICES. NB: There is a known issue in nn.parallel.replicate that prevents a single DDP instance to operate on multiple model replicas.
+  warnings.warn(
+Traceback (most recent call last):
+  File "./mutated_code_jtj/torch-39108/torch-39108-original.py", line 30, in <module>
+    fx.test_cuda()
+  File "./mutated_code_jtj/torch-39108/torch-39108-original.py", line 25, in test_cuda
+    self._test_base(nn.Linear(2, 2).to(0), [torch.randn(30, 2).to(0)])
+  File "./mutated_code_jtj/torch-39108/torch-39108-original.py", line 21, in _test_base
+    nn.parallel.DistributedDataParallel(copy.deepcopy(net),
+  File "/root/anaconda3/envs/torch-39108-buggy/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 287, in __init__
+    self._ddp_init_helper()
+  File "/root/anaconda3/envs/torch-39108-buggy/lib/python3.8/site-packages/torch/nn/parallel/distributed.py", line 376, in _ddp_init_helper
+    self.reducer = dist.Reducer(
+RuntimeError: Model replicas must have an equal number of parameters.

@@ -1,0 +1,12 @@
+/root/anaconda3/envs/torch-41013-buggy/lib/python3.8/site-packages/torch/serialization.py:575: UserWarning: 'torch.load' received a zip file that looks like a TorchScript archive dispatching to 'torch.jit.load' (call 'torch.jit.load' directly to silence this warning)
+  warnings.warn("'torch.load' received a zip file that looks like a TorchScript archive"
+Traceback (most recent call last):
+  File "./mutated_code_jtj/torch-41013/torch-41013-original.py", line 16, in <module>
+    fx.test_serialization_zipfile_actually_jit()
+  File "./mutated_code_jtj/torch-41013/torch-41013-original.py", line 12, in test_serialization_zipfile_actually_jit
+    torch.load(f)
+  File "/root/anaconda3/envs/torch-41013-buggy/lib/python3.8/site-packages/torch/serialization.py", line 578, in load
+    return torch.jit.load(f)
+  File "/root/anaconda3/envs/torch-41013-buggy/lib/python3.8/site-packages/torch/jit/__init__.py", line 277, in load
+    cpp_module = torch._C.import_ir_module_from_buffer(cu, f.read(), map_location, _extra_files)
+RuntimeError: [enforce fail at inline_container.cc:144] . PytorchStreamReader failed reading zip archive: not a ZIP archive

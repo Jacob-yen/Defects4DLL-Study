@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "torch-64190/torch-64190-original.py", line 43, in <module>
+    fx.test_duplicated_output_node()
+  File "torch-64190/torch-64190-original.py", line 39, in test_duplicated_output_node
+    assert graph.graph.output[0].name == 'output-' + str(0)
+AssertionError

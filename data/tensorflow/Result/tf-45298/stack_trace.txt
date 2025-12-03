@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "./Result/tf-45298/tf-45298-original.py", line 25, in <module>
+    fx.testGetVariableByName()
+  File "./Result/tf-45298/tf-45298-original.py", line 21, in testGetVariableByName
+    custom_gradient.get_variable_by_name('a')
+  File "/root/.local/lib/python3.8/site-packages/tensorflow/python/ops/custom_gradient.py", line 321, in get_variable_by_name
+    raise ValueError("Unsuccessful at finding variable {}.".format(var_name))
+ValueError: Unsuccessful at finding variable a.
+

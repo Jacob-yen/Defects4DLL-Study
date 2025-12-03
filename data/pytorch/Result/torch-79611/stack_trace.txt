@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "data/pytorch/Result/torch-79611/torch-79611-original.py", line 104, in <module>
+    fx.test_Dropout2d()
+  File "data/pytorch/Result/torch-79611/torch-79611-original.py", line 100, in test_Dropout2d
+    nn.Dropout2d(p=0.5)(torch.rand(1, 2, 2, device=device))
+  File "/root/anaconda3/envs/torch-79611-buggy/lib/python3.8/unittest/case.py", line 294, in __exit__
+    self._raiseFailure("{} not triggered".format(exc_name))
+  File "/root/anaconda3/envs/torch-79611-buggy/lib/python3.8/unittest/case.py", line 164, in _raiseFailure
+    raise self.test_case.failureException(msg)
+AssertionError: UserWarning not triggered

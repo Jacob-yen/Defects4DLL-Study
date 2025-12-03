@@ -1,0 +1,34 @@
+Traceback (most recent call last):
+  File "/data/defects4-dll-study/data/pytorch/Result/torch-59979/torch-59979-original.py", line 194, in <module>
+    fx.test_dynamic_repeat_interleave()
+  File "/data/defects4-dll-study/data/pytorch/Result/torch-59979/torch-59979-original.py", line 187, in test_dynamic_repeat_interleave
+    self.run_test(DynamicRepeatsModel(), (x, repeats), test_with_inputs=[(another_x, another_repeats)],
+  File "/data/defects4-dll-study/data/pytorch/Result/torch-59979/torch-59979-original.py", line 173, in run_test
+    _run_test(script_model, scripting_remained_onnx_input_idx)
+  File "/data/defects4-dll-study/data/pytorch/Result/torch-59979/torch-59979-original.py", line 156, in _run_test
+    return run_model_test(self, m, batch_size=batch_size,
+  File "/data/defects4-dll-study/data/pytorch/Result/torch-59979/torch-59979-original.py", line 103, in run_model_test
+    ort_sess = convert_to_onnx(model, input=input, opset_version=self.opset_version,
+  File "/data/defects4-dll-study/data/pytorch/Result/torch-59979/torch-59979-original.py", line 25, in convert_to_onnx
+    torch.onnx._export(model, input_copy, f,
+  File "/root/anaconda3/envs/torch-59979-buggy/lib/python3.8/site-packages/torch/onnx/__init__.py", line 28, in _export
+    result = utils._export(*args, **kwargs)
+  File "/root/anaconda3/envs/torch-59979-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 687, in _export
+    _model_to_graph(model, args, verbose, input_names,
+  File "/root/anaconda3/envs/torch-59979-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 468, in _model_to_graph
+    graph = _optimize_graph(graph, operator_export_type,
+  File "/root/anaconda3/envs/torch-59979-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 195, in _optimize_graph
+    graph = torch._C._jit_pass_onnx(graph, operator_export_type)
+  File "/root/anaconda3/envs/torch-59979-buggy/lib/python3.8/site-packages/torch/onnx/__init__.py", line 362, in _run_symbolic_function
+    return utils._run_symbolic_function(*args, **kwargs)
+  File "/root/anaconda3/envs/torch-59979-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 994, in _run_symbolic_function
+    return symbolic_fn(g, *inputs, **attrs)
+  File "/root/anaconda3/envs/torch-59979-buggy/lib/python3.8/site-packages/torch/onnx/symbolic_opset11.py", line 946, in repeat_interleave
+    return torch.onnx.symbolic_opset9.repeat_interleave(g, self, repeats, final_dim)
+  File "/root/anaconda3/envs/torch-59979-buggy/lib/python3.8/site-packages/torch/onnx/symbolic_opset9.py", line 2070, in repeat_interleave
+    return sym_help._onnx_opset_unsupported_detailed("repeat_interleave", 9, 11,
+  File "/root/anaconda3/envs/torch-59979-buggy/lib/python3.8/site-packages/torch/onnx/symbolic_helper.py", line 271, in _onnx_opset_unsupported_detailed
+    raise RuntimeError("Unsupported: ONNX export of {} in "
+RuntimeError: Unsupported: ONNX export of repeat_interleave in opset 9. Unsupported along dimension with unknown input size. Please try opset version 11.
+
+ERROR conda.cli.main_run:execute(125): `conda run python /data/defects4-dll-study/data/pytorch/Result/torch-59979/torch-59979-original.py` failed. (See above for error)

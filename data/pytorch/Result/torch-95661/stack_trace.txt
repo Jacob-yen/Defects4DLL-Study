@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "torch-95661-original.py", line 5, in <module>
+    torch.load("data.pth", weights_only=True)
+  File "/root/anaconda3/lib/python3.8/site-packages/torch/serialization.py", line 788, in load
+    raise pickle.UnpicklingError(UNSAFE_MESSAGE + str(e)) from None
+_pickle.UnpicklingError: Weights only load failed. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution.Do it only if you get the file from a trusted source. WeightsUnpickler error: Unsupported operand 71

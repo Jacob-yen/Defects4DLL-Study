@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "data/pytorch/Result/torch-66671/torch-66671-original.py", line 36, in <module>
+    fx.test_adagrad_complex()
+  File "data/pytorch/Result/torch-66671/torch-66671-original.py", line 25, in test_adagrad_complex
+    self._test_complex_optimizer(
+  File "data/pytorch/Result/torch-66671/torch-66671-original.py", line 21, in _test_complex_optimizer
+    self.assertEqual(torch.view_as_real(complex_param), real_param)
+  File "/root/anaconda3/envs/torch-66671-buggy/lib/python3.8/site-packages/torch/testing/_internal/common_utils.py", line 1879, in assertEqual
+    super().assertTrue(result, msg=self._get_assert_msg(msg, debug_msg=debug_msg))
+  File "/root/anaconda3/envs/torch-66671-buggy/lib/python3.8/unittest/case.py", line 765, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true : Tensors failed to compare as equal!With rtol=1.3e-06 and atol=1e-05, found 25 element(s) (out of 50) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.10000002384185791 (-0.3511422276496887 vs. -0.2511422038078308), which occurred at index (0, 0, 1).

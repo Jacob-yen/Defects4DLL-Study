@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "torch-47391-original.py", line 25, in <module>
+    fx.test_output_logger()
+  File "/root/anaconda3/envs/torch-47391-buggy/lib/python3.8/site-packages/torch/testing/_internal/common_quantized.py", line 122, in test_fn
+    qfunction(*args, **kwargs)
+  File "torch-47391-original.py", line 21, in test_output_logger
+    logger.forward(y)
+  File "/root/anaconda3/envs/torch-47391-buggy/lib/python3.8/site-packages/torch/quantization/_numeric_suite.py", line 203, in forward
+    self.stats["tensor_val"] = torch.cat((self.stats["tensor_val"], x))
+RuntimeError: Sizes of tensors must match except in dimension 0. Got 2 and 1 in dimension 1 (The offending index is 1)

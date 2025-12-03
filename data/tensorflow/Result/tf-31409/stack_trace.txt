@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "tf-31409-original.py", line 16, in <module>
+    fx.testPlaceholder()
+  File "/root/anaconda3/envs/tf-31409-buggy/lib/python3.7/site-packages/tensorflow_core/python/framework/test_util.py", line 1216, in decorated
+    return f(self, *args, **kwargs)
+  File "tf-31409-original.py", line 13, in testPlaceholder
+    fft_ops.fftshift(x, axes=axes)
+  File "/root/anaconda3/envs/tf-31409-buggy/lib/python3.7/site-packages/tensorflow_core/python/ops/signal/fft_ops.py", line 361, in fftshift
+    shift = [int(dim // 2) for dim in x.shape]
+  File "/root/anaconda3/envs/tf-31409-buggy/lib/python3.7/site-packages/tensorflow_core/python/ops/signal/fft_ops.py", line 361, in <listcomp>
+    shift = [int(dim // 2) for dim in x.shape]
+TypeError: __int__ returned non-int (type NoneType)

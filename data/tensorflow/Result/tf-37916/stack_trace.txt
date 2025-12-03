@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/jtj/ym_projects/defects4-dll-study/data/tensorflow/Result/tf-37916/tf-37916-original.py", line 73, in <module>
+    fx.test_class_weights()
+  File "/jtj/ym_projects/defects4-dll-study/data/tensorflow/Result/tf-37916/tf-37916-original.py", line 69, in test_class_weights
+    self.assertEqual(score[0] < ref_score[0], True)
+  File "/root/anaconda3/envs/tf-37916-buggy/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/root/anaconda3/envs/tf-37916-buggy/lib/python3.7/unittest/case.py", line 845, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: False != True

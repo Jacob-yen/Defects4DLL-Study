@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "./mutated_code_jtj/torch-52021/torch-52021-original.py", line 38, in <module>
+    tfx.test_trace_dict_int_keys()
+  File "./mutated_code_jtj/torch-52021/torch-52021-original.py", line 34, in test_trace_dict_int_keys
+    traced_graph = MyTracer().trace(CallsModWithDict())
+  File "/root/anaconda3/envs/torch-52021-buggy/lib/python3.8/site-packages/torch/fx/symbolic_trace.py", line 355, in trace
+    self.create_node('output', 'output', (self.create_arg(fn(*args)),), {},
+  File "./mutated_code_jtj/torch-52021/torch-52021-original.py", line 26, in forward
+    return self.m({(42): x})
+  File "/root/anaconda3/envs/torch-52021-buggy/lib/python3.8/site-packages/torch/fx/symbolic_trace.py", line 344, in module_call_wrapper
+    return self.call_module(mod, forward, args, kwargs)
+  File "/root/anaconda3/envs/torch-52021-buggy/lib/python3.8/site-packages/torch/fx/symbolic_trace.py", line 224, in call_module
+    return self.create_proxy('call_module', module_qualified_name, args, kwargs)
+  File "/root/anaconda3/envs/torch-52021-buggy/lib/python3.8/site-packages/torch/fx/proxy.py", line 39, in create_proxy
+    args_ = self.create_arg(args)
+  File "/root/anaconda3/envs/torch-52021-buggy/lib/python3.8/site-packages/torch/fx/symbolic_trace.py", line 154, in create_arg
+    return super().create_arg(a)
+  File "/root/anaconda3/envs/torch-52021-buggy/lib/python3.8/site-packages/torch/fx/proxy.py", line 60, in create_arg
+    return type(a)(self.create_arg(elem) for elem in a)
+  File "/root/anaconda3/envs/torch-52021-buggy/lib/python3.8/site-packages/torch/fx/proxy.py", line 60, in <genexpr>
+    return type(a)(self.create_arg(elem) for elem in a)
+  File "/root/anaconda3/envs/torch-52021-buggy/lib/python3.8/site-packages/torch/fx/symbolic_trace.py", line 154, in create_arg
+    return super().create_arg(a)
+  File "/root/anaconda3/envs/torch-52021-buggy/lib/python3.8/site-packages/torch/fx/proxy.py", line 65, in create_arg
+    raise NotImplementedError(f"dictionaries with non-string keys: {a}")
+NotImplementedError: dictionaries with non-string keys: {42: Proxy(x)}

@@ -1,0 +1,31 @@
+Traceback (most recent call last):
+  File "data/pytorch/Result/torch-56277/torch-56277-original.py", line 23, in <module>
+    fx.test_split_dynamic_axes()
+  File "data/pytorch/Result/torch-56277/torch-56277-original.py", line 18, in test_split_dynamic_axes
+    run_test(Split(), x, input_names=input_names, dynamic_axes={input_names[0]: {(0): 'batch'}})
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-56277/util.py", line 43, in run_test
+    _run_test(model, tracing_remained_onnx_input_idx)
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-56277/util.py", line 29, in _run_test
+    return run_model_test(m, batch_size=batch_size, input=
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-56277/util.py", line 136, in run_model_test
+    ort_sess = convert_to_onnx(model, input=input, opset_version=opset_version,
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-56277/util.py", line 61, in convert_to_onnx
+    torch.onnx._export(model, input_copy, f,
+  File "/root/anaconda3/envs/torch-56277-buggy/lib/python3.8/site-packages/torch/onnx/__init__.py", line 28, in _export
+    result = utils._export(*args, **kwargs)
+  File "/root/anaconda3/envs/torch-56277-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 676, in _export
+    _model_to_graph(model, args, verbose, input_names,
+  File "/root/anaconda3/envs/torch-56277-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 450, in _model_to_graph
+    graph = _optimize_graph(graph, operator_export_type,
+  File "/root/anaconda3/envs/torch-56277-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 200, in _optimize_graph
+    graph = torch._C._jit_pass_onnx(graph, operator_export_type)
+  File "/root/anaconda3/envs/torch-56277-buggy/lib/python3.8/site-packages/torch/onnx/__init__.py", line 309, in _run_symbolic_function
+    return utils._run_symbolic_function(*args, **kwargs)
+  File "/root/anaconda3/envs/torch-56277-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 981, in _run_symbolic_function
+    return symbolic_fn(g, *inputs, **attrs)
+  File "/root/anaconda3/envs/torch-56277-buggy/lib/python3.8/site-packages/torch/onnx/symbolic_helper.py", line 148, in wrapper
+    return fn(g, *args, **kwargs)
+  File "/root/anaconda3/envs/torch-56277-buggy/lib/python3.8/site-packages/torch/onnx/symbolic_opset13.py", line 73, in split
+    if self.type().sizes()[dim] is not None:
+TypeError: 'NoneType' object is not subscriptable
+(Occurred when translating split).

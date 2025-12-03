@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "torch-90044-original.py", line 30, in <module>
+    fx.test_onnx_aten()
+  File "/root/anaconda3/envs/torch-90044-buggy/lib/python3.8/site-packages/torch/testing/_internal/common_utils.py", line 1251, in wrapper
+    return func(self)
+  File "torch-90044-original.py", line 26, in test_onnx_aten
+    self.assertAtenOp(onnx_model, "fmod", "Tensor")
+  File "/root/anaconda3/envs/torch-90044-buggy/lib/python3.8/site-packages/torch/testing/_internal/common_utils.py", line 2723, in assertAtenOp
+    self.assertTrue(all_aten_nodes)
+  File "/root/anaconda3/envs/torch-90044-buggy/lib/python3.8/unittest/case.py", line 765, in assertTrue
+    raise self.failureException(msg)
+AssertionError: [] is not true

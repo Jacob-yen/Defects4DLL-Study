@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "./Result/tf-40636/tf-40636-original.py", line 17, in <module>
+    fx.testConstantStringToSparse()
+  File "./Result/tf-40636/tf-40636-original.py", line 13, in testConstantStringToSparse
+    sparse_ops.from_dense(tensor)
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/ops/sparse_ops.py", line 123, in from_dense
+    math_ops.not_equal(tensor, array_ops.constant(0, tensor.dtype)))
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/framework/constant_op.py", line 264, in constant
+    allow_broadcast=True)
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/framework/constant_op.py", line 275, in _constant_impl
+    return _constant_eager_impl(ctx, value, dtype, shape, verify_shape)
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/framework/constant_op.py", line 300, in _constant_eager_impl
+    t = convert_to_eager_tensor(value, ctx, dtype)
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/framework/constant_op.py", line 98, in convert_to_eager_tensor
+    return ops.EagerTensor(value, ctx.device_name, dtype)
+TypeError: Cannot convert 0 to EagerTensor of dtype string

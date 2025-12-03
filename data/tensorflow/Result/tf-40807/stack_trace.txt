@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "./Result/tf-40807/tf-40807-original.py", line 35, in <module>
+    fx.test_training_passed_during_construction()
+  File "./Result/tf-40807/tf-40807-original.py", line 32, in test_training_passed_during_construction
+    self.assertAllEqual(network(x), _call(x, True))
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/framework/test_util.py", line 1218, in decorated
+    return f(*args, **kwds)
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/framework/test_util.py", line 2739, in assertAllEqual
+    np.testing.assert_array_equal(a, b, err_msg="\n".join(msgs))
+  File "/root/anaconda3/envs/tf-40807-buggy/lib/python3.7/site-packages/numpy/testing/_private/utils.py", line 936, in assert_array_equal
+    verbose=verbose, header='Arrays are not equal')
+  File "/root/anaconda3/envs/tf-40807-buggy/lib/python3.7/site-packages/numpy/testing/_private/utils.py", line 846, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Arrays are not equal
+
+not equal where = (array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]))
+not equal lhs = array([0., 0., 0., 0., 0., 0., 0., 0., 0., 0.], dtype=float32)
+not equal rhs = array([1., 1., 1., 1., 1., 1., 1., 1., 1., 1.])
+Mismatched elements: 10 / 10 (100%)
+Max absolute difference: 1.
+Max relative difference: 1.
+ x: array([[0., 0., 0., 0., 0., 0., 0., 0., 0., 0.]], dtype=float32)
+ y: array([[1., 1., 1., 1., 1., 1., 1., 1., 1., 1.]])

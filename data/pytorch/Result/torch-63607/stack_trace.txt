@@ -1,0 +1,30 @@
+Warning: ONNX Preprocess - Removing mutation from node aten::add_ on block input: 'x.1'. This changes graph semantics.
+Traceback (most recent call last):
+  File "/root/anaconda3/envs/torch-63607-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 764, in _export
+    _check_onnx_proto(proto)
+RuntimeError: Mismatched attribute type in 'Constant_0 : value'
+
+==> Context: Bad node spec for node. Name: Constant_0 OpType: Constant
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "data/pytorch/Result/torch-63607/torch-63607-original.py", line 22, in <module>
+    fx.test_empty_constant_shape()
+  File "data/pytorch/Result/torch-63607/torch-63607-original.py", line 17, in test_empty_constant_shape
+    run_test(Zeros(), x)
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-63607/util.py", line 37, in run_test
+    _run_test(script_model)
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-63607/util.py", line 29, in _run_test
+    return run_model_test(m, batch_size=batch_size,
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-63607/util.py", line 129, in run_model_test
+    ort_sess = convert_to_onnx(model, input=input, opset_version=opset_version,
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-63607/util.py", line 55, in convert_to_onnx
+    torch.onnx._export(model, input_copy, f,
+  File "/root/anaconda3/envs/torch-63607-buggy/lib/python3.8/site-packages/torch/onnx/__init__.py", line 28, in _export
+    result = utils._export(*args, **kwargs)
+  File "/root/anaconda3/envs/torch-63607-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 766, in _export
+    raise ONNXCheckerError(e)
+torch.onnx.utils.ONNXCheckerError: Mismatched attribute type in 'Constant_0 : value'
+
+==> Context: Bad node spec for node. Name: Constant_0 OpType: Constant

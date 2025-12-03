@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "torch-111694-original.py", line 22, in <module>
+    session = ort.InferenceSession("model.onnx", providers=["CPUExecutionProvider"])
+  File "/home/jiangtianjie/anaconda3/envs/torch-2.1.0/lib/python3.8/site-packages/onnxruntime/capi/onnxruntime_inference_collection.py", line 347, in __init__
+    self._create_inference_session(providers, provider_options, disabled_optimizers)
+  File "/home/jiangtianjie/anaconda3/envs/torch-2.1.0/lib/python3.8/site-packages/onnxruntime/capi/onnxruntime_inference_collection.py", line 384, in _create_inference_session
+    sess = C.InferenceSession(session_options, self._model_path, True, self._read_config_from_model)
+onnxruntime.capi.onnxruntime_pybind11_state.InvalidGraph: [ONNXRuntimeError] : 10 : INVALID_GRAPH : Load model from model.onnx failed:This is an invalid model. Type Error: Type 'tensor(float)' of input parameter (/Constant_output_0) of operator (Gather) in node (/emb/Gather) is invalid.

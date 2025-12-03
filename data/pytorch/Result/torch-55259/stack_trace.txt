@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "data/pytorch/Result/torch-55259/torch-55259-original.py", line 28, in <module>
+    fx.test_prim_min()
+  File "data/pytorch/Result/torch-55259/torch-55259-original.py", line 23, in test_prim_min
+    run_test(Min(), (x,))
+  File "/jtj/jtj_project/tje/gdefects4dll/data/pytorch/Result/torch-55259/util.py", line 47, in run_test
+    _run_test(script_model, scripting_remained_onnx_input_idx)
+  File "/jtj/jtj_project/tje/gdefects4dll/data/pytorch/Result/torch-55259/util.py", line 31, in _run_test
+    return run_model_test(m, batch_size=batch_size,
+  File "/jtj/jtj_project/tje/gdefects4dll/data/pytorch/Result/torch-55259/util.py", line 140, in run_model_test
+    ort_sess = convert_to_onnx(model, input=input, opset_version=opset_version,
+  File "/jtj/jtj_project/tje/gdefects4dll/data/pytorch/Result/torch-55259/util.py", line 76, in convert_to_onnx
+    ort_sess = onnxruntime.InferenceSession(f.getvalue())
+  File "/root/anaconda3/envs/torch-55259-buggy/lib/python3.8/site-packages/onnxruntime/capi/onnxruntime_inference_collection.py", line 383, in __init__
+    self._create_inference_session(providers, provider_options, disabled_optimizers)
+  File "/root/anaconda3/envs/torch-55259-buggy/lib/python3.8/site-packages/onnxruntime/capi/onnxruntime_inference_collection.py", line 426, in _create_inference_session
+    sess = C.InferenceSession(session_options, self._model_bytes, False, self._read_config_from_model)
+onnxruntime.capi.onnxruntime_pybind11_state.Fail: [ONNXRuntimeError] : 1 : FAIL : Node (Loop_5) Op (Loop) [TypeInferenceError] Graph attribute inferencing failed: Type Error: Type parameter (T) of Optype (Add) bound to different types (tensor(float) and tensor(int64) in node (Add_10).

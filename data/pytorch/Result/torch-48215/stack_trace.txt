@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "torch-48215-original.py", line 19, in <module>
+    fx.test_parameterlistdict_setting_attributes()
+  File "torch-48215-original.py", line 15, in test_parameterlistdict_setting_attributes
+    self.assertEqual(len(w) == 0, True)
+  File "/root/anaconda3/envs/torch-48215-buggy/lib/python3.8/site-packages/torch/testing/_internal/common_utils.py", line 1164, in assertEqual
+    self.assertTrue(x == y, msg=msg)
+  File "/root/anaconda3/envs/torch-48215-buggy/lib/python3.8/unittest/case.py", line 765, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true

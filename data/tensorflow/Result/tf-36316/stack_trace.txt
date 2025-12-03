@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "tf-36316/tf-36316-original.py", line 50, in <module>
+    fx.test_ctc_decode()
+  File "/root/anaconda3/envs/tf-36316-buggy/lib/python3.7/site-packages/tensorflow_core/python/framework/test_util.py", line 1109, in decorated
+    f(self, *args, **kwargs)
+  File "tf-36316/tf-36316-original.py", line 46, in test_ctc_decode
+    self.assertTrue(np.alltrue(decode_truth[0] == keras.backend.eval(decode_pred_tf[0])))
+  File "/root/anaconda3/envs/tf-36316-buggy/lib/python3.7/unittest/case.py", line 705, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true

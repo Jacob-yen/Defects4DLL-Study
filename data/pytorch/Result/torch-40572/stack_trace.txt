@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "data/pytorch/Result/torch-40572/torch-40572-original.py", line 18, in <module>
+    fx.test_lazy_script()
+  File "data/pytorch/Result/torch-40572/torch-40572-original.py", line 14, in test_lazy_script
+    torch.jit.script(fee)
+  File "/root/anaconda3/envs/torch-40572-buggy/lib/python3.8/site-packages/torch/jit/__init__.py", line 1384, in script
+    fn = torch._C._jit_script_compile(qualified_name, ast, _rcb, get_default_args(obj))
+RuntimeError:
+undefined value foo:
+  File "/root/anaconda3/envs/torch-40572-buggy/lib/python3.8/site-packages/torch/jit/__init__.py", line 12
+        @torch.jit._script_if_tracing
+        def fee(x: int = 2):
+            return foo(1) + x
+                   ~~~ <--- HERE

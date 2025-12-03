@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "data/pytorch/Result/torch-59272/torch-59272-original.py", line 16, in <module>
+    fx.test_invalid_import()
+  File "data/pytorch/Result/torch-59272/torch-59272-original.py", line 12, in test_invalid_import
+    exporter.save_source_string('foo', 'from ........ import lol')
+  File "/root/anaconda3/envs/torch-59272-buggy/lib/python3.8/site-packages/torch/package/package_exporter.py", line 307, in save_source_string
+    deps = self._get_dependencies(src, module_name, is_package)
+  File "/root/anaconda3/envs/torch-59272-buggy/lib/python3.8/site-packages/torch/package/package_exporter.py", line 258, in _get_dependencies
+    dep_pairs = find_files_source_depends_on(src, package_name)
+  File "/root/anaconda3/envs/torch-59272-buggy/lib/python3.8/site-packages/torch/package/find_file_dependencies.py", line 17, in run
+    visitor.visit(tree)
+  File "/root/anaconda3/envs/torch-59272-buggy/lib/python3.8/ast.py", line 371, in visit
+    return visitor(node)
+  File "/root/anaconda3/envs/torch-59272-buggy/lib/python3.8/ast.py", line 379, in generic_visit
+    self.visit(item)
+  File "/root/anaconda3/envs/torch-59272-buggy/lib/python3.8/ast.py", line 371, in visit
+    return visitor(node)
+  File "/root/anaconda3/envs/torch-59272-buggy/lib/python3.8/site-packages/torch/package/find_file_dependencies.py", line 35, in visit_ImportFrom
+    name = self._absmodule(node.module, 0 if node.level is None else node.level)
+  File "/root/anaconda3/envs/torch-59272-buggy/lib/python3.8/site-packages/torch/package/find_file_dependencies.py", line 27, in _absmodule
+    return _resolve_name(module_name, self.package, level)
+  File "/root/anaconda3/envs/torch-59272-buggy/lib/python3.8/site-packages/torch/package/_importlib.py", line 32, in _resolve_name
+    raise ValueError("attempted relative import beyond top-level package")
+ValueError: attempted relative import beyond top-level package

@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "tf-52172-original.py", line 13, in <module>
+    partitionedCallTest.testDeterminismExceptionThrowing()
+  File "tf-52172-original.py", line 9, in testDeterminismExceptionThrowing
+    image_ops_impl.sample_distorted_bounding_box_v2(image_size=[50, 50, 1], bounding_boxes=[[[0., 0., 1., 1.]]], )
+  File "/root/anaconda3/envs/tf-52172-buggy/lib/python3.8/site-packages/tensorflow/python/util/traceback_utils.py", line 141, in error_handler
+    return fn(*args, **kwargs)
+  File "/root/anaconda3/envs/tf-52172-buggy/lib/python3.8/site-packages/tensorflow/python/util/dispatch.py", line 1096, in op_dispatch_handler
+    return dispatch_target(*args, **kwargs)
+  File "/root/anaconda3/envs/tf-52172-buggy/lib/python3.8/site-packages/tensorflow/python/ops/image_ops_impl.py", line 3387, in sample_distorted_bounding_box_v2
+    return gen_image_ops.sample_distorted_bounding_box_v2(
+  File "/root/anaconda3/envs/tf-52172-buggy/lib/python3.8/site-packages/tensorflow/python/ops/gen_image_ops.py", line 4314, in sample_distorted_bounding_box_v2
+    return sample_distorted_bounding_box_v2_eager_fallback(
+  File "/root/anaconda3/envs/tf-52172-buggy/lib/python3.8/site-packages/tensorflow/python/ops/gen_image_ops.py", line 4411, in sample_distorted_bounding_box_v2_eager_fallback
+    _result = _execute.execute(b"SampleDistortedBoundingBoxV2", 3,
+  File "/root/anaconda3/envs/tf-52172-buggy/lib/python3.8/site-packages/tensorflow/python/eager/execute.py", line 58, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+tensorflow.python.framework.errors_impl.InvalidArgumentError: When determinism is enabled, random ops must have a seed specified. [Op:SampleDistortedBoundingBoxV2]

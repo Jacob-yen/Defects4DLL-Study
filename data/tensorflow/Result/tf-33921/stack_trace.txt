@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "tf-33921-original.py", line 21, in <module>
+    fx.test_callback_params_samples()
+  File "tf-33921-original.py", line 18, in test_callback_params_samples
+    self.assertEqual(callback.params['samples'], 64)
+  File "/root/anaconda3/envs/tf-32220-buggy/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/root/anaconda3/envs/tf-32220-buggy/lib/python3.7/unittest/case.py", line 845, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: True != 64

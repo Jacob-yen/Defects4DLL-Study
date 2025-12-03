@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "./Result/tf-39134/tf-39134-original.py", line 8, in <module>
+    m.update_state([0, 1, 1, 1], [1, 0, 1, 1])
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/keras/utils/metrics_utils.py", line 90, in decorated
+    update_op = update_state_fn(*args, **kwargs)
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/keras/metrics.py", line 1393, in update_state
+    sample_weight=sample_weight)
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/keras/utils/metrics_utils.py", line 454, in update_confusion_matrix_variables
+    variables_to_update[matrix_cond]))
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/keras/utils/metrics_utils.py", line 430, in weighted_assign_add
+    return var.assign_add(math_ops.reduce_sum(label_and_pred, 1))
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/ops/resource_variable_ops.py", line 813, in assign_add
+    self.handle, ops.convert_to_tensor(delta, dtype=self.dtype),
+  File "/root/.local/lib/python3.7/site-packages/tensorflow/python/framework/ops.py", line 1464, in convert_to_tensor
+    (dtype.name, value.dtype.name, value))
+ValueError: Tensor conversion requested dtype float64 for Tensor with dtype float32: <tf.Tensor: shape=(1,), dtype=float32, numpy=array([2.], dtype=float32)>

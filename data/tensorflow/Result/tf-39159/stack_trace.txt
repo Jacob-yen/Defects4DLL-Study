@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "tf-39159-original.py", line 23, in <module>
+    fx.testMaskWithAxisTensor()
+  File "tf-39159-original.py", line 19, in testMaskWithAxisTensor
+    self.evaluate(f())
+  File "/root/anaconda3/envs/tf-39159-buggy/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 766, in __call__
+    result = self._call(*args, **kwds)
+  File "/root/anaconda3/envs/tf-39159-buggy/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 809, in _call
+    self._initialize(args, kwds, add_initializers_to=initializers)
+  File "/root/anaconda3/envs/tf-39159-buggy/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 688, in _initialize
+    *args, **kwds))
+  File "/root/anaconda3/envs/tf-39159-buggy/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 2836, in _get_concrete_function_internal_garbage_collected
+    graph_function, _, _ = self._maybe_define_function(args, kwargs)
+  File "/root/anaconda3/envs/tf-39159-buggy/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 3193, in _maybe_define_function
+    graph_function = self._create_graph_function(args, kwargs)
+  File "/root/anaconda3/envs/tf-39159-buggy/lib/python3.7/site-packages/tensorflow/python/eager/function.py", line 3055, in _create_graph_function
+    capture_by_value=self._capture_by_value),
+  File "/root/anaconda3/envs/tf-39159-buggy/lib/python3.7/site-packages/tensorflow/python/framework/func_graph.py", line 981, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "/root/anaconda3/envs/tf-39159-buggy/lib/python3.7/site-packages/tensorflow/python/eager/def_function.py", line 595, in wrapped_fn
+    return weak_wrapped_fn().__wrapped__(*args, **kwds)
+  File "tf-39159-original.py", line 17, in f
+    return array_ops.boolean_mask(tensor, mask, axis=constant)
+  File "/root/anaconda3/envs/tf-39159-buggy/lib/python3.7/site-packages/tensorflow/python/ops/array_ops.py", line 1702, in boolean_mask
+    shape_tensor[axis:axis + ndims_mask].assert_is_compatible_with(shape_mask)
+  File "/root/anaconda3/envs/tf-39159-buggy/lib/python3.7/site-packages/tensorflow/python/framework/tensor_shape.py", line 878, in __getitem__
+    return TensorShape(self._dims[key])
+TypeError: slice indices must be integers or None or have an __index__ method

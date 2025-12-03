@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/jtj/jtj_project/tje/gdefects4dll/data/pytorch/Result/torch-99666/torch-99666-original.py", line 87, in <module>
+    fx.test_params_invalidated_with_grads_invalidated_between_unscale_and_step()
+  File "/jtj/jtj_project/tje/gdefects4dll/data/pytorch/Result/torch-99666/torch-99666-original.py", line 59, in test_params_invalidated_with_grads_invalidated_between_unscale_and_step
+    self._test_grads_invalidated_between_unscale_and_step(optimizer_ctor, optimizer_kwargs)
+  File "/jtj/jtj_project/tje/gdefects4dll/data/pytorch/Result/torch-99666/torch-99666-original.py", line 82, in _test_grads_invalidated_between_unscale_and_step
+    self.assertTrue(all((p.isnan().any() or p.isinf().any()) for p in model.parameters()))
+  File "/root/anaconda3/envs/torch-99666-buggy/lib/python3.8/unittest/case.py", line 765, in assertTrue
+    raise self.failureException(msg)
+AssertionError: False is not true

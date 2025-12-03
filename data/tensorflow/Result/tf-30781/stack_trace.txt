@@ -1,0 +1,31 @@
+Traceback (most recent call last):
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-1.14.0/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py", line 527, in _apply_op_helper
+    preferred_dtype=default_dtype)
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-1.14.0/lib/python3.7/site-packages/tensorflow/python/framework/ops.py", line 1224, in internal_convert_to_tensor
+    ret = conversion_func(value, dtype=dtype, name=name, as_ref=as_ref)
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-1.14.0/lib/python3.7/site-packages/tensorflow/python/framework/constant_op.py", line 305, in _constant_tensor_conversion_function
+    return constant(v, dtype=dtype, name=name)
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-1.14.0/lib/python3.7/site-packages/tensorflow/python/framework/constant_op.py", line 246, in constant
+    allow_broadcast=True)
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-1.14.0/lib/python3.7/site-packages/tensorflow/python/framework/constant_op.py", line 284, in _constant_impl
+    allow_broadcast=allow_broadcast))
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-1.14.0/lib/python3.7/site-packages/tensorflow/python/framework/tensor_util.py", line 466, in make_tensor_proto
+    _AssertCompatible(values, dtype)
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-1.14.0/lib/python3.7/site-packages/tensorflow/python/framework/tensor_util.py", line 371, in _AssertCompatible
+    (dtype.name, repr(mismatch), type(mismatch).__name__))
+TypeError: Expected string, got 0 of type 'int' instead.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "tf-30781-original.py", line 17, in <module>
+    partitionedCallTest.testSparseTensorToDenseString()
+  File "tf-30781-original.py", line 13, in testSparseTensorToDenseString
+    sparse_ops.sparse_tensor_to_dense(sp)
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-1.14.0/lib/python3.7/site-packages/tensorflow/python/ops/sparse_ops.py", line 1457, in sparse_tensor_to_dense
+    name=name)
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-1.14.0/lib/python3.7/site-packages/tensorflow/python/ops/gen_sparse_ops.py", line 3172, in sparse_to_dense
+    validate_indices=validate_indices, name=name)
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-1.14.0/lib/python3.7/site-packages/tensorflow/python/framework/op_def_library.py", line 536, in _apply_op_helper
+    repr(values), type(values).__name__, err))
+TypeError: Expected string passed to parameter 'default_value' of op 'SparseToDense', got 0 of type 'int' instead. Error: Expected string, got 0 of type 'int' instead.

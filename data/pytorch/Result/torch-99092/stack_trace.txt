@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "torch-99092-original.py", line 17, in <module>
+    mha(X, X, X, attn_mask=M, need_weights=False)  # crashes
+  File "/home/jiangtianjie/anaconda3/envs/torch-2.0.0/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jiangtianjie/anaconda3/envs/torch-2.0.0/lib/python3.8/site-packages/torch/nn/modules/activation.py", line 1144, in forward
+    return torch._native_multi_head_attention(
+RuntimeError: For mask_type == 2 mask shape should match input shape

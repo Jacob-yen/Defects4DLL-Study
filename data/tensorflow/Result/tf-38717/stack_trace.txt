@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "./Result/tf-38717/tf-38717-original.py", line 14, in <module>
+    fx.testScopeName()
+  File "./Result/tf-38717/tf-38717-original.py", line 10, in testScopeName
+    self.assertEqual(bf.name, "bfloat16")
+  File "/root/anaconda3/envs/tf-38717-buggy/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/root/anaconda3/envs/tf-38717-buggy/lib/python3.7/site-packages/absl/testing/absltest.py", line 1163, in assertMultiLineEqual
+    raise self.failureException(''.join(failure_message))
+AssertionError: 
++ bfloat16
+

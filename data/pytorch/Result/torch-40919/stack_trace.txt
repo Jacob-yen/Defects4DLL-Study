@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "./mutated_code_jtj/torch-40919/torch-40919-original.py", line 15, in <module>
+    fx.test_print()
+  File "./mutated_code_jtj/torch-40919/torch-40919-original.py", line 10, in test_print
+    self.assertExpectedInline(str(x), 'tensor([2.3000+4.j, 7.0000+6.j])')
+  File "/root/anaconda3/envs/torch-40919-buggy/lib/python3.8/site-packages/torch/testing/_internal/expecttest.py", line 195, in assertExpectedInline
+    self.assertMultiLineEqual(expect, actual, msg=help_text)
+  File "/root/anaconda3/envs/torch-40919-buggy/lib/python3.8/unittest/case.py", line 1292, in assertMultiLineEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/root/anaconda3/envs/torch-40919-buggy/lib/python3.8/unittest/case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: 'tensor([2.3000+4.j, 7.0000+6.j])' != 'tensor([(2.3000+4.0000j), (7.0000+6.0000j)])'
+- tensor([2.3000+4.j, 7.0000+6.j])
++ tensor([(2.3000+4.0000j), (7.0000+6.0000j)])
+?         +         ++++ +  +         ++++ +
+ : To accept the new output, re-run test with envvar EXPECTTEST_ACCEPT=1 (we recommend staging/committing your changes before doing this)

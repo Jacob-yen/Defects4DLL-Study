@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "torch-36111-original.py", line 30, in <module>
+    fx.test_torchbind_optional_explicit_attr()
+  File "torch-36111-original.py", line 26, in test_torchbind_optional_explicit_attr
+    torch.jit.script(mod)
+  File "/root/anaconda3/envs/torch-36111-buggy/lib/python3.8/site-packages/torch/jit/__init__.py", line 1267, in script
+    return torch.jit._recursive.create_script_module(obj, torch.jit._recursive.infer_methods_to_compile)
+  File "/root/anaconda3/envs/torch-36111-buggy/lib/python3.8/site-packages/torch/jit/_recursive.py", line 297, in create_script_module
+    concrete_type = concrete_type_store.get_or_create_concrete_type(nn_module)
+  File "/root/anaconda3/envs/torch-36111-buggy/lib/python3.8/site-packages/torch/jit/_recursive.py", line 256, in get_or_create_concrete_type
+    concrete_type_builder = infer_concrete_type_builder(nn_module)
+  File "/root/anaconda3/envs/torch-36111-buggy/lib/python3.8/site-packages/torch/jit/_recursive.py", line 218, in infer_concrete_type_builder
+    attr_type = infer_type(name, value)
+  File "/root/anaconda3/envs/torch-36111-buggy/lib/python3.8/site-packages/torch/jit/_recursive.py", line 86, in infer_type
+    attr_type = torch.jit.annotations.ann_to_type(class_annotations[name], _jit_internal.fake_range())
+  File "/root/anaconda3/envs/torch-36111-buggy/lib/python3.8/site-packages/torch/jit/annotations.py", line 303, in ann_to_type
+    the_type = try_ann_to_type(ann, loc)
+  File "/root/anaconda3/envs/torch-36111-buggy/lib/python3.8/site-packages/torch/jit/annotations.py", line 269, in try_ann_to_type
+    return OptionalType(try_ann_to_type(ann.__args__[0], loc))
+  File "/root/anaconda3/envs/torch-36111-buggy/lib/python3.8/site-packages/torch/jit/annotations.py", line 296, in try_ann_to_type
+    the_type = torch._C._resolve_type_from_object(ann, loc, fake_rcb)
+TypeError: _resolve_type_from_object(): incompatible function arguments. The following argument types are supported:
+    1. (arg0: object, arg1: torch._C._jit_tree_views.SourceRange, arg2: Callable[[str], function]) -> torch._C.Type
+
+Invoked with: <torch._C.ScriptClass object at 0x7f21b1fdddf0>, <torch._jit_internal.SourceContext object at 0x7f21242d9450>, <function try_ann_to_type.<locals>.fake_rcb at 0x7f2124292c10>

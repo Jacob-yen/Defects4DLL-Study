@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "tf-37018/tf-37018-original.py", line 45, in <module>
+    fx.test_serialize_custom_model_compile()
+  File "/root/anaconda3/envs/tf-37018-buggy/lib/python3.7/site-packages/tensorflow/python/framework/test_util.py", line 1109, in decorated
+    f(self, *args, **kwargs)
+  File "tf-37018/tf-37018-original.py", line 41, in test_serialize_custom_model_compile
+    self.assertEqual("dummy-package>DummySparseCategoricalCrossentropyLoss", model_round_trip["class_name"])
+  File "/root/anaconda3/envs/tf-37018-buggy/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/root/anaconda3/envs/tf-37018-buggy/lib/python3.7/site-packages/absl/testing/absltest.py", line 1163, in assertMultiLineEqual
+    raise self.failureException(''.join(failure_message))
+AssertionError: 
+- dummy-package>DummySparseCategoricalCrossentropyLoss
+? --------------
++ DummySparseCategoricalCrossentropyLoss

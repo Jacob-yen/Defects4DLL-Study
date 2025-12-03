@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "tf-40626-original.py", line 54, in <module>
+    tf.assert_equal(image_flipped_via_dataset_map, expected_output)
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-2.3.0/lib/python3.8/site-packages/tensorflow/python/util/dispatch.py", line 201, in wrapper
+    return target(*args, **kwargs)
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-2.3.0/lib/python3.8/site-packages/tensorflow/python/ops/check_ops.py", line 659, in assert_equal_v2
+    return assert_equal(x=x, y=y, summarize=summarize, message=message, name=name)
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-2.3.0/lib/python3.8/site-packages/tensorflow/python/util/dispatch.py", line 201, in wrapper
+    return target(*args, **kwargs)
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-2.3.0/lib/python3.8/site-packages/tensorflow/python/ops/check_ops.py", line 670, in assert_equal
+    return _binary_assert('==', 'assert_equal', math_ops.equal, np.equal, x, y,
+  File "/home/jiangtianjie/anaconda3/envs/tf-gpu-2.3.0/lib/python3.8/site-packages/tensorflow/python/ops/check_ops.py", line 353, in _binary_assert
+    raise errors.InvalidArgumentError(
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Condition x == y did not hold.
+Indices of first 3 different values:
+[[0 0 0 0]
+ [0 0 0 1]
+ [0 0 0 2]]
+Corresponding x values:
+[6 7 8]
+Corresponding y values:
+[3 4 5]
+First 3 elements of x:
+[6 7 8]
+First 3 elements of y:
+[3 4 5]

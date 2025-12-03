@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "torch-37599-original.py", line 14, in <module>
+    model.fit(np.zeros((64, 1)), np.zeros((64, 1)), callbacks=[tf.keras.callbacks.TensorBoard(log_dir="tmp", profile_batch=1)], )
+  File "/root/anaconda3/envs/tf-37599-buggy/lib/python3.7/site-packages/tensorflow/python/keras/callbacks.py", line 1736, in __init__
+    profiler.warmup()  # Improve the profiling accuracy.
+  File "/root/anaconda3/envs/tf-37599-buggy/lib/python3.7/site-packages/tensorflow/python/profiler/profiler_v2.py", line 124, in warmup
+    start('')
+  File "/root/anaconda3/envs/tf-37599-buggy/lib/python3.7/site-packages/tensorflow/python/profiler/profiler_v2.py", line 74, in start
+    'Another profiler is running.')
+tensorflow.python.framework.errors_impl.AlreadyExistsError: Another profiler is running.

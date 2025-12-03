@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "torch-72697-original.py", line 12, in <module>
+    fx.test_pad_sequence_with_tensor_sequences()
+  File "torch-72697-original.py", line 8, in test_pad_sequence_with_tensor_sequences
+    torch.nn.utils.rnn.pad_sequence(tensor)
+  File "/home/jiangtianjie/anaconda3/envs/torch-1.10.0/lib/python3.8/site-packages/torch/nn/utils/rnn.py", line 363, in pad_sequence
+    return torch._C._nn.pad_sequence(sequences, batch_first, padding_value)
+TypeError: pad_sequence(): argument 'sequences' (position 1) must be tuple of Tensors, not Tensor

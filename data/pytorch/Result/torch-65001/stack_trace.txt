@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "data/pytorch/Result/torch-65001/torch-65001-original.py", line 23, in <module>
+    fx.test_softplus()
+  File "data/pytorch/Result/torch-65001/torch-65001-original.py", line 18, in test_softplus
+    run_test(BetaModel(), x)
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-65001/util.py", line 46, in run_test
+    _run_test(script_model, scripting_remained_onnx_input_idx,
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-65001/util.py", line 31, in _run_test
+    return run_model_test(m, batch_size=batch_size, input=
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-65001/util.py", line 167, in run_model_test
+    ort_sess = convert_to_onnx(model, input=input, opset_version=opset_version,
+  File "/jtj/jtj_project/batch/gdefects4dll/data/pytorch/Result/torch-65001/util.py", line 90, in convert_to_onnx
+    torch.onnx._export(model, input_copy, f,
+  File "/root/anaconda3/envs/torch-65001-buggy/lib/python3.8/site-packages/torch/onnx/__init__.py", line 28, in _export
+    result = utils._export(*args, **kwargs)
+  File "/root/anaconda3/envs/torch-65001-buggy/lib/python3.8/site-packages/torch/onnx/utils.py", line 716, in _export
+    proto, export_map = graph._export_onnx(
+RuntimeError: ONNX export failed: Couldn't export operator aten::softplus
+
+Defined at:
+  File "data/pytorch/Result/torch-65001/torch-65001-original.py", line 15
+            def forward(self, x):
+                return torch.nn.functional.softplus(x, beta=2)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ <--- HERE
+
+
+Graph we tried to export:
+graph(%x.1 : Float(3, 4, 5, strides=[20, 5, 1], requires_grad=1, device=cpu)):
+  %1 : Long(requires_grad=0, device=cpu) = onnx::Constant[value={2}]()
+  %2 : Long(requires_grad=0, device=cpu) = onnx::Constant[value={20}]()
+  %3 : Float(*, *, *, strides=[20, 5, 1], requires_grad=0, device=cpu) = aten::softplus(%x.1, %1, %2) # data/pytorch/Result/torch-65001/torch-65001-original.py:15:23
+  return (%3)

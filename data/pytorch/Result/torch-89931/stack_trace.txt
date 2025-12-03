@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "torch-89931-original.py", line 24, in <module>
+    fx.test_reduce_range_qat()
+  File "torch-89931-original.py", line 17, in test_reduce_range_qat
+    self.assertEqual(fake_quantize_activ.activation_post_process.reduce_range, reduce_ranges[0])
+  File "/root/anaconda3/envs/torch-89931-buggy/lib/python3.8/site-packages/torch/testing/_internal/common_utils.py", line 2468, in assertEqual
+    assert_equal(
+  File "/root/anaconda3/envs/torch-89931-buggy/lib/python3.8/site-packages/torch/testing/_comparison.py", line 1093, in assert_equal
+    raise error_metas[0].to_error(msg)
+AssertionError: Booleans mismatch: True is not False
